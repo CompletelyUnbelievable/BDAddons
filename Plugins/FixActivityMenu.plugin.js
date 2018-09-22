@@ -1,6 +1,6 @@
 //META{"name":"FixActivityMenu"}*//
 
-var PluginName, PluginDesc, PluginVers, PluginAuth, observer;
+var PluginName, PluginDesc, PluginVers, PluginAuth;
 
 
 class FixActivityMenu {
