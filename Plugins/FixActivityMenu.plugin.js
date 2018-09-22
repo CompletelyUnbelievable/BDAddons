@@ -1,6 +1,6 @@
 //META{"name":"FixActivityMenu"}*//
 
-var PluginName, PluginDesc, PluginVers, PluginAuth;
+var PluginName, PluginDesc, PluginVers, PluginAuth, ReplacedClass;
 
 
 class FixActivityMenu {
@@ -30,6 +30,7 @@ class FixActivityMenu {
 
 	start () {
 		BdApi.injectCSS(PluginName + 'CSS', setStyles());
+		ReplacedClass = 'ReplacedFiAcMenu';
 	}
 }
 
@@ -86,7 +87,7 @@ function AmendString(x) {
 
 	if (x.lastIndexOf(".") > -1 && x.lastIndexOf(".") + 15 != x.length) {
 		x = x.slice(0, x.lastIndexOf(".") + 4);
-		x += "?format=png"; /*Prevents Gifs from playing, this could easily be a setting.*/
+		x += "?format=png"; /*Prevents Gifs from playing, this would easily be a setting.*/
 	 }
 
 	if (x.lastIndexOf(".") + 15 == x.length) {
@@ -98,8 +99,8 @@ function AmendString(x) {
 
 function checkForPage() {
 	if (document.getElementsByClassName('activityFeed-28jde9')) {
-		FindModify('background-1ri_HN', 'CUReplaced');
-		FindModify('background-3zYSQO', 'CUReplaced');
-		FindModify('splashArt-1anaP9', 'CUReplaced');
+		FindModify('background-1ri_HN', ReplacedClass);
+		FindModify('background-3zYSQO', ReplacedClass);
+		FindModify('splashArt-1anaP9', ReplacedClass);
 	}
 }
