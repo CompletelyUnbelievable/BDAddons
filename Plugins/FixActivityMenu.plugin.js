@@ -1,6 +1,6 @@
 //META{"name":"FixActivityMenu"}*//
 
-var PluginName, PluginDesc, PluginVers, PluginAuth, observer;
+var PluginName, PluginDesc, PluginVers, PluginAuth;
 
 
 class FixActivityMenu {
@@ -62,29 +62,6 @@ function setStyles() {
 
     return styles;
 }
-
-/*
-function setEvent(x) {
-
-    if (document.getElementsByClassName(x)[0]) {
-        $('.' + x).each(function(i, obj) {
-            document.getElementsByClassName(x)[i].addEventListener("click", function(){
-                setTimeout(Eyes, 0);
-            });
-        });
-    }
-
-}
-
-function removeEvent(x) {
-
-        $('.' + x).each(function(i, obj) {
-            document.getElementsByClassName(x)[i].removeEventListener("click", function(){
-                setTimeout(Eyes, 0);
-            });
-        });
-
-}*/
 
 function FindModify(x, y) { /*Find x, remember with y.*/
     if (document.getElementsByClassName(x)[0]) {
