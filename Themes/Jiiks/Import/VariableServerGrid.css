@@ -1,0 +1,197 @@
+@charset "utf-8";
+
+.da-guildsWrapper {
+	//--preventresizing: 1; /*This is for testing purposes only*/
+	--meadiatorwidth: calc(50px * var(--guildiconw));
+	--meadiatorheight: calc(50px * var(--guildiconh));
+	--wrapperwidth: calc(58px * var(--columns, 1)  * var(--preventresizing, var(--guildiconw, 1)) + var(--spacer, 0px) + 24px);
+	--margincentering: calc((58px * var(--columns, 1) * var(--preventresizing, var(--guildiconw, 1)) + var(--spacer, 0px) - 52px) / 2);
+	--addfontsize: calc(40px * var(--guildiconw, 1));
+}
+
+.da-guildsWrapper:hover {
+	padding-left: var(--nocollapsiblegrid, 0px);
+	transition: var(--nocollapsiblegrid, padding .75s ease 0s), var(--nocompactgrid, width 1.5s ease);
+}
+
+.da-guildsWrapper:not(:hover) {
+	padding-left: var(--nocollapsiblegrid, 20px);
+	width: var(--nocollapsiblegrid, 0px);
+	transition: var(--nocollapsiblegrid, padding .75s ease .25s), var(--nocompactgrid, width 1.5s ease);
+}
+
+#bd-pub-li {
+	top: 6px;
+}
+
+.da-guildsWrapper, .da-guildsWrapper .da-scrollerWrap {
+	width: var(--wrapperwidth, 52px);
+}
+
+.da-guilds .guild-1EfMGQ:not(:first-child):not(#bd-pub-li):not(#RANbutton-frame):not(.da-guildsAdd), .da-guilds .guild-1EfMGQ:not(:first-child):not(#bd-pub-li):not(#RANbutton-frame):not(.da-guildsAdd) *:not(.da-badge):not(.da-guildsError) {
+	width: var(--meadiatorwidth, 50px);
+	height: var(--meadiatorheight, 50px);
+	font-size: calc(18px * var(--guildiconh, 1)) !important; /*required*/
+	line-height: var(--meadiatorheight, 50px);
+	//border-radius: var(--guildborderradius, 50%);
+}
+
+.da-guilds .da-guildsError {
+	width: var(--meadiatorwidth, 50px);
+	height: var(--meadiatorheight, 50px);
+	font-size: calc(18px * var(--guildiconh, 1)); /*required*/
+	line-height: var(--meadiatorheight, 50px);
+	//margin-top: 4px;
+}
+
+.da-guildsWrapper .da-guilds .guild-1EfMGQ:first-child { 
+	position: relative;
+	margin: 0px var(--margincentering, auto) 0px var(--margincentering, auto);
+}
+
+#app-mount .da-guildsWrapper .selected-ML3OIq:before {
+	position: absolute;
+	left: 4.25px;
+	top: 38.267px;
+	background: var(--indicatorcolor, #7289da);
+	z-index: 9000;
+	width: calc(5px * var(--guildiconw, 1));
+	height: calc(50px * (var(--guildiconh, 0) - 1) + 25px);
+}
+
+.da-guildsWrapper .da-guilds .unread-qLkInr:not(.selected-ML3OIq)::before {
+	position: absolute;
+	left: 2px;
+	top: 10px;
+	z-index: 9000;
+	background: var(--indicatorcolor, #7289da);
+	width: calc(12px * var(--guildiconw, 1));
+	height: calc(12px * var(--guildiconh, 1));
+	border-radius: 100%;
+}
+
+.da-badge {
+	box-sizing: border-box;
+	display: table-cell;
+	height: calc(16px * var(--guildiconh, 1));
+	font-size: calc(12px * var(--guildiconw, 1));
+	line-height: calc(14px * var(--guildiconh, 1));
+	//top: calc(-50px * var(--guildiconh, 1));
+	bottom: calc(15px * var(--guildiconh, 1));
+	left: 0px;
+	position: relative;
+	padding: calc(2px * var(--guildiconh, 1)) calc(4px * var(--guildiconw, 1)) calc(2px * var(--guildiconh, 1)) calc(4px * var(--guildiconw, 1));
+	background-color: var(--alertscolor, #f04747);
+	text-align: center;
+	vertical-align: middle;
+}
+
+.da-dms .da-badge {
+	top: -50px;
+}
+
+.da-appMount .guild-1EfMGQ.audio-3vVhBi .da-guildInner::after {
+	top: 2px;
+	right: -2px;
+	background-color: transparent;
+}
+
+.da-guildsWrapper .da-scroller {
+	padding-right: 14px;
+}
+
+.da-guildsAdd span.da-guildsAddInner {
+	font-size: var(--addfontsize, 40px);
+	position: relative;
+	left: -1px;
+	top: -1px;
+	height: var(--meadiatorheight, 50px);
+	width: var(--meadiatorwidth, 50px);
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	flex-flow: column wrap;
+}
+
+.da-appMount .da-guildsWrapper .da-guilds .da-guildsAdd {
+	width: var(--meadiatorwidth, 50px);
+	height: var(--meadiatorheight, 50px);
+	//border-radius: var(--guildborderradius, 50%);
+	left: -3px;
+	box-sizing: border-box;
+	position: static;
+	margin-top: 4px;
+	margin-bottom: 4px;
+}
+
+.da-guilds .guild-1EfMGQ:not(:first-child):not(#bd-pub-li):not(#RANbutton-frame):not(.da-guildsAdd) {
+	padding: 4px 4px 4px 4px;
+}
+
+/*Read all button alligns correctly.*/
+#RANbutton-frame.da-guild {
+	margin: auto;
+}
+
+.da-guildsWrapper .da-guilds {
+	display: flex;
+	flex-flow: row wrap;
+	align-content: flex-start;
+}
+
+.da-guildsWrapper .da-guilds .guild-1EfMGQ:first-child.selected-ML3OIq:before { 
+	display: none;
+}
+
+.da-guildsWrapper .da-guilds .da-guildSeparator {
+	position: relative;
+	width: 100%;
+	margin-top: 0px;
+}
+
+.da-guildsWrapper .da-guilds .da-friendsOnline {
+	top: 12px;
+	position: relative;
+	width: 100%;
+	margin: auto;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.da-guildsWrapper .da-guilds .guild-1EfMGQ {
+	position: relative;
+}
+
+.da-guildsWrapper .da-guilds .da-dms {
+	width: 100%;
+	display: flex;
+	flex-flow: row wrap;
+}
+
+.da-guildsWrapper .da-guilds .da-dms .da-guild {
+	left: 0;
+	top: 2px;
+}
+
+/*removes scrollbar.*/
+
+.da-appMount .da-guildsWrapper .scroller-wrap .scroller::-webkit-scrollbar {
+	width: 0px; /*14*/
+}
+
+.da-appMount .da-guildsWrapper .da-scroller::-webkit-scrollbar-thumb {
+	background-color: transparent; /*#202225*/
+	border-color: transparent; /*#36393f*/
+}
+
+.da-appMount .da-guildsWrapper .da-scroller::-webkit-scrollbar-track-piece {
+	background-color: transparent; /*#2f3136*/
+	border-color: transparent; /*#36393f*/
+	border-radius: 0px; /*7px*/
+}
+/*End of scrollbar fix.*/
+
+.da-appMount .guild-1EfMGQ+.guild-1EfMGQ {
+	margin: auto;
+}
