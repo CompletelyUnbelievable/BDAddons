@@ -1,0 +1,239 @@
+/*Blur Email*/
+.da-appMount .userSettingsAccount-2eMFVR div:nth-child(2) > div:nth-child(2) > .viewBody-2Qz-jg:not(:hover) {
+	transition: filter 0.3s;
+	filter: blur(6px);
+	overflow: hidden;
+}
+
+.da-appMount .userSettingsAccount-2eMFVR div:nth-child(2) > div:nth-child(2) > .viewBody-2Qz-jg:hover {
+	transition: filter 0.3s;
+	filter: none;
+	overflow: hidden;
+}
+/*End blur email*/
+
+/*Blur Username*/
+.da-appMount .userSettingsAccount-2eMFVR div:nth-child(2) > div:nth-child(1) > .viewBody-2Qz-jg:not(:hover) {
+	transition: filter 0.3s;
+	filter: blur(6px);
+	overflow: hidden;
+}
+
+.da-appMount .userSettingsAccount-2eMFVR div:nth-child(2) > div:nth-child(1) > .viewBody-2Qz-jg:hover {
+	transition: filter 0.3s;
+	filter: none;
+	overflow: hidden;
+}
+
+.da-appMount .da-containerDefault .da-content a:not(:hover) {
+	transition: filter 0.3s;
+	filter: blur(6px);
+	overflow: hidden;
+}
+
+.da-appMount .da-containerDefault .da-content a:hover {
+	transition: filter 0.3s;
+	filter: none;
+	overflow: hidden;
+}
+
+.da-appMount .textArea-2Spzkt::-webkit-input-placeholder, .da-appMount .quickMessage-1yeL4E::-webkit-input-placeholder {
+	Font-size:0;
+}
+
+.da-container .da-avatar {
+	filter: grayscale(100%) blur(10px);
+	overflow: hidden;
+}
+
+.da-appMount .da-markup .da-mention:not(:hover) {
+	transition: filter 0.3s;
+	filter: blur(6px);
+	overflow: hidden;
+}
+
+.da-appMount .da-markup .da-mention:hover {
+	transition: filter 0.3s;
+	filter: none;
+	overflow: hidden;
+}
+
+.da-privateChannels .da-channel:not(.da-btnFriends):not(.btn-friends):not(:hover) {
+	transition: filter 0.3s;
+	filter: grayscale(100%) blur(6px);
+	overflow: hidden;
+}
+
+.da-privateChannels .da-channel:not(.da-btnFriends):not(.btn-friends):hover {
+	transition: filter 0.3s;
+	filter: none;
+	overflow: hidden;
+}
+
+.da-appMount .callAvatarBorder-1D_KaE, .da-appMount .da-guildIcon, .popout-2fzvxG:not(.status-oxiHuE), .profile-ZOdGIb {
+	filter: grayscale(100%) blur(10px);
+	overflow: hidden;
+}
+
+.da-appMount .da-note textarea:not(:focus) {
+	transition: filter 0.3s;
+	filter: blur(6px);
+	overflow: hidden;
+}
+
+.da-appMount .da-note textarea:focus {
+	transition: filter 0.3s;
+	filter: none;
+	overflow: hidden;
+}
+
+.da-appMount .da-accountDetails.da-nameTag {
+	filter: blur(6px);
+	overflow: hidden;
+}
+/*.da-member dies when you click on a member on the member list.*/
+.da-appMount .member-3W1lQa:not(:hover) {
+	transition: filter 0.3s;
+	filter: blur(6px);
+	overflow: hidden;
+}
+
+.da-appMount .member-3W1lQa:hover {
+	transition: filter 0.3s;
+	filter: none;
+	overflow: hidden;
+}
+
+.da-appMount .da-name:not(:hover) {
+	transition: filter 0.3s;
+	filter: blur(6px);
+	overflow: hidden;
+}
+
+.da-appMount .name-3YKhmS:hover {
+	transition: filter 0.3s;
+	filter: none;
+	overflow: hidden;
+}
+
+.da-channelName:not(:hover), .da-titleText:not(:hover) {
+	transition: filter 0.3s;
+	filter: blur(6px);
+	overflow: hidden;
+}
+
+.da-channelName:hover, .da-titleText:hover {
+	transition: filter 0.3s;
+	filter: none;
+	overflow: hidden;
+}
+
+.da-large, .da-image.da-profile, da-xxlarge > div, da-avatarXxlarge > div {
+	filter: grayscale(100%) blur(20px);
+	overflow: hidden;
+	border-radius: 50%;
+}
+
+.da-appMount .da-message h2 strong:not(:hover), .da-appMount .da-headerText:not(:hover) {
+	transition: filter 0.3s;
+	filter: blur(6px);
+	overflow: hidden;
+}
+
+.da-appMount .da-message h2 strong:hover, .da-appMount .da-headerText:hover {
+	transition: filter 0.3s;
+	filter: none;
+	overflow: hidden;
+}
+
+.da-memberOffline:not(:hover), .da-memberOnline:not(:hover) {
+	transition: filter 0.3s;
+	filter: grayscale(100%) blur(6px);
+	overflow: hidden;
+}
+
+.da-memberOffline:hover, .da-memberOnline:hover {
+	transition: filter 0.3s;
+	filter: none;
+	overflow: hidden;
+}
+
+.da-appMount .topic-2QX7LI {
+	filter: blur(6px);
+	overflow: hidden;
+}
+
+/*Guild channels blurring*/
+.da-contentConnectedText:not(:hover), .da-contentConnectedVoice:not(:hover), .da-contentDefaultText:not(:hover), .contentDefaultVoice-2ko43i:not(:hover), .contentHoveredText-2D9B-x:not(:hover), .contentHoveredVoice-3p_NEO:not(:hover), .contentLockedText-1aHuz8:not(:hover), .contentLockedVoice-1gx-SP:not(:hover), .contentMutedText-2y6aPQ:not(:hover), .contentMutedVoice-2lJ0UD:not(:hover), .contentSelectedText-3wUhMi:not(:hover), .contentSelectedVoice-1WDIBM:not(:hover), .contentUnreadText-2vNnZc:not(:hover), .contentUnreadVoice-1dijOt:not(:hover) {
+	transition: filter 0.3s;
+	filter: blur(6px);
+	overflow: hidden;
+}
+
+
+.contentConnectedText-16O0fe:hover, .contentConnectedVoice-qL-YrL:hover, .contentDefaultText-3vZplL:hover, .contentDefaultVoice-2ko43i:hover, .contentHoveredText-2D9B-x:hover, .contentHoveredVoice-3p_NEO:hover, .contentLockedText-1aHuz8:hover, .contentLockedVoice-1gx-SP:hover, .contentMutedText-2y6aPQ:hover, .contentMutedVoice-2lJ0UD:hover, .contentSelectedText-3wUhMi:hover, .contentSelectedVoice-1WDIBM:hover, .contentUnreadText-2vNnZc:hover, .contentUnreadVoice-1dijOt:hover {
+	transition: filter 0.3s;
+	filter: none;
+	overflow: hidden;
+}
+
+/*Category Blurring*/
+.wrapperCollapsed-3Fbxl6:not(:hover), .wrapperDefault-10Jfvz:not(:hover), .wrapperHovered-28fu1D:not(:hover), .wrapperHoveredCollapsed-1PADEo:not(:hover), .wrapperMuted-3KeA2M:not(:hover), .wrapperUnread-1JPWj3:not(:hover) {
+	transition: filter 0.3s;
+	filter: blur(6px);
+	overflow: hidden;
+}
+
+.wrapperCollapsed-3Fbxl6:hover, .wrapperDefault-10Jfvz:hover, .wrapperHovered-28fu1D:hover, .wrapperHoveredCollapsed-1PADEo:hover, .wrapperMuted-3KeA2M:hover, .wrapperUnread-1JPWj3:hover {
+	transition: filter 0.3s;
+	filter: none;
+	overflow: hidden;
+}
+
+
+.da-base strong:not(:hover) {
+	transition: filter 0.3s;
+	filter: blur(6px);
+	overflow: hidden;
+}
+
+.da-base strong:hover {
+	transition: filter 0.3s;
+	filter: none;
+	overflow: hidden;
+}
+
+.da-message .markup [title*="discord.gg"] {
+	transition: filter 0.3s;
+	filter: blur(6px);
+	overflow: hidden;
+}
+
+.da-appMount .da-listRow {
+	transition: filter 0.3s;
+	filter: grayscale(100%) blur(10px);
+	overflow: hidden;
+}
+
+.da-appMount .da-listRow:hover {
+	transition: filter 0.3s;
+	filter: none;
+	overflow: hidden;
+}
+
+.da-connectedAccount > div {
+	transition: filter 0.3s;
+	filter: grayscale(100%) blur(10px);
+	overflow: hidden;
+}
+
+.da-connectedAccount > div:hover {
+	transition: filter 0.3s;
+	filter: none;
+	overflow: hidden;
+}
+
+/*Hides the billing tab in the settings menu.*/
+#user-settings .da-item:nth-child(6) {
+	display: none;
+}
