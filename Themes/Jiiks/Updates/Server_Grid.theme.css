@@ -1,0 +1,77 @@
+//META{"name":"Server_Grid","description":"Display servers in 3 column grid. Updated with normalized classes by CompletelyUnbelievable.","author":"Jiiks","version":"1.0"}*//{}
+
+.da-guildsWrapper {
+	width: 180px;
+}
+
+.da-guildsWrapper .da-scrollerWrap {
+	width: 200px;
+}
+
+.da-guildsWrapper .da-guilds {
+	display: flex;
+	flex-flow: row wrap;
+	padding-left: 0;
+	align-content: flex-start;
+}
+
+.da-guildsWrapper .da-guilds .guild-1EfMGQ {
+	margin-left: 8px;
+	margin-top: 8px;
+}
+
+.da-guildsWrapper .da-guilds .unread-qLkInr::before {
+	left: -2px;
+	top: 5px;
+	z-index:9000;
+}
+
+.da-guildsWrapper .da-guilds .guild-1EfMGQ:first-child {
+	position: relative; 
+	left: 0;
+	margin: auto;
+	margin-top: 15px;
+}
+
+#bd-pub-li {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+
+#bd-pub-li #bd-pub-button {
+	position:absolute;
+	width: 100%;
+	text-align: center;
+}
+
+.da-guildsWrapper .da-guilds .da-guildSeparator {
+	position: relative;
+	width: 100%;
+	margin-top: 10px;
+}
+
+.da-guildsWrapper .da-guilds .da-friendsOnline {
+	position: relative;
+	width: 100%;
+	margin: auto;
+	margin-top: 5px;
+}
+
+.da-guildsWrapper .da-guilds .guild-1EfMGQ.selected-ML3OIq:before {
+	display: none;
+}
+
+.da-guildsWrapper .da-guilds .guild-1EfMGQ {
+	position: relative;
+}
+
+.da-guildsWrapper .da-guilds .da-dms {
+	width: 100%;
+	display: flex;
+	flex-flow: row wrap;
+}
+
+.da-guildsWrapper .da-guilds .da-dms .da-guild {
+	left: 0;
+}
