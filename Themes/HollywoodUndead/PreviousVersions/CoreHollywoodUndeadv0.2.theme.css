@@ -1,0 +1,127 @@
+//META{"name":"Core_HollywoodUndead","description":"A version of the hollywood undead theme. This version without imports, and without automatic updates. Last Major Update: '16/5/2018' (dd/mm/yyyy)","author":"CompletelyUnbelievable","version":"0.2","source":"https://github.com/CompletelyUnbelievable/HollywoodUndead","website":"https://git.io/vhWjm"}*//
+
+/*changing the link will change the background image.*/
+.app {
+     background-image: url(https://raw.githubusercontent.com/CompletelyUnbelievable/HollywoodUndead/master/Images/HU.png);
+ 
+     background-size: 100% 100%;
+     background-repeat: no-repeat;
+}
+
+/*Around the text, embeds, and attachments. Broken on purpose.*/
+.message-group.comment {
+     background-color: rgba(79,84,92,.6);
+     border-radius: 5px !important;
+}
+
+/*Around every message.*/
+.message-group {
+     background-color: rgba(79,84,92,.6);
+     border-radius: 5px !important;
+}
+
+/*Playerlist*/
+.member-3W1lQa {
+     background-color: rgba(79,84,92,.6);
+     border-radius: 5px !important; 
+}
+
+/*channels*/
+.content-20Aix8 {
+     background-color: rgba(79,84,92,.6);
+     border-radius: 5px !important;
+}
+ /*Muted channels*/
+.nameMutedText-3Vj4bM {
+     color: #72767d;
+}
+
+/*categories selector*/
+.cursorPointer-1ajlYk {
+     background-color: rgba(79,84,92,.6);
+     border-radius: 5px !important;
+}
+
+/*A square outline/border for the guilds.*/
+.guild-inner {
+     background-color: rgba(79,84,92,.6) !important;
+     border-radius: 5px !important;
+}
+
+/*Forces normal guild shape for the images.*/
+.guild-inner > .avatar-small {
+     border-radius: 25px !important;
+}
+
+/*role separators*/
+.membersGroup-v9BXpm {
+     /*background-color: rgba(79,84,92,.6);*/
+     border-radius: 100px !important;
+}
+
+/*Friends online text right below dms.*/
+.friends-online {
+     background-color: rgba(79,84,92,.6);
+     border-radius: 100px !important;
+     color: black !important;
+}
+
+/*Guild name background.*/
+.container-2Rl01u {
+     background-color: rgba(79,84,92,.6) !important;
+     border-radius: 0px !important;
+}
+
+/*server menu navigation*/
+.side-8zPYf6 {
+     background-color: rgba(79,84,92,.6);
+     border-radius: 5px !important;
+}
+
+/*server menu body*/
+div.content-column.default > div {
+     background-color: rgba(79,84,92,.6);
+     border-radius: 5px !important;
+}
+
+/*TitleBar*/
+.title-3qD0b- {
+     background-color: rgba(79,84,92,.6) !important;
+     border-radius: 0px !important;
+}
+
+/*Username area*/
+.container-2Thooq {
+     background-color: rgba(79,84,92,.6) !important;
+     border-radius: 5px !important;
+}
+
+/*Users on the DM page*/
+.private-channels .channel {
+     background-color: rgba(79,84,92,.6);
+     border-radius: 5px !important;
+}
+
+/*DM menu search bar*/
+.private-channels .search-bar {
+     background-color: rgba(79,84,92,.6);
+}
+
+/*Dm menu "Direct Messages" text*/
+div.scroller-2FKFPG > header {
+     Background-color: rgba(79,84,92,.6);
+     color: white;
+}
+
+/*From here on is CSS to make the background image of the theme to be visable.*/
+.friends-table, .messages-wrapper, .chat>.content, .chat, .channels-Ie2l6A, .guilds-wrapper, .container-2lgZY8, .layer-3QrUeG, .layers-3iHuyZ, .members-1998pB, .container-PNkimc {
+     background-color: transparent !important;
+}
+
+.chat form {
+     background-color: transparent !important;
+}
+
+.ui-standard-sidebar-view > .sidebar-region, .ui-standard-sidebar-view > .content-region, .layer-3QrUeG, .layers-3iHuyZ {
+     background: transparent !important;
+}
