@@ -1,0 +1,1 @@
+A place for plugins I believe to be a sufficient product, plugins I am less confident about will be in the <a href="https://github.com/CompletelyUnbelievable/BDAddons/tree/master/PluginsExperiments">PluginsExperiments</a> folder.
