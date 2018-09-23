@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+/*The old version was completely gutted*/
+#app-mount .app.theme-dark {
+	background: linear-gradient(rgba(97, 98 ,116 , .5), rgba(97, 98 ,116 , .5)), var(--DarkBackground,#202225) no-repeat;
+	background-size: var(--BackgroundFill, 100% 100%);
+}
+
+ /*Muted channels*/
+.theme-dark .nameMutedText-3Vj4bM {
+     color: #72767d;
+}
+
+/*Forces normal guild shape for the images.*/
+.theme-dark .guild-inner > .avatar-small {
+     border-radius: 25px;
+}
+
+/*Friends online text right below dms.*/
+#app-mount .theme-dark .friends-online {
+     color: hsla(0,0%,100%,.3);
+}
+
+/*Dm menu "Direct Messages" text*/
+.theme-dark .scroller-2FKFPG > header {
+     color: #fff;
+}
