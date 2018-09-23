@@ -1,0 +1,111 @@
+//META{"name":"Core_HollywoodUndead","description":"A version of the hollywood undead theme. This version without imports, and without automatic updates. Last Major Update: '16/5/2018' (dd/mm/yyyy)","author":"CompletelyUnbelievable","version":"0.1","source":"https://github.com/CompletelyUnbelievable/HollywoodUndead","website":"https://git.io/vhWjm"}*//
+
+/*changing the link will change the background image.*/
+.app {
+     background-image: url(https://raw.githubusercontent.com/CompletelyUnbelievable/HollywoodUndead/master/Images/HU.png);
+ 
+     background-size: 100% 100%;
+     background-repeat: no-repeat;
+}
+
+/*Around the text, embeds, and attachments. Broken on purpose.*/
+.message-group.comment {
+     background-color: rgba(79,84,92,.6);
+     border-radius: 5px !important;
+}
+
+/*Around every message.*/
+.message-group {
+     background-color: rgba(79,84,92,.6);
+     border-radius: 5px !important;
+}
+
+/*Playerlist*/
+.member-3W1lQa {
+     background-color: rgba(79,84,92,.6);
+     border-radius: 5px !important; 
+}
+
+/*channels*/
+.content-20Aix8 {
+     background-color: rgba(79,84,92,.6);
+     border-radius: 5px !important;
+}
+ /*Muted channels*/
+.nameMutedText-3Vj4bM {
+     color: #72767d;
+}
+
+/*categories selector*/
+.cursorPointer-1ajlYk {
+     background-color: rgba(79,84,92,.6);
+     border-radius: 5px !important;
+}
+
+/*A square outline/border for the guilds.*/
+.guild-inner {
+     background-color: rgba(79,84,92,.6) !important;
+     border-radius: 5px !important;
+}
+
+/*Forces normal guild shape for the images.*/
+.guild-inner > .avatar-small {
+     border-radius: 25px !important;
+}
+
+/*role separators*/
+.membersGroup-v9BXpm {
+     /*background-color: rgba(79,84,92,.6);*/
+     border-radius: 100px !important;
+}
+
+/*Friends online text right below dms.*/
+.friends-online {
+     background-color: rgba(79,84,92,.6);
+     border-radius: 100px !important;
+     color: black !important;
+}
+
+/*Guild name background.*/
+.container-2Rl01u {
+     background-color: rgba(79,84,92,.6) !important;
+     border-radius: 0px !important;
+}
+
+/*server menu navigation*/
+.side-8zPYf6 {
+     background-color: rgba(79,84,92,.6);
+     border-radius: 5px !important;
+}
+
+/*server menu body*/
+div.content-column.default > div {
+     background-color: rgba(79,84,92,.6);
+     border-radius: 5px !important;
+}
+
+/*TitleBar*/
+.title-3qD0b- {
+     background-color: rgba(79,84,92,.6) !important;
+     border-radius: 0px !important;
+}
+
+/*Username area*/
+.container-2Thooq {
+     background-color: rgba(79,84,92,.6) !important;
+     border-radius: 5px !important;
+}
+
+#app-mount > div.app-19_DXt.platform-win > div > div.layers-3iHuyZ.flex-vertical.flex-spacer > div > div , #app-mount > div.app-19_DXt.platform-win > div > div.layers-3iHuyZ.flex-vertical.flex-spacer > div > div > div.guilds-wrapper , #app-mount > div.app-19_DXt.platform-win > div > div.layers-3iHuyZ.flex-vertical.flex-spacer > div > div > div.flex-1xMQg5.flex-1O1GKY.vertical-V37hAW.flex-1O1GKY.directionColumn-35P_nr.justifyStart-2NDFzi.alignStretch-DpGPf3.noWrap-3jynv6.base-3dtUhz > div.flex-1xMQg5.flex-1O1GKY.horizontal-1ae9ci.horizontal-2EEEnY.flex-1O1GKY.directionRow-3v3tfG.justifyStart-2NDFzi.alignStretch-DpGPf3.noWrap-3jynv6.spacer-29U_x8 > div.channels-Ie2l6A.vertical-V37hAW.flex-1O1GKY.directionColumn-35P_nr , #app-mount > div.app-19_DXt.platform-win > div > div.layers-3iHuyZ.flex-vertical.flex-spacer > div > div > div.flex-1xMQg5.flex-1O1GKY.vertical-V37hAW.flex-1O1GKY.directionColumn-35P_nr.justifyStart-2NDFzi.alignStretch-DpGPf3.noWrap-3jynv6.base-3dtUhz > div.flex-1xMQg5.flex-1O1GKY.horizontal-1ae9ci.horizontal-2EEEnY.flex-1O1GKY.directionRow-3v3tfG.justifyStart-2NDFzi.alignStretch-DpGPf3.noWrap-3jynv6.spacer-29U_x8 > div.chat.flex-vertical.flex-spacer , #app-mount > div.app-19_DXt.platform-win > div > div.layers-3iHuyZ.flex-vertical.flex-spacer > div > div > div.flex-1xMQg5.flex-1O1GKY.vertical-V37hAW.flex-1O1GKY.directionColumn-35P_nr.justifyStart-2NDFzi.alignStretch-DpGPf3.noWrap-3jynv6.base-3dtUhz > div.flex-1xMQg5.flex-1O1GKY.horizontal-1ae9ci.horizontal-2EEEnY.flex-1O1GKY.directionRow-3v3tfG.justifyStart-2NDFzi.alignStretch-DpGPf3.noWrap-3jynv6.spacer-29U_x8 > div.chat.flex-vertical.flex-spacer > div.content.flex-spacer.flex-horizontal , #app-mount > div.app-19_DXt.platform-win > div > div.layers-3iHuyZ.flex-vertical.flex-spacer > div > div > div.flex-1xMQg5.flex-1O1GKY.vertical-V37hAW.flex-1O1GKY.directionColumn-35P_nr.justifyStart-2NDFzi.alignStretch-DpGPf3.noWrap-3jynv6.base-3dtUhz > div.flex-1xMQg5.flex-1O1GKY.horizontal-1ae9ci.horizontal-2EEEnY.flex-1O1GKY.directionRow-3v3tfG.justifyStart-2NDFzi.alignStretch-DpGPf3.noWrap-3jynv6.spacer-29U_x8 > div.chat.flex-vertical.flex-spacer > div.content.flex-spacer.flex-horizontal > div.flex-spacer.flex-vertical > div , #app-mount > div.app-19_DXt.platform-win > div > div.layers-3iHuyZ.flex-vertical.flex-spacer > div > div > div.flex-1xMQg5.flex-1O1GKY.vertical-V37hAW.flex-1O1GKY.directionColumn-35P_nr.justifyStart-2NDFzi.alignStretch-DpGPf3.noWrap-3jynv6.base-3dtUhz > div.flex-1xMQg5.flex-1O1GKY.horizontal-1ae9ci.horizontal-2EEEnY.flex-1O1GKY.directionRow-3v3tfG.justifyStart-2NDFzi.alignStretch-DpGPf3.noWrap-3jynv6.spacer-29U_x8 > div.chat.flex-vertical.flex-spacer > div.content.flex-spacer.flex-horizontal > div.flex-spacer.flex-vertical > form , #app-mount > div.app-19_DXt.platform-win > div > div.layers-3iHuyZ.flex-vertical.flex-spacer > div > div > div.flex-1xMQg5.flex-1O1GKY.vertical-V37hAW.flex-1O1GKY.directionColumn-35P_nr.justifyStart-2NDFzi.alignStretch-DpGPf3.noWrap-3jynv6.base-3dtUhz > div.flex-1xMQg5.flex-1O1GKY.horizontal-1ae9ci.horizontal-2EEEnY.flex-1O1GKY.directionRow-3v3tfG.justifyStart-2NDFzi.alignStretch-DpGPf3.noWrap-3jynv6.spacer-29U_x8 > div.chat.flex-vertical.flex-spacer > div.content.flex-spacer.flex-horizontal > div.membersWrap-2h-GB4 > div > div , #app-mount > div.app-19_DXt.platform-win > div > div.layers-3iHuyZ.flex-vertical.flex-spacer > div > div > div.flex-1xMQg5.flex-1O1GKY.vertical-V37hAW.flex-1O1GKY.directionColumn-35P_nr.justifyStart-2NDFzi.alignStretch-DpGPf3.noWrap-3jynv6.base-3dtUhz > div.flex-1xMQg5.flex-1O1GKY.horizontal-1ae9ci.horizontal-2EEEnY.flex-1O1GKY.directionRow-3v3tfG.justifyStart-2NDFzi.alignStretch-DpGPf3.noWrap-3jynv6.spacer-29U_x8 > div.channels-Ie2l6A.vertical-V37hAW.flex-1O1GKY.directionColumn-35P_nr > div.flex-1xMQg5.flex-1O1GKY.vertical-V37hAW.flex-1O1GKY.directionColumn-35P_nr.justifyStart-2NDFzi.alignStretch-DpGPf3.noWrap-3jynv6.container-PNkimc , #app-mount > div.app-19_DXt.platform-win > div > div.layers-3iHuyZ.flex-vertical.flex-spacer > div > div > div.flex-1xMQg5.flex-1O1GKY.vertical-V37hAW.flex-1O1GKY.directionColumn-35P_nr.justifyStart-2NDFzi.alignStretch-DpGPf3.noWrap-3jynv6.base-3dtUhz > div.flex-1xMQg5.flex-1O1GKY.horizontal-1ae9ci.horizontal-2EEEnY.flex-1O1GKY.directionRow-3v3tfG.justifyStart-2NDFzi.alignStretch-DpGPf3.noWrap-3jynv6.spacer-29U_x8 > div.channels-Ie2l6A.vertical-V37hAW.flex-1O1GKY.directionColumn-35P_nr , #friends , #friends > div.friends-table , .wrapper-2NJDcI {
+     background-color: transparent !important;
+}
+
+#app-mount > div.app-19_DXt.platform-win > div > div.layers-3iHuyZ.flex-vertical.flex-spacer > div > div > div.guilds-wrapper > div.scroller-wrap > div > button , 
+#app-mount > div.app-19_DXt.platform-win > div > div.layers-3iHuyZ.flex-vertical.flex-spacer > div:nth-child(2) > div > div.sidebar-region , #app-mount > div.app-19_DXt.platform-win > div > div.layers-3iHuyZ.flex-vertical.flex-spacer > div:nth-child(2) > div > div.content-region , #app-mount > div.app-19_DXt.platform-win > div > div.layers-3iHuyZ.flex-vertical.flex-spacer , #app-mount > div.app-19_DXt.platform-win > div > div.layers-3iHuyZ.flex-vertical.flex-spacer > div , #app-mount > div.app-19_DXt.platform-win > div > div.layers-3iHuyZ.flex-vertical.flex-spacer > div > div > div.flex-1xMQg5.flex-1O1GKY.vertical-V37hAW.flex-1O1GKY.directionColumn-35P_nr.justifyStart-2NDFzi.alignStretch-DpGPf3.noWrap-3jynv6.base-3dtUhz > div.flex-1xMQg5.flex-1O1GKY.horizontal-1ae9ci.horizontal-2EEEnY.flex-1O1GKY.directionRow-3v3tfG.justifyStart-2NDFzi.alignStretch-DpGPf3.noWrap-3jynv6.spacer-29U_x8 > div.chat.flex-vertical.flex-spacer > div.titleWrapper-1l0xT9 > div , #friends > div.flex-1xMQg5.flex-1O1GKY.horizontal-1ae9ci.horizontal-2EEEnY.flex-1O1GKY.directionRow-3v3tfG.justifyStart-2NDFzi.alignCenter-1dQNNs.noWrap-3jynv6.headerBar-UHpsPw {
+     background: transparent;
+}
+
+
+#app-mount > div.app-19_DXt.platform-win > div > div.layers-3iHuyZ.flex-vertical.flex-spacer > div > div > div.flex-1xMQg5.flex-1O1GKY.vertical-V37hAW.flex-1O1GKY.directionColumn-35P_nr.justifyStart-2NDFzi.alignStretch-DpGPf3.noWrap-3jynv6.base-3dtUhz > div.flex-1xMQg5.flex-1O1GKY.horizontal-1ae9ci.horizontal-2EEEnY.flex-1O1GKY.directionRow-3v3tfG.justifyStart-2NDFzi.alignStretch-DpGPf3.noWrap-3jynv6.spacer-29U_x8 > div.chat.flex-vertical.flex-spacer > div.content.flex-spacer.flex-horizontal > div.flex-spacer.flex-vertical > form > div.typing-2GQL18.stop-animation , #app-mount > div.app-19_DXt.platform-win > div > div.layers-3iHuyZ.flex-vertical.flex-spacer > div > div > div.flex-1xMQg5.flex-1O1GKY.vertical-V37hAW.flex-1O1GKY.directionColumn-35P_nr.justifyStart-2NDFzi.alignStretch-DpGPf3.noWrap-3jynv6.base-3dtUhz > div.flex-1xMQg5.flex-1O1GKY.horizontal-1ae9ci.horizontal-2EEEnY.flex-1O1GKY.directionRow-3v3tfG.justifyStart-2NDFzi.alignStretch-DpGPf3.noWrap-3jynv6.spacer-29U_x8 > div.chat.flex-vertical.flex-spacer > div.content.flex-spacer.flex-horizontal > div.flex-spacer.flex-vertical > form > div.typing-2GQL18.stop-animation , .typing-2GQL18 {
+     background-color: transparent !important;
+}
