@@ -1,0 +1,1175 @@
+//META{"name":"codeblockLangIdentifierMod","description":"Shows the corresponding language's syntax highlighting that was used on the code block. Modified by CompletelyUnbeilevable.","author":"intrnl","version":"1.0","source":"https://github.com/intrnl/discordcustomizations/tree/master/codeblockLangIdentifier/src","website":"https://discord.gg/XtedRz3"}*//
+
+.da-markup pre .hljs::before {
+	pointer-events: none;
+	display: block;
+	margin: 0 0 10px 0;
+	padding: 0 0 2px 0;
+	font-family: 'Whitney', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+	border-bottom: 2px solid rgba(32,34,37,.3);
+	color: #b58900;
+}
+
+.da-markup pre .hljs.1c::before {
+	content: "1c";
+}
+
+.da-markup pre .hljs.abnf::before {
+	content: "ABNF";
+}
+
+.da-markup pre .hljs.accesslog::before {
+	content: "Access Log";
+}
+
+.da-markup pre .hljs.actionscript::before {
+	content: "ActionScript";
+}
+
+.da-markup pre .hljs.as::before {
+	content: "ActionScript";
+}
+
+.da-markup pre .hljs.ada::before {
+	content: "Ada";
+}
+
+.da-markup pre .hljs.apache::before {
+	content: "Apache";
+}
+
+.da-markup pre .hljs.apacheconf::before {
+	content: "Apache";
+}
+
+.da-markup pre .hljs.applescript::before {
+	content: "Applescript";
+}
+
+.da-markup pre .hljs.osascript::before {
+	content: "Applescript";
+}
+
+.da-markup pre .hljs.arduino::before {
+	content: "Arduino";
+}
+
+.da-markup pre .hljs.armasm::before {
+	content: "ARM Assembly";
+}
+
+.da-markup pre .hljs.arm::before {
+	content: "ARM Assembly";
+}
+
+.da-markup pre .hljs.asciidoc::before {
+	content: "AsciiDoc";
+}
+
+.da-markup pre .hljs.adoc::before {
+	content: "AsciiDoc";
+}
+
+.da-markup pre .hljs.aspectj::before {
+	content: "AspectJ";
+}
+
+.da-markup pre .hljs.atom::before {
+	content: "Atom Feed (XML)";
+}
+
+.da-markup pre .hljs.autohotkey::before {
+	content: "AutoHotkey";
+}
+
+.da-markup pre .hljs.autoit::before {
+	content: "AutoIt";
+}
+
+.da-markup pre .hljs.avrasm::before {
+	content: "AVR Assembler";
+}
+
+.da-markup pre .hljs.awk::before {
+	content: "Awk";
+}
+
+.da-markup pre .hljs.mawk::before {
+	content: "Awk";
+}
+
+.da-markup pre .hljs.nawk::before {
+	content: "Awk";
+}
+
+.da-markup pre .hljs.gawk::before {
+	content: "Awk";
+}
+
+.da-markup pre .hljs.axapta::before {
+	content: "Axapta";
+}
+
+.da-markup pre .hljs.bash::before {
+	content: "Bash";
+}
+
+.da-markup pre .hljs.sh::before {
+	content: "Bash";
+}
+
+.da-markup pre .hljs.zsh::before {
+	content: "Bash";
+}
+
+.da-markup pre .hljs.basic::before {
+	content: "Basic";
+}
+
+.da-markup pre .hljs.dos::before {
+	content: "Batch";
+}
+
+.da-markup pre .hljs.bat::before {
+	content: "Batch";
+}
+
+.da-markup pre .hljs.cmd::before {
+	content: "Batch";
+}
+
+.da-markup pre .hljs.bnf::before {
+	content: "BNF";
+}
+
+.da-markup pre .hljs.brainfuck::before {
+	content: "Brainfuck";
+}
+
+.da-markup pre .hljs.c::before {
+	content: "C/C++";
+}
+
+.da-markup pre .hljs.cc::before {
+	content: "C/C++";
+}
+
+.da-markup pre .hljs.cpp::before {
+	content: "C/C++";
+}
+
+.da-markup pre .hljs.h::before {
+	content: "C/C++";
+}
+
+.da-markup pre .hljs.hpp::before {
+	content: "C/C++";
+}
+
+.da-markup pre .hljs.cs::before {
+	content: "C#";
+}
+
+.da-markup pre .hljs.csharp::before {
+	content: "C#";
+}
+
+.da-markup pre .hljs.cal::before {
+	content: "CAL";
+}
+
+.da-markup pre .hljs.capnproto::before {
+	content: "Cap'n Proto";
+}
+
+.da-markup pre .hljs.capnp::before {
+	content: "Cap'n Proto";
+}
+
+.da-markup pre .hljs.ceylon::before {
+	content: "Ceylon";
+}
+
+.da-markup pre .hljs.clean::before {
+	content: "Clean";
+}
+
+.da-markup pre .hljs.clojure::before {
+	content: "Clojure";
+}
+
+.da-markup pre .hljs.clj::before {
+	content: "Clojure";
+}
+
+.da-markup pre .hljs.clojure-repl::before {
+	content: "Clojure REPL";
+}
+
+.da-markup pre .hljs.cmake::before {
+	content: "CMake";
+}
+
+.da-markup pre .hljs.coffeescript::before {
+	content: "CoffeeScript";
+}
+
+.da-markup pre .hljs.coffee::before {
+	content: "CoffeeScript";
+}
+
+.da-markup pre .hljs.cson::before {
+	content: "CoffeeScript";
+}
+
+.da-markup pre .hljs.iced::before {
+	content: "CoffeeScript";
+}
+
+.da-markup pre .hljs.coq::before {
+	content: "Coq";
+}
+
+.da-markup pre .hljs.cos::before {
+	content: "Cach� Object Script";
+}
+
+.da-markup pre .hljs.cls::before {
+	content: "Cach� Object Script";
+}
+
+.da-markup pre .hljs.podspec::before {
+	content: "CocoaPod";
+}
+
+.da-markup pre .hljs.crmsh::before {
+	content: "crmsh";
+}
+
+.da-markup pre .hljs.crm::before {
+	content: "crmsh";
+}
+
+.da-markup pre .hljs.pcmk::before {
+	content: "crmsh";
+}
+
+.da-markup pre .hljs.crystal::before {
+	content: "Crystal";
+}
+
+.da-markup pre .hljs.csp::before {
+	content: "CSP";
+}
+
+.da-markup pre .hljs.css::before {
+	content: "CSS";
+}
+
+.da-markup pre .hljs.d::before {
+	content: "D";
+}
+
+.da-markup pre .hljs.dart::before {
+	content: "Dart";
+}
+
+.da-markup pre .hljs.delphi::before {
+	content: "Delphi (Object Pascal)";
+}
+
+.da-markup pre .hljs.dfm::before {
+	content: "Delphi (Object Pascal)";
+}
+
+.da-markup pre .hljs.dpr::before {
+	content: "Delphi (Object Pascal)";
+}
+
+.da-markup pre .hljs.diff::before {
+	content: "Diff";
+}
+
+.da-markup pre .hljs.patch::before {
+	content: "Diff";
+}
+
+.da-markup pre .hljs.django::before {
+	content: "Django";
+}
+
+.da-markup pre .hljs.jinja::before {
+	content: "Django";
+}
+
+.da-markup pre .hljs.dns::before {
+	content: "DNS Zone File";
+}
+
+.da-markup pre .hljs.dockerfile::before {
+	content: "Dockerfile";
+}
+
+.da-markup pre .hljs.docker::before {
+	content: "Dockerfile";
+}
+
+.da-markup pre .hljs.dsconfig::before {
+	content: "dsconfig";
+}
+
+.da-markup pre .hljs.dts::before {
+	content: "Device Tree";
+}
+
+.da-markup pre .hljs.dust::before {
+	content: "Dust";
+}
+
+.da-markup pre .hljs.ebnf::before {
+	content: "EBNF";
+}
+
+.da-markup pre .hljs.elixir::before {
+	content: "Elixir";
+}
+
+.da-markup pre .hljs.elm::before {
+	content: "Elm";
+}
+
+.da-markup pre .hljs.erb::before {
+	content: "ERB";
+}
+
+.da-markup pre .hljs.erlang::before {
+	content: "Erlang";
+}
+
+.da-markup pre .hljs.erl::before {
+	content: "Erlang";
+}
+
+.da-markup pre .hljs.erlang-repl::before {
+	content: "Erlang REPL";
+}
+
+.da-markup pre .hljs.excel::before {
+	content: "Excel";
+}
+
+.da-markup pre .hljs.xls::before {
+	content: "Excel";
+}
+
+.da-markup pre .hljs.xlsx::before {
+	content: "Excel";
+}
+
+.da-markup pre .hljs.fs::before {
+	content: "F#";
+}
+
+.da-markup pre .hljs.fsharp::before {
+	content: "F#";
+}
+
+.da-markup pre .hljs.fix::before {
+	content: "Fix";
+}
+
+.da-markup pre .hljs.flix::before {
+	content: "Flix";
+}
+
+.da-markup pre .hljs.fortran::before {
+	content: "Fortran";
+}
+
+.da-markup pre .hljs.f90::before {
+	content: "Fortran";
+}
+
+.da-markup pre .hljs.f95::before {
+	content: "Fortran";
+}
+
+.da-markup pre .hljs.gams::before {
+	content: "GAMS";
+}
+
+.da-markup pre .hljs.gms::before {
+	content: "GAMS";
+}
+
+.da-markup pre .hljs.gauss::before {
+	content: "Gauss";
+}
+
+.da-markup pre .hljs.gss::before {
+	content: "Gauss";
+}
+
+.da-markup pre .hljs.gcode::before {
+	content: "G-code";
+}
+
+.da-markup pre .hljs.nc::before {
+	content: "G-code";
+}
+
+.da-markup pre .hljs.gherkin::before {
+	content: "Gherkin";
+}
+
+.da-markup pre .hljs.glsl::before {
+	content: "GLSL";
+}
+
+.da-markup pre .hljs.go::before {
+	content: "Go";
+}
+
+.da-markup pre .hljs.golang::before {
+	content: "Go";
+}
+
+.da-markup pre .hljs.golo::before {
+	content: "Golo";
+}
+
+.da-markup pre .hljs.gololang::before {
+	content: "Golo";
+}
+
+.da-markup pre .hljs.gradle::before {
+	content: "Gradle";
+}
+
+.da-markup pre .hljs.groovy::before {
+	content: "Groovy";
+}
+
+.da-markup pre .hljs.haml::before {
+	content: "Haml";
+}
+
+.da-markup pre .hljs.handlebars::before {
+	content: "Handlebars";
+}
+
+.da-markup pre .hljs.hbs::before {
+	content: "Handlebars";
+}
+
+.da-markup pre .hljs.haskell::before {
+	content: "Haskell";
+}
+
+.da-markup pre .hljs.hs::before {
+	content: "Haskell";
+}
+
+.da-markup pre .hljs.haxe::before {
+	content: "Haxe";
+}
+
+.da-markup pre .hljs.hx::before {
+	content: "Haxe";
+}
+
+.da-markup pre .hljs.hsp::before {
+	content: "HSP";
+}
+
+.da-markup pre .hljs.html::before {
+	content: "HTML";
+}
+
+.da-markup pre .hljs.htmlbars::before {
+	content: "HTMLBars";
+}
+
+.da-markup pre .hljs.http::before {
+	content: "HTTP";
+}
+
+.da-markup pre .hljs.https::before {
+	content: "HTTPS";
+}
+
+.da-markup pre .hljs.hy::before {
+	content: "Hy";
+}
+
+.da-markup pre .hljs.hylang::before {
+	content: "Hy";
+}
+
+.da-markup pre .hljs.inform7::before {
+	content: "Inform7";
+}
+
+.da-markup pre .hljs.i7::before {
+	content: "Inform7";
+}
+
+.da-markup pre .hljs.ini::before {
+	content: "Ini";
+}
+
+.da-markup pre .hljs.irpf90::before {
+	content: "IRPF90";
+}
+
+.da-markup pre .hljs.java::before {
+	content: "Java";
+}
+
+.da-markup pre .hljs.jsp::before {
+	content: "Java";
+}
+
+.da-markup pre .hljs.javascript::before {
+	content: "JavaScript (Babel)";
+}
+
+.da-markup pre .hljs.js::before {
+	content: "JavaScript (Babel)";
+}
+
+.da-markup pre .hljs.jsx::before {
+	content: "JavaScript (Babel)";
+}
+
+.da-markup pre .hljs.xjb::before {
+	content: "JAXB (XML)";
+}
+
+.da-markup pre .hljs.jboss-cli::before {
+	content: "JBoss CLI";
+}
+
+.da-markup pre .hljs.json::before {
+	content: "JSON";
+}
+
+.da-markup pre .hljs.julia::before {
+	content: "Julia";
+}
+
+.da-markup pre .hljs.julia-repl::before {
+	content: "Julia REPL";
+}
+
+.da-markup pre .hljs.kotlin::before {
+	content: "Kotlin";
+}
+
+.da-markup pre .hljs.lasso::before {
+	content: "Lasso";
+}
+
+.da-markup pre .hljs.lassoscript::before {
+	content: "Lasso";
+}
+
+.da-markup pre .hljs.ls::before {
+	content: "Lasso";
+}
+
+.da-markup pre .hljs.ldif::before {
+	content: "LDIF";
+}
+
+.da-markup pre .hljs.leaf::before {
+	content: "Leaf";
+}
+
+.da-markup pre .hljs.less::before {
+	content: "Less";
+}
+
+.da-markup pre .hljs.lisp::before {
+	content: "Lisp";
+}
+
+.da-markup pre .hljs.livecodeserver::before {
+	content: "LiveCode Server";
+}
+
+.da-markup pre .hljs.livescript::before {
+	content: "LiveScript";
+}
+
+.da-markup pre .hljs.ls::before {
+	content: "LiveScript";
+}
+
+.da-markup pre .hljs.llvm::before {
+	content: "LLVM IR";
+}
+
+.da-markup pre .hljs.lsl::before {
+	content: "LSL";
+}
+
+.da-markup pre .hljs.lua::before {
+	content: "Lua";
+}
+
+.da-markup pre .hljs.makefile::before {
+	content: "Makefile";
+}
+
+.da-markup pre .hljs.mk::before {
+	content: "Makefile";
+}
+
+.da-markup pre .hljs.mak::before {
+	content: "Makefile";
+}
+
+.da-markup pre .hljs.markdown::before {
+	content: "Markdown";
+}
+
+.da-markup pre .hljs.md::before {
+	content: "Markdown";
+}
+
+.da-markup pre .hljs.mkd::before {
+	content: "Markdown";
+}
+
+.da-markup pre .hljs.mkdown::before {
+	content: "Markdown";
+}
+
+.da-markup pre .hljs.mathematica::before {
+	content: "Mathematica";
+}
+
+.da-markup pre .hljs.mma::before {
+	content: "Mathematica";
+}
+
+.da-markup pre .hljs.matlab::before {
+	content: "MatLab";
+}
+
+.da-markup pre .hljs.maxima::before {
+	content: "Maxima";
+}
+
+.da-markup pre .hljs.mel::before {
+	content: "MEL";
+}
+
+.da-markup pre .hljs.mercury::before {
+	content: "Mercury";
+}
+
+.da-markup pre .hljs.mipsasm::before {
+	content: "MISP Assembly";
+}
+
+.da-markup pre .hljs.mips::before {
+	content: "MISP Assembly";
+}
+
+.da-markup pre .hljs.routeros::before {
+	content: "Microtik RouterOS script";
+}
+
+.da-markup pre .hljs.mizar::before {
+	content: "Mizar";
+}
+
+.da-markup pre .hljs.mojolicious::before {
+	content: "Mojolicious";
+}
+
+.da-markup pre .hljs.monkey::before {
+	content: "Monkey";
+}
+
+.da-markup pre .hljs.moonscript::before {
+	content: "MoonScript";
+}
+
+.da-markup pre .hljs.moon::before {
+	content: "MoonScript";
+}
+
+.da-markup pre .hljs.n1ql::before {
+	content: "N1QL";
+}
+
+.da-markup pre .hljs.nginx::before {
+	content: "Nginx";
+}
+
+.da-markup pre .hljs.nginxconf::before {
+	content: "Nginx";
+}
+
+.da-markup pre .hljs.nimrod::before {
+	content: "Nimrod";
+}
+
+.da-markup pre .hljs.nix::before {
+	content: "Nix";
+}
+
+.da-markup pre .hljs.nsis::before {
+	content: "NSIS";
+}
+
+.da-markup pre .hljs.objectivec::before {
+	content: "Objective-C";
+}
+
+.da-markup pre .hljs.objc::before {
+	content: "Objective-C";
+}
+
+.da-markup pre .hljs.ocaml::before {
+	content: "OCaml";
+}
+
+.da-markup pre .hljs.openscad::before {
+	content: "OpenSCAD";
+}
+
+.da-markup pre .hljs.scad::before {
+	content: "OpenSCAD";
+}
+
+.da-markup pre .hljs.ruleslanguage::before {
+	content: "Oracle Rules Language";
+}
+
+.da-markup pre .hljs.oxygene::before {
+	content: "Oxygene";
+}
+
+.da-markup pre .hljs.parser3::before {
+	content: "Parser3";
+}
+
+.da-markup pre .hljs.pascal::before {
+	content: "Pascal/Object Pascal";
+}
+
+.da-markup pre .hljs.pas::before {
+	content: "Pascal/Object Pascal";
+}
+
+.da-markup pre .hljs.freepascal::before {
+	content: "Pascal/Object Pascal";
+}
+
+.da-markup pre .hljs.lazarus::before {
+	content: "Pascal/Object Pascal";
+}
+
+.da-markup pre .hljs.lfm::before {
+	content: "Pascal/Object Pascal";
+}
+
+.da-markup pre .hljs.lpr::before {
+	content: "Pascal/Object Pascal";
+}
+
+.da-markup pre .hljs.perl::before {
+	content: "Perl";
+}
+
+.da-markup pre .hljs.pl::before {
+	content: "Perl";
+}
+
+.da-markup pre .hljs.pm::before {
+	content: "Perl";
+}
+
+.da-markup pre .hljs.pf::before {
+	content: "PF";
+}
+
+.da-markup pre .hljs.pf.conf::before {
+	content: "PF";
+}
+
+.da-markup pre .hljs.php::before {
+	content: "PHP";
+}
+
+.da-markup pre .hljs.php3::before {
+	content: "PHP";
+}
+
+.da-markup pre .hljs.php4::before {
+	content: "PHP";
+}
+
+.da-markup pre .hljs.php5::before {
+	content: "PHP";
+}
+
+.da-markup pre .hljs.php6::before {
+	content: "PHP";
+}
+
+.da-markup pre .hljs.pony::before {
+	content: "Pony";
+}
+
+.da-markup pre .hljs.powershell::before {
+	content: "PowerShell";
+}
+
+.da-markup pre .hljs.ps::before {
+	content: "PowerShell";
+}
+
+.da-markup pre .hljs.processing::before {
+	content: "Processing";
+}
+
+.da-markup pre .hljs.prolog::before {
+	content: "Prolog";
+}
+
+.da-markup pre .hljs.plist::before {
+	content: "Property List";
+}
+
+.da-markup pre .hljs.protobuf::before {
+	content: "Protocol Buffers";
+}
+
+.da-markup pre .hljs.puppet::before {
+	content: "Puppet";
+}
+
+.da-markup pre .hljs.pp::before {
+	content: "Puppet";
+}
+
+.da-markup pre .hljs.purebasic::before {
+	content: "PureBASIC";
+}
+
+.da-markup pre .hljs.python::before {
+	content: "Python";
+}
+
+.da-markup pre .hljs.py::before {
+	content: "Python";
+}
+
+.da-markup pre .hljs.gyp::before {
+	content: "Python";
+}
+
+.da-markup pre .hljs.profile::before {
+	content: "Python profile";
+}
+
+.da-markup pre .hljs.q::before {
+	content: "Q";
+}
+
+.da-markup pre .hljs.k::before {
+	content: "Q";
+}
+
+.da-markup pre .hljs.kdb::before {
+	content: "Q";
+}
+
+.da-markup pre .hljs.qml::before {
+	content: "QML";
+}
+
+.da-markup pre .hljs.r::before {
+	content: "R";
+}
+
+.da-markup pre .hljs.rib::before {
+	content: "RenderMan RIB";
+}
+
+.da-markup pre .hljs.rsl::before {
+	content: "RenderMan RSL";
+}
+
+.da-markup pre .hljs.roboconf::before {
+	content: "Roboconf";
+}
+
+.da-markup pre .hljs.graph::before {
+	content: "Roboconf";
+}
+
+.da-markup pre .hljs.instances::before {
+	content: "Roboconf";
+}
+
+.da-markup pre .hljs.rss::before {
+	content: "RSS Feed (XML)";
+}
+
+.da-markup pre .hljs.ruby::before {
+	content: "Ruby";
+}
+
+.da-markup pre .hljs.rb::before {
+	content: "Ruby";
+}
+
+.da-markup pre .hljs.thor::before {
+	content: "Thor";
+}
+
+.da-markup pre .hljs.irb::before {
+	content: "IRB";
+}
+
+.da-markup pre .hljs.gemspec::before {
+	content: "Ruby Gem";
+}
+
+.da-markup pre .hljs.rust::before {
+	content: "Rust";
+}
+
+.da-markup pre .hljs.rs::before {
+	content: "Rust";
+}
+
+.da-markup pre .hljs.scala::before {
+	content: "Scala";
+}
+
+.da-markup pre .hljs.scheme::before {
+	content: "Scheme";
+}
+
+.da-markup pre .hljs.scilab::before {
+	content: "Scilab";
+}
+
+.da-markup pre .hljs.sci::before {
+	content: "Scilab";
+}
+
+.da-markup pre .hljs.scss::before {
+	content: "SCSS";
+}
+
+.da-markup pre .hljs.shell::before {
+	content: "Shell";
+}
+
+.da-markup pre .hljs.console::before {
+	content: "Shell";
+}
+
+.da-markup pre .hljs.smali::before {
+	content: "Smali";
+}
+
+.da-markup pre .hljs.smalltalk::before {
+	content: "Smalltalk";
+}
+
+.da-markup pre .hljs.st::before {
+	content: "Smalltalk";
+}
+
+.da-markup pre .hljs.sml::before {
+	content: "SML";
+}
+
+.da-markup pre .hljs.sqf::before {
+	content: "SQF";
+}
+
+.da-markup pre .hljs.sql::before {
+	content: "SQL";
+}
+
+.da-markup pre .hljs.stan::before {
+	content: "Stan";
+}
+
+.da-markup pre .hljs.stata::before {
+	content: "Stata";
+}
+
+.da-markup pre .hljs.step21::before {
+	content: "STEP Part 21";
+}
+
+.da-markup pre .hljs.step::before {
+	content: "STEP Part 21";
+}
+
+.da-markup pre .hljs.stp::before {
+	content: "STEP Part 21";
+}
+
+.da-markup pre .hljs.p21::before {
+	content: "STEP Part 21";
+}
+
+.da-markup pre .hljs.stylus::before {
+	content: "Stylus";
+}
+
+.da-markup pre .hljs.styl::before {
+	content: "Stylus";
+}
+
+.da-markup pre .hljs.subunit::before {
+	content: "SubUnit";
+}
+
+.da-markup pre .hljs.swift::before {
+	content: "Swift";
+}
+
+.da-markup pre .hljs.taggerscript::before {
+	content: "Tagger Script";
+}
+
+.da-markup pre .hljs.tap::before {
+	content: "TAP";
+}
+
+.da-markup pre .hljs.tcl::before {
+	content: "Tcl";
+}
+
+.da-markup pre .hljs.tk::before {
+	content: "Tcl";
+}
+
+.da-markup pre .hljs.tex::before {
+	content: "TeX";
+}
+
+.da-markup pre .hljs.thrift::before {
+	content: "Thrift";
+}
+
+.da-markup pre .hljs.tp::before {
+	content: "TP";
+}
+
+.da-markup pre .hljs.twig::before {
+	content: "Twig";
+}
+
+.da-markup pre .hljs.craftcms::before {
+	content: "Twig";
+}
+
+.da-markup pre .hljs.typescript::before {
+	content: "TypeScript";
+}
+
+.da-markup pre .hljs.ts::before {
+	content: "TypeScript";
+}
+
+.da-markup pre .hljs.vala::before {
+	content: "Vala";
+}
+
+.da-markup pre .hljs.vbnet::before {
+	content: "VB.NET";
+}
+
+.da-markup pre .hljs.vb::before {
+	content: "VB.NET";
+}
+
+.da-markup pre .hljs.vbscript::before {
+	content: "VBScript";
+}
+
+.da-markup pre .hljs.vbs::before {
+	content: "VBScript";
+}
+
+.da-markup pre .hljs.verilog::before {
+	content: "Verilog";
+}
+
+.da-markup pre .hljs.v::before {
+	content: "Verilog";
+}
+
+.da-markup pre .hljs.vhdl::before {
+	content: "VHDL";
+}
+
+.da-markup pre .hljs.vim::before {
+	content: "Vim Script";
+}
+
+.da-markup pre .hljs.x86asm::before {
+	content: "x86 Assembly";
+}
+
+.da-markup pre .hljs.xl::before {
+	content: "XL";
+}
+
+.da-markup pre .hljs.tao::before {
+	content: "XL";
+}
+
+.da-markup pre .hljs.xquery::before {
+	content: "XQuery";
+}
+
+.da-markup pre .hljs.xq xpath::before {
+	content: "XQuery";
+}
+
+.da-markup pre .hljs.yaml::before {
+	content: "YAML";
+}
+
+.da-markup pre .hljs.yml::before {
+	content: "YAML";
+}
+
+.da-markup pre .hljs.xhtml::before {
+	content: "XHTML";
+}
+
+.da-markup pre .hljs.xml::before {
+	content: "XML";
+}
+
+.da-markup pre .hljs.xsd::before {
+	content: "XML Schema";
+}
+
+.da-markup pre .hljs.xsl::before {
+	content: "XSL";
+}
+
+.da-markup pre .hljs.zephir::before {
+	content: "Zephir";
+}
+
+.da-markup pre .hljs.zep::before {
+	content: "Zephir";
+}
