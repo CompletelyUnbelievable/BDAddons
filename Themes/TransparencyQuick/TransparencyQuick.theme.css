@@ -12,7 +12,7 @@
 	--DarkBackground: transparent; /*changes the background of the window in discord's dark theme*/
 	--LightBackground: transparent; /*changes the background of the window in discord's light theme*/
 	
-	--dim: rgba(79,84,92,0.5); /*Makes the background darker, and possibly prevents a user from clicking through the window with the transparency patcher and a transparent background color.*/
+	--dim: rgba(79,84,92,0.5); /*Makes the background darker, and can prevent a user from clicking through the window with the transparency patcher and a transparent background color.*/
 	--DarkTitlebarColor: #202225; /*Title bar while using discord's dark theme, mileage may vary on Mac/Linux.*/
 	--LightTitlebarColor: #202225; /*Title bar while using discord's light theme, mileage may vary on Mac/Linux.*/
 	--FallbackColor: #202225; /*A solid color to use if the background variables are not properly set.*/
