@@ -1,0 +1,102 @@
+/*Sets the dim*/
+#app-mount .da-layers {
+	background: var(--dim, transparent);
+	background-size: var(--BackgroundFill, 100% 100%);
+}
+
+#app-mount .da-activityFeed {
+	background-color: transparent;
+}
+
+#app-mount .da-messagesWrapper, #app-mount .da-messagesWrapper + form {
+	background-color: transparent;
+}
+
+#app-mount .da-chat, #app-mount .da-chat form, #app-mount .da-content {
+	background-color: transparent;
+}
+
+#app-mount .da-chat>.da-content {
+	background-color: transparent;
+}
+
+#app-mount .da-chat {
+	background-color: transparent;
+}
+
+#app-mount .da-channels {
+	background-color: transparent;
+}
+
+#app-mount .da-guildsWrapper {
+	background-color: transparent;
+}
+
+#app-mount .da-layers .da-container {
+	background-color: transparent;
+}
+
+#app-mount .da-layers > .layer-3QrUeG {
+	background: transparent;
+}
+
+#app-mount .da-uiStandardSidebarView .da-contentRegion {
+	background: transparent;
+}
+
+#app-mount .da-uiStandardSidebarView .da-sidebarRegion {
+	background: transparent;
+}
+
+#app-mount .da-uiStandardSidebarView {
+	background: transparent;
+}
+
+#app-mount .da-title {
+	background: transparent;
+}
+
+#app-mount .da-channels .da-container {
+	background-color: transparent;
+}
+
+#app-mount .da-chat form {
+	background-color: transparent;
+}
+
+#app-mount #friends .da-headerBar {
+	background: transparent;
+}
+
+#app-mount #friends {
+	background-color: transparent;
+}
+
+#app-mount .da-membersWrap .da-members, #app-mount .membersWrap-2h-GB4 .members-1998pB {
+	background-color: transparent;
+}
+
+#app-mount .da-typing, #app-mount .typing-2GQL18 {
+		background: transparent;
+}
+
+#app-mount .da-guildsWrapper .da-guildsAdd {
+	background: transparent;
+}
+
+#app-mount .da-gameLibrary, #app-mount .da-gameLibrary .da-headerBar, .da-activityFeed .da-headerBar {
+	background-color: transparent;
+}
+
+#app-mount .da-layers .chat-3bRxxu {
+	background-color: transparent;
+}
+
+/*Important tags and pseudo elements/classes from here on:*/
+#app-mount .da-guildsWrapper .da-guilds .da-guildInner {
+	background: transparent !important;
+}
+
+#app-mount .da-card .da-header, #app-mount .da-activityFeed, #app-mount .da-card .da-cardHeader, #app-mount .da-card {
+	background: transparent;
+}
