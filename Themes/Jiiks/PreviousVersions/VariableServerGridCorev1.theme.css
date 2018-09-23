@@ -1,0 +1,136 @@
+//META{"name":"VariableServerGridCorev1","description":"A theme based on Jikks' ServerGrid. Allows the user to set the number of columns in the CSS file.","author":"CompletelyUnbelievable","version":"1.0","source":"https://github.com/CompletelyUnbelievable/TheRevitalizationProject/tree/master/Jiiks/Themes","website":"https://git.io/vhWjm"}*//
+
+
+:root {
+	--columns: 2; /*2*/
+	--spacer: 20px; /*20px*/
+	--alertscolor: #7289da; /*#7289da*/
+}
+
+
+
+#bd-pub-li {
+	position: absolute;
+	top: 82px;
+	left: calc(((52px * var(--columns, 1) - (54px - var(--spacer, 20px))) / 2));
+}
+
+.da-guildsWrapper {
+	width: calc(52px * var(--columns, 1) + var(--spacer, 20px));
+}
+
+.da-guildsWrapper .da-scrollerWrap {
+	width: calc(52px * var(--columns, 1) + var(--spacer, 20px));
+}
+
+.da-appMount .guild-1EfMGQ.audio-3vVhBi .da-guildInner::after {
+	top: 2px;
+	right: -2px;
+	background-color: transparent;
+}
+
+.da-guildsWrapper .da-scroller {
+	padding-right: 14px;
+}
+
+.da-guildsAdd .da-guildsAddInner {
+	position: absolute;
+	top: 4.5px;
+	left: 13.5px;
+}
+
+.da-guilds .guild-1EfMGQ:not(:first-child):not(#bd-pub-li):not(#RANbutton-frame) {
+	padding-top: 8px;
+}
+
+/*Read all button alligns correctly.*/
+#RANbutton-frame.da-guild {
+	margin: auto;
+}
+
+.da-guildsWrapper .da-guilds {
+	display: flex;
+	flex-flow: row wrap;
+	align-content: flex-start;
+}
+
+.da-guildsWrapper .da-guilds .guild-1EfMGQ:first-child { 
+	position: relative;
+	margin: 0px auto 0px auto;
+}
+
+.da-guildsWrapper .da-guilds .guild-1EfMGQ:first-child.selected-ML3OIq:before { 
+	display: none;
+}
+
+.da-guildsWrapper .da-guilds .da-guildSeparator {
+	position: relative;
+	width: 100%;
+	margin-top: 0px;
+}
+
+.da-guildsWrapper .da-guilds .da-friendsOnline {
+	position: relative;
+	width: 100%;
+	margin: auto;
+	margin-top: 5px;
+	margin-bottom: 10px;
+}
+
+#app-mount .da-guildsWrapper .selected-ML3OIq:before {
+	position: absolute;
+	left: 0px;
+	top: 42px;
+	background: var(--alertscolor, #7289da);
+	z-index: 9000;
+	width: 5px;
+	height: 25px;
+}
+
+.da-guildsWrapper .da-guilds .unread-qLkInr:not(.selected-ML3OIq)::before {
+	position: absolute;
+	left: 2px;
+	top: 15px;
+	z-index: 9000;
+	background: var(--alertscolor, #7289da);
+	width: 12px;
+	height: 12px;
+	border-radius: 12px;
+}
+
+.da-guildsWrapper .da-guilds .da-guild {
+	position: relative;
+}
+
+.da-guildsWrapper .da-guilds .da-dms {
+	width: 100%;
+	display: flex;
+	flex-flow: row wrap;
+}
+
+.da-guildsWrapper .da-guilds .da-dms .da-guild {
+	left: 0;
+	top: 2px;
+}
+
+/*removes scrollbar.*/
+
+.da-appMount .da-guildsWrapper .scroller-wrap .scroller::-webkit-scrollbar {
+	width: 0px; /*14*/
+}
+
+.da-appMount .da-guildsWrapper .da-scroller::-webkit-scrollbar-thumb {
+	background-color: transparent; /*#202225*/
+	border-color: transparent; /*#36393f*/
+}
+
+.da-appMount .da-guildsWrapper .da-scroller::-webkit-scrollbar-track-piece {
+	background-color: transparent; /*#2f3136*/
+	border-color: transparent; /*#36393f*/
+	border-radius: 0px; /*7px*/
+}
+/*End of scrollbar fix.*/
+
+.da-appMount .guild-1EfMGQ+.guild-1EfMGQ {
+	margin: auto;
+}
