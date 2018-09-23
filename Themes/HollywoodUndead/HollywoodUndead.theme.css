@@ -1,0 +1,14 @@
+//META{"name":"HollywoodUndead","description":"A hollywood undead theme. Updates Automatically when the GitHub page is updated.","author":"CompletelyUnbelievable","version":"1.0","source":"https://github.com/CompletelyUnbelievable/HollywoodUndead","website":"https://git.io/vhWjm"}*//
+
+@import url("https://completelyunbelievable.github.io/TransparencyQuick/Import/TransparencyQuickDark.css");
+@import url("https://completelyunbelievable.github.io/HollywoodUndead/Import/HollywoodUndead.css");
+
+/*Background image and titlebar color.*/
+:root {
+	--DarkBackground: url(https://raw.githubusercontent.com/CompletelyUnbelievable/HollywoodUndead/master/Import/Images/HU.png);
+	--DarkTitlebarColor: #202225;
+	--LightTitlebarColor: #202225;
+	--LightTitle: 'Anti-Light';
+	--DarkTitle: 'HollywoodUndead';
+	--BackgroundFill: cover;
+}
