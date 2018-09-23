@@ -1,0 +1,150 @@
+@charset "UTF-8";
+
+body .da-appMount {
+	background-color: transparent;
+}
+
+.da-appMount .da-titleBar {
+	padding-top: 4px;
+	margin-top: 0;
+	background-color: transparent;
+}
+
+.app {
+	margin-top: -22px;
+	background-repeat: no-repeat;
+}
+
+.app::before {
+	content: '';
+	padding-top: 22px;
+}
+
+.app.theme-dark::before {
+	background: var(--DarkTitlebarColor, var(--FallbackColor, transparent));
+}
+
+.app.theme-light::before {
+	background: var(--LightTitlebarColor, var(--FallbackColor, transparent));
+}
+
+.app.theme-dark {
+	background: var(--DarkBackground, var(--FallbackColor, transparent));
+	background-size: var(--BackgroundFill, 100% 100%);
+}
+
+.app.theme-light {
+	background: var(--LightBackground, var(--FallbackColor, transparent));
+	background-size: var(--BackgroundFill, 100% 100%);
+}
+
+.da-appMount .da-userSettingsAccount div:nth-child(2) >div:nth-child(2) >.da-viewBody:not(:hover) {
+	transition: filter 0.3s;
+	filter: blur(6px);
+}
+
+.da-appMount .da-userSettingsAccount div:nth-child(2) >div:nth-child(2) >.da-viewBody:hover {
+	transition: filter 0.3s;
+	filter: none;
+}
+
+.theme-light .da-layers {
+	background: var(--dim, transparent);
+	background-size: var(--BackgroundFill, 100% 100%);
+}
+
+.theme-light .da-activityFeed {
+	background-color: transparent;
+}
+
+.theme-light .da-messagesWrapper, .theme-light .da-messagesWrapper +form {
+	background-color: transparent;
+}
+
+.theme-light .da-chat, .theme-light .da-chat form, .theme-light .da-content {
+	background-color: transparent;
+}
+
+.theme-light .da-chat >.da-content {
+	background-color: transparent;
+}
+
+.theme-light .da-chat {
+	background-color: transparent;
+}
+
+.theme-light .da-channels {
+	background-color: transparent;
+}
+
+.theme-light .da-guildsWrapper {
+	background-color: transparent;
+}
+
+.theme-light .da-layers .da-container {
+	background-color: transparent;
+}
+
+.theme-light .da-layers >.layer-3QrUeG {
+	background: transparent;
+}
+
+.theme-light .da-uiStandardSidebarView .da-contentRegion {
+	background: transparent;
+}
+
+.theme-light .da-uiStandardSidebarView .da-sidebarRegion {
+	background: transparent;
+}
+
+.theme-light .da-uiStandardSidebarView {
+	background: transparent;
+}
+
+.theme-light .da-title {
+	background: transparent;
+}
+
+.theme-light .da-channels .da-container {
+	background-color: transparent;
+}
+
+.theme-light .da-chat form {
+	background-color: transparent;
+}
+
+.theme-light #friends .da-headerBar {
+	background: transparent;
+}
+
+.theme-light #friends {
+	background-color: transparent;
+}
+
+.theme-light .da-membersWrap .da-members, .theme-light .membersWrap-2h-GB4 .members-1998pB {
+	background-color: transparent;
+}
+
+.theme-light .da-typing, .theme-light .typing-2GQL18 {
+	background: transparent;
+}
+
+.theme-light .da-guildsWrapper .da-guildsAdd {
+	background: transparent;
+}
+
+.theme-light .da-gameLibrary, .theme-light .da-gameLibrary .da-headerBar, .da-activityFeed .da-headerBar {
+	background-color: transparent;
+}
+
+.theme-light .da-layers .chat-3bRxxu {
+	background-color: transparent;
+}
+
+.theme-light .da-guildsWrapper .da-guilds .da-guildInner {
+	background: transparent !important;
+}
+
+.theme-light .da-card .da-header, .theme-light .da-activityFeed, .theme-light .da-card .da-cardHeader, .theme-light .da-card {
+	background: transparent;
+}
