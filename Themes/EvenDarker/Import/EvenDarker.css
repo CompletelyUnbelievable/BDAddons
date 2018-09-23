@@ -1,0 +1,13 @@
+@charset "UTF-8";
+
+/*Changes the appearance page.*/
+.marginTop40-i-78cZ:nth-child(2) > .radioGroup-1GBvlr > .item-26Dhrx:nth-child(2) > .info-3LOr12 > .title-3BE6m5 {
+	font-size: 0px;
+}
+
+#app-mount > div > div > div.layers-3iHuyZ.flex-vertical.flex-spacer > div:nth-child(2) > div > div:nth-child(2) > div > div > div > div.content-column.default > div > div > div:nth-child(2) > div > div:nth-child(2) > div > div.title-3BE6m5:before {
+	content: 'Even Darker' !important; /*to take dominance over Anti-Light's name change.*/
+	position: absolute;
+	font-size: 16px;
+}
+/*end of appearance page changes.*/
