@@ -19,9 +19,9 @@ class FixActivityMenu {
 	}
 
 	stop () {
-		removeClass('background-1ri_HN', 'CUReplaced');
-		removeClass('background-3zYSQO', 'CUReplaced');
-		removeClass('splashArt-1anaP9', 'CUReplaced');
+		removeClass('background-1ri_HN', PluginName + 'Tag');
+		removeClass('background-3zYSQO', PluginName + 'Tag');
+		removeClass('splashArt-1anaP9', PluginName + 'Tag');
 
 		if (document.getElementById(PluginName + 'CSS')) {
 			BdApi.clearCSS(PluginName + 'CSS');
@@ -63,6 +63,29 @@ function setStyles() {
 
 	return styles;
 }
+
+/*
+function setEvent(x) {
+
+	if (document.getElementsByClassName(x)[0]) {
+		$('.' + x).each(function(i, obj) {
+			document.getElementsByClassName(x)[i].addEventListener("click", function(){
+				setTimeout(Eyes, 0);
+			});
+		});
+	}
+
+}
+
+function removeEvent(x) {
+
+		$('.' + x).each(function(i, obj) {
+			document.getElementsByClassName(x)[i].removeEventListener("click", function(){
+				setTimeout(Eyes, 0);
+			});
+		});
+
+}*/
 
 function FindModify(x, y) { /*Find x, remember with y.*/
 	if (document.getElementsByClassName(x)[0]) {
