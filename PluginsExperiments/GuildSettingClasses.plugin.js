@@ -46,7 +46,7 @@ function FindModify(x) {
 	if (document.getElementsByClassName(x)[0]) {
 		for (i = 0; i < document.getElementsByClassName(x).length; i++) {
 				ClassElement[i] = document.getElementsByClassName(x)[i];
-				ClassName[i] = ((document.getElementsByClassName(x)[i].innerHTML).replace(/ /g, "").replace('&amp;', "").replace('\'', ""));				
+				ClassName[i] = document.getElementsByClassName(x)[i].innerHTML.replace(/ |'|&amp;|&/igm, "");
 				if (ClassElement[i].classList.contains(ClassName[i]) == false) {
 					ClassElement[i].classList.add(ClassName[i]);
 				}
