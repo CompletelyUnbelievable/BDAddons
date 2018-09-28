@@ -7,7 +7,7 @@ class StartingVolume {
 
 	getName () {PluginName = "StartingVolume"; return PluginName;}
 
-	getDescription () {PluginDesc = "Sets the volume on the default discord embedDoes not visually update properly."; return PluginDesc;}
+	getDescription () {PluginDesc = "Sets the volume on the default discord video embeds. Does not visually update properly."; return PluginDesc;}
 
 	getVersion () {PluginVers = "Alpha"; return PluginVers;}
 
