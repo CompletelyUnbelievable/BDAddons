@@ -1,13 +1,13 @@
 //META{"name":"StartingVolume"}*//
 
-var PluginName, PluginDesc, PluginVers, PluginAuth, ClassElement, VolumeElement, ReplacedClass, VolValP, VolValD;
+var PluginName, PluginDesc, PluginVers, PluginAuth, ClassElement, ReplacedClass, VolValP, VolValD;
 
 
 class StartingVolume {
 
 	getName () {PluginName = "StartingVolume"; return PluginName;}
 
-	getDescription () {PluginDesc = "Sets the volume on the default discord video embeds. Does not visually update properly."; return PluginDesc;}
+	getDescription () {PluginDesc = "A base for plugin creation."; return PluginDesc;}
 
 	getVersion () {PluginVers = "Alpha"; return PluginVers;}
 
@@ -24,7 +24,7 @@ class StartingVolume {
 	start () {
 		VolValP = '10%';
 		ReplacedClass = 'AudioFixed';
-		ClassElement = [], VolumeElement = [];
+		ClassElement = [];
 	}
 }
 
@@ -38,10 +38,25 @@ function CalcVolume(x) {
 }
 
 function VideoPlayer() {
+	/*For video*/
 	if (document.getElementsByTagName('video')[0]) {
 		for (i = 0; i < document.getElementsByTagName('video').length; i++) {
-			if (document.getElementsByTagName('video')[i].classList.contains('video-8eMOth')) {
+			if (document.getElementsByTagName('video')[i].classList.contains('video-8eMOth') && !document.getElementsByTagName('video')[i].classList.contains(ReplacedClass)) {
 				ClassElement[i] = document.getElementsByTagName('video')[i];
+				if (ClassElement[i].classList.contains(ReplacedClass) == false) {
+					ClassElement[i].classList.add(ReplacedClass);
+					if (CalcVolume(VolValP) != null) {
+						ClassElement[i].volume = VolValD;
+					}
+				}
+			}
+		}
+	}
+	/*For audio tracks*/
+	if (document.getElementsByTagName('audio')[0]) {
+		for (i = 0; i < document.getElementsByTagName('audio').length; i++) {
+			if (document.getElementsByTagName('audio')[i].classList.contains('audio-2-PNle') && !document.getElementsByTagName('video')[i].classList.contains(ReplacedClass)) {
+				ClassElement[i] = document.getElementsByTagName('audio')[i];
 				if (ClassElement[i].classList.contains(ReplacedClass) == false) {
 					ClassElement[i].classList.add(ReplacedClass);
 					if (CalcVolume(VolValP) != null) {
