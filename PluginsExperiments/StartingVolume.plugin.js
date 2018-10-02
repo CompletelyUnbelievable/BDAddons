@@ -55,10 +55,13 @@ function CalcVolume(x) {
 }
 
 function RemoveClasses() {
-	if (Array.isArray(ClassElement)) {
-		for (i = 0; i < ClassElement.length; i++) {
-			if (ClassElement[i] && ReplacedClass) {
-				ClassElement[i].classList.remove(ReplacedClass);
+	if (document.getElementsByClassName(ReplacedClass)[0]) {
+		for (i = 0; i < document.getElementsByClassName(ReplacedClass).length; i++) {
+			if (document.getElementsByClassName(ReplacedClass)[i]) {
+				if (CalcVolume('50%') != null) {
+					document.getElementsByClassName(ReplacedClass)[i].volume = CalcVolume('50%');
+				}
+				document.getElementsByClassName(ReplacedClass)[i].classList.remove(ReplacedClass);
 			}
 		}
 	}
