@@ -7,14 +7,15 @@ class StartingVolume {
 
 	getName () {PluginName = "StartingVolume"; return PluginName;}
 
-	getDescription () {PluginDesc = "A base for plugin creation."; return PluginDesc;}
+	getDescription () {PluginDesc = "Sets the volume on the default discord video and audio embeds. Does not visually update properly."; return PluginDesc;}
 
 	getVersion () {PluginVers = "Alpha"; return PluginVers;}
 
 	getAuthor () {PluginAuth = "CompletelyUnbelievable"; return PluginAuth;}
 
 	observer () {
-		VideoPlayer();
+		Player('video', 'video-8eMOth');
+		Player('audio', 'audio-2-PNle');
 	}
 
 	stop () {
@@ -28,43 +29,28 @@ class StartingVolume {
 	}
 }
 
+function Player(Tag, TagClass) { /*Tag name, verify with a class*/
+	if (document.getElementsByTagName(Tag)[0]) {
+		for (i = 0; i < document.getElementsByTagName(Tag).length; i++) {
+			if (document.getElementsByTagName(Tag)[i].classList.contains(TagClass) && !document.getElementsByTagName(Tag)[i].classList.contains(ReplacedClass)) {
+				ClassElement[i] = document.getElementsByTagName(Tag)[i];
+				if (ClassElement[i].classList.contains(ReplacedClass) == false) {
+					ClassElement[i].classList.add(ReplacedClass);
+					if (CalcVolume(VolValP) != null) {
+						ClassElement[i].volume = VolValD;
+					}
+				}
+			}
+		}
+	}
+}
+
 function CalcVolume(x) {
 	if(!isNaN(parseFloat(x))){
 		VolValD = parseFloat(x) / 100;
 		return VolValD;
 	}else{
 		return null;
-	}
-}
-
-function VideoPlayer() {
-	/*For video*/
-	if (document.getElementsByTagName('video')[0]) {
-		for (i = 0; i < document.getElementsByTagName('video').length; i++) {
-			if (document.getElementsByTagName('video')[i].classList.contains('video-8eMOth') && !document.getElementsByTagName('video')[i].classList.contains(ReplacedClass)) {
-				ClassElement[i] = document.getElementsByTagName('video')[i];
-				if (ClassElement[i].classList.contains(ReplacedClass) == false) {
-					ClassElement[i].classList.add(ReplacedClass);
-					if (CalcVolume(VolValP) != null) {
-						ClassElement[i].volume = VolValD;
-					}
-				}
-			}
-		}
-	}
-	/*For audio tracks*/
-	if (document.getElementsByTagName('audio')[0]) {
-		for (i = 0; i < document.getElementsByTagName('audio').length; i++) {
-			if (document.getElementsByTagName('audio')[i].classList.contains('audio-2-PNle') && !document.getElementsByTagName('video')[i].classList.contains(ReplacedClass)) {
-				ClassElement[i] = document.getElementsByTagName('audio')[i];
-				if (ClassElement[i].classList.contains(ReplacedClass) == false) {
-					ClassElement[i].classList.add(ReplacedClass);
-					if (CalcVolume(VolValP) != null) {
-						ClassElement[i].volume = VolValD;
-					}
-				}
-			}
-		}
 	}
 }
 
