@@ -56,13 +56,3 @@ body .da-appMount {
 	filter: none;
 }
 /*End of Email blur.*/
-
-#app-mount .tilePopoutContainer-1vD21T .tileWrapper-2khh-w, #app-mount .whyYouMightLikeIt-2zZIIj, #app-mount .purchaseUnit-2lxci3 .bodySection-jqkkIP, #app-mount .features-_IOqVv .row-1bU71H {
-	background-color: var(--TQcardDim, transparent);
-}
-
-#app-mount .systemRequirements-1L5nPd {
-	background-color: var(--TQcardDim, transparent);
-	border-radius: 3px;
-	padding: 20px 20px 0;
-}
