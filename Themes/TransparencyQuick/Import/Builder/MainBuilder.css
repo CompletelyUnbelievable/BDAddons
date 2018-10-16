@@ -1,7 +1,7 @@
 /*Sets the dim*/
 #app-mount .da-layers {
-	background: var(--dim, transparent);
-	background-size: var(--BackgroundFill, 100% 100%);
+	background: var(--TQdim, transparent);
+	background-size: var(--TQBackgroundFill, 100% 100%);
 }
 
 #app-mount .tilePopoutContainer-1vD21T .tileWrapper-2khh-w, #app-mount .whyYouMightLikeIt-2zZIIj, #app-mount .purchaseUnit-2lxci3 .bodySection-jqkkIP, #app-mount .features-_IOqVv .row-1bU71H {
@@ -109,4 +109,12 @@
 
 #app-mount .da-card .da-header, #app-mount .da-activityFeed, #app-mount .da-card .da-cardHeader, #app-mount .da-card {
 	background: transparent;
+}
+
+#app-mount .applicationStore-1pNvnv, #app-mount .homeWrapper-3-Wh5T .headerBar-UHpsPw, #app-mount .applicationStore-1pNvnv .headerBar-UHpsPw {
+	background-color: transparent;
+}
+
+#app-mount #pubslayerroot .layer-3QrUeG {
+	background-color: transparent;
 }
