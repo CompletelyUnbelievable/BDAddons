@@ -1,4 +1,4 @@
-//META{"name":"TransparencyQuick","description":"A theme to easily allow for a background image. Works in dark and light themes.","author":"CompletelyUnbelievable","version":"1.0","source":"https://github.com/CompletelyUnbelievable/BDAddons/tree/master/Themes/TransparencyQuick","website":"https://git.io/vhWjm"}*//
+//META{"name":"TransparencyQuick","description":"A theme to easily allow for a background image. Works in dark and light themes.","author":"CompletelyUnbelievable","version":"1.1","source":"https://github.com/CompletelyUnbelievable/BDAddons/edit/master/Themes/TransparencyQuick","website":"https://git.io/vhWjm"}*//
 @import url("https://completelyunbelievable.github.io/BDAddons/Themes/TransparencyQuick/Import/TransparencyQuick.css");
 @import url("https://completelyunbelievable.github.io/BDAddons/Themes/TransparencyQuick/Import/Builder/Legacy.css");
 
@@ -9,12 +9,13 @@
 	3. The link must be encapsulated by 'url()' in order to work
 	Example: url(https://i.imgur.com/PnSeZX3r.jpg)*/
 	
-	--DarkBackground: transparent; /*changes the background of the window in discord's dark theme*/
-	--LightBackground: transparent; /*changes the background of the window in discord's light theme*/
+	--TQDarkBackground: transparent; /*changes the background of the window in discord's dark theme*/
+	--TQLightBackground: transparent; /*changes the background of the window in discord's light theme*/
 	
-	--dim: rgba(79,84,92,0.5); /*Makes the background darker, and can prevent a user from clicking through the window with the transparency patcher and a transparent background color.*/
-	--DarkTitlebarColor: #202225; /*Title bar while using discord's dark theme, mileage may vary on Mac/Linux.*/
-	--LightTitlebarColor: #202225; /*Title bar while using discord's light theme, mileage may vary on Mac/Linux.*/
-	--FallbackColor: #202225; /*A solid color to use if the background variables are not properly set.*/
-	--BackgroundFill: cover; /*'cover' fits an image to the window without stretching it, but 'fill' will stretch/warp the image to ensure the image is completely viewable.*/
+	--TQdim: rgba(79,84,92,0.5); /*Makes the background darker, and can prevent a user from clicking through the window with the transparency patcher and a transparent background color.*/
+	--TQcardDim: rgba(79,84,92,0.5); /*Some elements look bad with just a transparent background, this color will be used instead.*/
+	--TQDarkTitlebarColor: #202225; /*Title bar while using discord's dark theme, mileage may vary on Mac/Linux.*/
+	--TQLightTitlebarColor: #202225; /*Title bar while using discord's light theme, mileage may vary on Mac/Linux.*/
+	--TQFallbackColor: #202225; /*A solid color to use if the background variables are not properly set.*/
+	--TQBackgroundFill: cover; /*'cover' fits an image to the window without stretching it, but 'fill' will stretch/warp the image to ensure the image is completely viewable.*/
 }
