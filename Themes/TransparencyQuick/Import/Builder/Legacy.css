@@ -2,4 +2,12 @@
 
 :root {
 	--TQcardDim: rgba(79,84,92,0.5); /*Some elements look bad with just a transparent background, this color will be used instead.*/
+	--TQDarkBackground: var(--DarkBackground); /*changes the background of the window in discord's dark theme*/
+	--TQLightBackground: var(--LightBackground); /*changes the background of the window in discord's light theme*/
+	--TQdim: var(--dim); /*Makes the background darker, and can prevent a user from clicking through the window with the transparency patcher and a transparent background color.*/
+	--TQcardDim: rgba(79,84,92,0.5); /*Some elements look bad with just a transparent background, this color will be used instead.*/
+	--TQDarkTitlebarColor: var(--DarkTitlebarColor); /*Title bar while using discord's dark theme, mileage may vary on Mac/Linux.*/
+	--TQLightTitlebarColor: var(--LightTitlebarColor); /*Title bar while using discord's light theme, mileage may vary on Mac/Linux.*/
+	--TQFallbackColor: var(--FallbackColor); /*A solid color to use if the background variables are not properly set.*/
+	--TQBackgroundFill: var(--BackgroundFill, cover); /*'cover' fits an image to the window without stretching it, but 'fill' will stretch/warp the image to ensure the image is completely viewable.*/
 }
