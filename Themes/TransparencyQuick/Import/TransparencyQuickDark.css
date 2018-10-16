@@ -21,21 +21,21 @@ body .da-appMount {
 }
 
 .app.theme-dark::before {
-	background: var(--DarkTitlebarColor, var(--FallbackColor, transparent));
+	background: var(--TQDarkTitlebarColor, var(--TQFallbackColor, transparent));
 }
 
 .app.theme-light::before {
-	background: var(--LightTitlebarColor, var(--FallbackColor, transparent));
+	background: var(--TQLightTitlebarColor, var(--TQFallbackColor, transparent));
 }
 
 .app.theme-dark {
-	background: var(--DarkBackground, var(--FallbackColor, transparent));
-	background-size: var(--BackgroundFill, 100% 100%);
+	background: var(--TQDarkBackground, var(--TQFallbackColor, transparent));
+	background-size: var(--TQBackgroundFill, 100% 100%);
 }
 
 .app.theme-light {
-	background: var(--LightBackground, var(--FallbackColor, transparent));
-	background-size: var(--BackgroundFill, 100% 100%);
+	background: var(--TQLightBackground, var(--TQFallbackColor, transparent));
+	background-size: var(--TQBackgroundFill, 100% 100%);
 }
 
 .da-appMount .da-userSettingsAccount div:nth-child(2) >div:nth-child(2) >.da-viewBody:not(:hover) {
@@ -49,8 +49,18 @@ body .da-appMount {
 }
 
 .theme-dark .da-layers {
-	background: var(--dim, transparent);
-	background-size: var(--BackgroundFill, 100% 100%);
+	background: var(--TQdim, transparent);
+	background-size: var(--TQBackgroundFill, 100% 100%);
+}
+
+.theme-dark .tilePopoutContainer-1vD21T .tileWrapper-2khh-w, .theme-dark .whyYouMightLikeIt-2zZIIj, .theme-dark .purchaseUnit-2lxci3 .bodySection-jqkkIP, .theme-dark .features-_IOqVv .row-1bU71H {
+	background-color: var(--TQcardDim, transparent);
+}
+
+.theme-dark .systemRequirements-1L5nPd {
+	background-color: var(--TQcardDim, transparent);
+	border-radius: 3px;
+	padding: 20px 20px 0;
 }
 
 .theme-dark .da-activityFeed {
@@ -73,11 +83,11 @@ body .da-appMount {
 	background-color: transparent;
 }
 
-.theme-dark .da-channels {
+.theme-dark .channels-Ie2l6A {
 	background-color: transparent;
 }
 
-.theme-dark .da-guildsWrapper {
+.theme-dark .guildsWrapper-5TJh6A {
 	background-color: transparent;
 }
 
@@ -105,7 +115,7 @@ body .da-appMount {
 	background: transparent;
 }
 
-.theme-dark .da-channels .da-container {
+.theme-dark .channels-Ie2l6A .da-container {
 	background-color: transparent;
 }
 
@@ -129,7 +139,7 @@ body .da-appMount {
 	background: transparent;
 }
 
-.theme-dark .da-guildsWrapper .da-guildsAdd {
+.theme-dark .guildsWrapper-5TJh6A .da-guildsAdd {
 	background: transparent;
 }
 
@@ -141,10 +151,18 @@ body .da-appMount {
 	background-color: transparent;
 }
 
-.theme-dark .da-guildsWrapper .da-guilds .da-guildInner {
+.theme-dark .guildsWrapper-5TJh6A .da-guilds .da-guildInner {
 	background: transparent !important;
 }
 
 .theme-dark .da-card .da-header, .theme-dark .da-activityFeed, .theme-dark .da-card .da-cardHeader, .theme-dark .da-card {
 	background: transparent;
+}
+
+.theme-dark .applicationStore-1pNvnv, .theme-dark .homeWrapper-3-Wh5T .headerBar-UHpsPw, .theme-dark .applicationStore-1pNvnv .headerBar-UHpsPw {
+	background-color: transparent;
+}
+
+.theme-dark #pubslayerroot .layer-3QrUeG {
+	background-color: transparent;
 }
