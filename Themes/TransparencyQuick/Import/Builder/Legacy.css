@@ -1,1 +1,5 @@
 /*Legacy file for users who do not update themes frequently.*/
+
+:root {
+	--cardDim: rgba(79,84,92,0.5); /*Some elements look bad with just a transparent background, this color will be used instead.*/
+}
