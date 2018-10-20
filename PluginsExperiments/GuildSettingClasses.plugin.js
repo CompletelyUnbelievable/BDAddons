@@ -14,8 +14,8 @@ class GuildSettingClasses {
 
 	start () {
 		GSCRemoveClass = ["GSCMyAccount", "GSCAuthorizedApps", "GSCConnections", "GSCBilling", "GSCDiscordNitro", "GSCHypeSquad", "GSCVoiceVideo", "GSCOverlay", "GSCNotifications", "GSCKeybinds", "GSCGameActivity", "GSCGameLibrary", "GSCTextImages", "GSCAppearance", "GSCStreamerMode", "GSCLanguage", "GSCWindowsSettings", "GSCChangeLog", "GSCLogOut", "GSCCore", "GSCZeresFork", "GSCEmotes", "GSCCustomCSS", "GSCPlugins", "GSCThemes"];
-		BdApi.showToast(this.getName() + ' v' + this.getVersion() + ' has started.');
 		BdApi.injectCSS(this.getName() + 'CSS', setStyles());
+		BdApi.showToast(this.getName() + ' v' + this.getVersion() + ' has started.');
 		GuildSettings();
 	}
 
@@ -34,7 +34,7 @@ class GuildSettingClasses {
 }
 
 function GuildSettings() {
-	if (document.getElementsByClassName('ui-standard-sidebar-view')[0]) {
+	if (document.getElementsByClassName('sidebarRegion-VFTUkN')[0]) {
 		FindModify('item-PXvHYJ');
 		if (document.getElementsByClassName('ui-tab-bar-item')[0]) {
 			FindModify('ui-tab-bar-item');
@@ -47,7 +47,7 @@ function FindModify(x) {
 	if (document.getElementsByClassName(x)[0]) {
 		for (i = 0; i < document.getElementsByClassName(x).length; i++) {
 				ClassElement[i] = document.getElementsByClassName(x)[i];
-				ClassName[i] = "GSC" + ((document.getElementsByClassName(x)[i].innerHTML).replace(/ /g, "").replace('&amp;', "").replace('\'', ""));				
+				ClassName[i] = "GSC" + (document.getElementsByClassName(x)[i].innerHTML).replace(/ |'|&amp;|&/igm, "");				
 				if (ClassElement[i].classList.contains(ClassName[i]) == false) {
 					ClassElement[i].classList.add(ClassName[i]);
 					if (!GSCRemoveClass.includes(ClassName[i])) {
