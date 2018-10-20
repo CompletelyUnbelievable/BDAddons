@@ -8,7 +8,7 @@ class GuildSettingClasses {
 
 	getDescription () {return "Adds classes and styles for the settings menu.";}
 
-	getVersion () {return "Alpha";}
+	getVersion () {return "1.5";}
 
 	getAuthor () {return "CompletelyUnbelievable";}
 
