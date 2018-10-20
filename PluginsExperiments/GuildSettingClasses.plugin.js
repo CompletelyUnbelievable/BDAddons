@@ -78,6 +78,7 @@ function setStyles() {
 
 	#user-settings .item-PXvHYJ:before, #bd-settings-sidebar .ui-tab-bar-item:before {
 		content:"";
+		mask: none;
 		position: absolute;
 		left: 4px;
 		top: 4px;
@@ -92,131 +93,105 @@ function setStyles() {
 	
 	#user-settings .item-PXvHYJ.GSCMyAccount:before {
 		-webkit-mask: var(--MyAccountSVG);
-		mask: none;
 	}
 	#user-settings .item-PXvHYJ.GSCPrivacySafety:before {
 		-webkit-mask: var(--PrivacySafetySVG);
-		mask: none;
 	}
 		
 	#user-settings .item-PXvHYJ.GSCAuthorizedApps:before {
 		-webkit-mask: var(--AuthorizedAppsSVG);
-		mask: none;
 	}
 		
 	#user-settings .item-PXvHYJ.GSCConnections:before {
 		-webkit-mask: var(--ConnectionsSVG);
-		mask: none;
 	}
 		
 	#user-settings .item-PXvHYJ.GSCBilling:before {
 		-webkit-mask: var(--BillingSVG);
-		mask: none;
 	}
 		
 	#user-settings .item-PXvHYJ.GSCDiscordNitro:before {
 		-webkit-mask: var(--DiscordNitroSVG);
-		mask: none;
 	}
 		
 	#user-settings .item-PXvHYJ.GSCHypeSquad:before {
 		-webkit-mask: var(--HypeSquadSVG);
-		mask: none;
 	}
 		
 	#user-settings .item-PXvHYJ.GSCVoiceVideo:before {
 		-webkit-mask: var(--VoiceVideoSVG);
-		mask: none;
 	}
 		
 	#user-settings .item-PXvHYJ.GSCOverlay:before {
 		-webkit-mask: var(--OverlaySVG);
-		mask: none;
 	}
 		
 	#user-settings .item-PXvHYJ.GSCNotifications:before {
 		-webkit-mask: var(--NotificationsSVG);
-		mask: none;
 	}
 		
 	#user-settings .item-PXvHYJ.GSCKeybinds:before {
 		-webkit-mask: var(--KeybindsSVG);
-		mask: none;
 	}
 		
 	#user-settings .item-PXvHYJ.GSCGameActivity:before {
 		-webkit-mask: var(--GameActivitySVG);
-		mask: none;
 	}
 	
 	#user-settings .item-PXvHYJ.GSCGameLibrary:before {
 		-webkit-mask: var(--GameLibrarySVG);
-		mask: none;
 	}
 		
 	#user-settings .item-PXvHYJ.GSCTextImages:before {
 		-webkit-mask: var(--TextImagesSVG);
-		mask: none;
 	}
 		
 	#user-settings .item-PXvHYJ.GSCAppearance:before {
 		-webkit-mask: var(--AppearanceSVG);
-		mask: none;
 	}
 	
 	#user-settings .item-PXvHYJ.GSCStreamerMode:before {
 		-webkit-mask: var(--StreamerModeSVG);
-		mask: none;
 	}
 		
 	#user-settings .item-PXvHYJ.GSCLanguage:before {
 		-webkit-mask: var(--LanguageSVG);
-		mask: none;
 	}
 	
 	#user-settings .item-PXvHYJ.GSCWindowsSettings:before {
 		-webkit-mask: var(--WindowsSettingsSVG);
-		mask: none;
 	}
 	
 	#user-settings .item-PXvHYJ.GSCChangeLog:before {
 		-webkit-mask: var(--ChangeLogSVG);
-		mask: none;
 	}
 	
 	#bd-settings-sidebar .ui-tab-bar-item.GSCCore:before {
 		-webkit-mask: var(--BDCoreSVG);
-		mask: none;
 	}
 	
 	#bd-settings-sidebar .ui-tab-bar-item.GSCZeresFork:before {
 		-webkit-mask: var(--BDZeresForkSVG);
-		mask: none;
 	}
 	
 	#bd-settings-sidebar .ui-tab-bar-item.GSCEmotes:before {
 		-webkit-mask: var(--BDEmotesSVG);
-		mask: none;
 	}
 	
 	#bd-settings-sidebar .ui-tab-bar-item.GSCCustomCSS:before {
 		-webkit-mask: var(--BDCustomCSSSVG);
-		mask: none;
 	}
 	
 	#bd-settings-sidebar .ui-tab-bar-item.GSCPlugins:before {
 		-webkit-mask: var(--BDPluginsSVG);
-		mask: none;
 	}
 	
 	#bd-settings-sidebar .ui-tab-bar-item.GSCThemes:before {
 		-webkit-mask: var(--BDThemesSVG);
-		mask: none;
 	}
 
 	#user-settings .item-PXvHYJ.GSCLogOut:before {
 		-webkit-mask: var(--LogOutSVG);
-		mask: none;
 	}
 	
 	:root {
