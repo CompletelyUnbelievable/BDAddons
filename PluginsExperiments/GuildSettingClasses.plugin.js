@@ -34,27 +34,27 @@ class GuildSettingClasses {
 }
 
 function GuildSettings() {
-	if (document.getElementsByClassName('sidebarRegion-VFTUkN')[0]) {
-		FindModify('item-PXvHYJ');
-		if (document.getElementsByClassName('ui-tab-bar-item')[0]) {
-			FindModify('ui-tab-bar-item');
-		}
+	CheckClassExists('item-PXvHYJ');
+	CheckClassExists('ui-tab-bar-item');
+}
+
+function CheckClassExists(x) {
+	if (document.getElementsByClassName(x)[0]) {
+		FindModify(x);
 	}
 }
 
 function FindModify(x) {
 	let ClassElement = [], ClassName = [];
-	if (document.getElementsByClassName(x)[0]) {
-		for (i = 0; i < document.getElementsByClassName(x).length; i++) {
-				ClassElement[i] = document.getElementsByClassName(x)[i];
-				ClassName[i] = "GSC" + (document.getElementsByClassName(x)[i].innerHTML).replace(/ |'|&amp;|&/igm, "");				
-				if (ClassElement[i].classList.contains(ClassName[i]) == false) {
-					ClassElement[i].classList.add(ClassName[i]);
-					if (!GSCRemoveClass.includes(ClassName[i])) {
-						GSCRemoveClass.push(ClassName[i]);
-					}
+	for (i = 0; i < document.getElementsByClassName(x).length; i++) {
+			ClassElement[i] = document.getElementsByClassName(x)[i];
+			ClassName[i] = "GSC" + (document.getElementsByClassName(x)[i].innerHTML).replace(/ |'|&amp;|&/igm, "");				
+			if (ClassElement[i].classList.contains(ClassName[i]) == false) {
+				ClassElement[i].classList.add(ClassName[i]);
+				if (!GSCRemoveClass.includes(ClassName[i])) {
+					GSCRemoveClass.push(ClassName[i]);
 				}
-		}
+			}
 	}
 }
 
