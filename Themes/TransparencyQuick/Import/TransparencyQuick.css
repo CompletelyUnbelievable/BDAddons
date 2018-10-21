@@ -4,50 +4,60 @@ body .da-appMount {
 	background-color: transparent;
 }
 
+/*Fixes the sizing of the titlebar as well as sets it's background color transparent so we can change the background color with dark/light theme selectors.*/
 .da-appMount .da-titleBar {
 	padding-top: 4px;
-	margin-top: 0;
+	margin-top: 0px;
 	background-color: transparent;
 }
 
+/*Allows background images to extend behind the titlebar and sets up declarations for the background images*/
 .app {
 	margin-top: -22px;
 	background-repeat: no-repeat;
 }
 
+/*Allows background images to extend behind the titlebar.*/
 .app::before {
 	content: '';
 	padding-top: 22px;
 }
 
+/*Sets the background color of the titlebar in dark theme.*/
 .app.theme-dark::before {
 	background: var(--TQDarkTitlebarColor, var(--TQFallbackColor, transparent));
 }
 
+/*Sets the background color of the titlebar in light theme.*/
 .app.theme-light::before {
 	background: var(--TQLightTitlebarColor, var(--TQFallbackColor, transparent));
 }
 
+/*Sets the background image of the discord window in dark theme.*/
 .app.theme-dark {
 	background: var(--TQDarkBackground, var(--TQFallbackColor, transparent));
 	background-size: var(--TQBackgroundFill, 100% 100%);
 }
 
+/*Sets the background image of the discord window in light theme.*/
 .app.theme-light {
 	background: var(--TQLightBackground, var(--TQFallbackColor, transparent));
 	background-size: var(--TQBackgroundFill, 100% 100%);
 }
 
-.da-appMount .da-userSettingsAccount div:nth-child(2) >div:nth-child(2) >.da-viewBody:not(:hover) {
+/*Email Blur.*/
+.da-appMount .da-userSettingsAccount div:nth-child(2) > div:nth-child(2) > .da-viewBody:not(:hover) {
 	transition: filter 0.3s;
 	filter: blur(6px);
 }
 
-.da-appMount .da-userSettingsAccount div:nth-child(2) >div:nth-child(2) >.da-viewBody:hover {
+.da-appMount .da-userSettingsAccount div:nth-child(2) > div:nth-child(2) > .da-viewBody:hover {
 	transition: filter 0.3s;
 	filter: none;
 }
+/*End of Email blur.*/
 
+/*Sets the dim*/
 #app-mount .da-layers {
 	background: var(--TQdim, transparent);
 	background-size: var(--TQBackgroundFill, 100% 100%);
@@ -67,7 +77,7 @@ body .da-appMount {
 	background-color: transparent;
 }
 
-#app-mount .da-messagesWrapper, #app-mount .da-messagesWrapper +form {
+#app-mount .da-messagesWrapper, #app-mount .da-messagesWrapper + form {
 	background-color: transparent;
 }
 
@@ -75,7 +85,7 @@ body .da-appMount {
 	background-color: transparent;
 }
 
-#app-mount .da-chat >.da-content {
+#app-mount .da-chat>.da-content {
 	background-color: transparent;
 }
 
@@ -95,19 +105,19 @@ body .da-appMount {
 	background-color: transparent;
 }
 
-#app-mount .da-layers >.layer-3QrUeG {
+#app-mount .da-layers > .layer-3QrUeG {
 	background: transparent;
 }
 
-#app-mount .da-uiStandardSidebarView .da-contentRegion {
+#app-mount .contentRegion-3nDuYy {
 	background: transparent;
 }
 
-#app-mount .da-uiStandardSidebarView .da-sidebarRegion {
+#app-mount .sidebarRegion-VFTUkN {
 	background: transparent;
 }
 
-#app-mount .da-uiStandardSidebarView {
+#app-mount .standardSidebarView-3F1I7i {
 	background: transparent;
 }
 
@@ -136,7 +146,7 @@ body .da-appMount {
 }
 
 #app-mount .da-typing, #app-mount .typing-2GQL18 {
-	background: transparent;
+		background: transparent;
 }
 
 #app-mount .guildsWrapper-5TJh6A .da-guildsAdd {
@@ -151,6 +161,7 @@ body .da-appMount {
 	background-color: transparent;
 }
 
+/*Important tags and pseudo elements/classes from here on:*/
 #app-mount .guildsWrapper-5TJh6A .da-guilds .da-guildInner {
 	background: transparent !important;
 }
