@@ -102,9 +102,8 @@
 	background-color: transparent;
 }
 
-/*Important tags and pseudo elements/classes from here on:*/
 #app-mount .guildsWrapper-5TJh6A .da-guilds .da-guildInner {
-	background: transparent !important;
+	background: transparent;
 }
 
 #app-mount .da-card .da-header, #app-mount .da-activityFeed, #app-mount .da-card .da-cardHeader, #app-mount .da-card {
