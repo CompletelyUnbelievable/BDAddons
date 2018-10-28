@@ -1,17 +1,17 @@
 //META{"name":"StartingVolume"}*//
 
-var PluginName, PluginDesc, PluginVers, PluginAuth, ClassElement, ReplacedClass, VolValP, VolValD;
+let ClassElement, ReplacedClass, VolValP;
 
 
 class StartingVolume {
 
-	getName () {PluginName = "StartingVolume"; return PluginName;}
+	getName () {return "StartingVolume";}
 
-	getDescription () {PluginDesc = "Sets the volume on the default discord video and audio embeds. Does not visually update properly."; return PluginDesc;}
+	getDescription () {return "Sets the volume on the default discord video and audio embeds. Does not visually update properly.";}
 
-	getVersion () {PluginVers = "Alpha"; return PluginVers;}
+	getVersion () {return "Alpha";}
 
-	getAuthor () {PluginAuth = "CompletelyUnbelievable"; return PluginAuth;}
+	getAuthor () {return "CompletelyUnbelievable";}
 
 	observer () {
 		Player('video', 'video-8eMOth');
@@ -20,12 +20,14 @@ class StartingVolume {
 
 	stop () {
 		RemoveClasses();
+		BdApi.showToast(this.getName() + ' v' + this.getVersion() + ' has stopped.');
 	}
 
 	start () {
 		VolValP = '10%';
 		ReplacedClass = 'AudioFixed';
 		ClassElement = [];
+		BdApi.showToast(this.getName() + ' v' + this.getVersion() + ' has started.');
 	}
 }
 
@@ -37,7 +39,7 @@ function Player(Tag, TagClass) { /*Tag name, verify with a class*/
 				if (ClassElement[i].classList.contains(ReplacedClass) == false) {
 					ClassElement[i].classList.add(ReplacedClass);
 					if (CalcVolume(VolValP) != null) {
-						ClassElement[i].volume = VolValD;
+						ClassElement[i].volume = CalcVolume(VolValP);
 					}
 				}
 			}
@@ -47,8 +49,7 @@ function Player(Tag, TagClass) { /*Tag name, verify with a class*/
 
 function CalcVolume(x) {
 	if(!isNaN(parseFloat(x))){
-		VolValD = parseFloat(x) / 100;
-		return VolValD;
+		return (parseFloat(x) / 100);
 	}else{
 		return null;
 	}
