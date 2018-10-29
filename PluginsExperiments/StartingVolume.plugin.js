@@ -1,7 +1,4 @@
-//META{"name":"StartingVolume"}*//
-
-let ClassElement, ReplacedClass, VolValP;
-
+//META{"name":"StartingVolume","source":"https://github.com/CompletelyUnbelievable/BDAddons/blob/master/PluginsExperiments/StartingVolume.plugin.js","website":"https://git.io/vhWjm"}*//
 
 class StartingVolume {
 
@@ -9,37 +6,42 @@ class StartingVolume {
 
 	getDescription () {return "Sets the volume on the default discord video and audio embeds. Does not visually update properly.";}
 
-	getVersion () {return "Alpha";}
+	getVersion () {return "1.0";}
 
 	getAuthor () {return "CompletelyUnbelievable";}
 
 	observer () {
-		Player('video', 'video-8eMOth');
-		Player('audio', 'audio-2-PNle');
+		SVPlayer('video', 'video-8eMOth');
+		SVPlayer('audio', 'audio-2-PNle');
 	}
 
 	stop () {
-		RemoveClasses();
-		BdApi.showToast(this.getName() + ' v' + this.getVersion() + ' has stopped.');
+		SVRemoveClasses();
 	}
 
 	start () {
-		VolValP = '10%';
-		ReplacedClass = 'AudioFixed';
-		ClassElement = [];
-		BdApi.showToast(this.getName() + ' v' + this.getVersion() + ' has started.');
+		this.observer();
 	}
 }
 
-function Player(Tag, TagClass) { /*Tag name, verify with a class*/
+function SVSetVolume() {
+	return '10%';
+}
+
+function SVReplacedClass() {
+	return 'AudioFixed';
+}
+
+function SVPlayer(Tag, TagClass) { /*Tag name, verify with a class*/
 	if (document.getElementsByTagName(Tag)[0]) {
 		for (i = 0; i < document.getElementsByTagName(Tag).length; i++) {
-			if (document.getElementsByTagName(Tag)[i].classList.contains(TagClass) && !document.getElementsByTagName(Tag)[i].classList.contains(ReplacedClass)) {
+			if (document.getElementsByTagName(Tag)[i].classList.contains(TagClass) && !document.getElementsByTagName(Tag)[i].classList.contains(SVReplacedClass())) {
+				let ClassElement = [];
 				ClassElement[i] = document.getElementsByTagName(Tag)[i];
-				if (ClassElement[i].classList.contains(ReplacedClass) == false) {
-					ClassElement[i].classList.add(ReplacedClass);
-					if (CalcVolume(VolValP) != null) {
-						ClassElement[i].volume = CalcVolume(VolValP);
+				if (ClassElement[i].classList.contains(SVReplacedClass()) == false) {
+					ClassElement[i].classList.add(SVReplacedClass());
+					if (SVCalcVolume(SVSetVolume()) != null) {
+						ClassElement[i].volume = SVCalcVolume(SVSetVolume());
 					}
 				}
 			}
@@ -47,7 +49,7 @@ function Player(Tag, TagClass) { /*Tag name, verify with a class*/
 	}
 }
 
-function CalcVolume(x) {
+function SVCalcVolume(x) {
 	if(!isNaN(parseFloat(x))){
 		return (parseFloat(x) / 100);
 	}else{
@@ -55,14 +57,14 @@ function CalcVolume(x) {
 	}
 }
 
-function RemoveClasses() {
-	if (document.getElementsByClassName(ReplacedClass)[0]) {
-		for (i = 0; i < document.getElementsByClassName(ReplacedClass).length; i++) {
-			if (document.getElementsByClassName(ReplacedClass)[i]) {
-				if (CalcVolume('50%') != null) {
-					document.getElementsByClassName(ReplacedClass)[i].volume = CalcVolume('50%');
+function SVRemoveClasses() {
+	if (document.getElementsByClassName(SVReplacedClass())[0]) {
+		for (i = 0; i < document.getElementsByClassName(SVReplacedClass()).length; i++) {
+			if (document.getElementsByClassName(SVReplacedClass())[i]) {
+				if (SVCalcVolume('50%') != null) {
+					document.getElementsByClassName(SVReplacedClass())[i].volume = SVCalcVolume('50%');
 				}
-				document.getElementsByClassName(ReplacedClass)[i].classList.remove(ReplacedClass);
+				document.getElementsByClassName(SVReplacedClass())[i].classList.remove(SVReplacedClass());
 			}
 		}
 	}
