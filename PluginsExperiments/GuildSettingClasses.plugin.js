@@ -1,77 +1,90 @@
 //META{"name":"GuildSettingClasses"}*//
 
-let GSCRemoveClass;
-
 class GuildSettingClasses {
 
 	getName () {return "GuildSettingClasses";}
 
 	getDescription () {return "Adds classes and styles for the settings menu.";}
 
-	getVersion () {return "1.5";}
+	getVersion () {return "1.6";}
 
 	getAuthor () {return "CompletelyUnbelievable";}
 
 	start () {
-		GSCRemoveClass = ["GSCMyAccount", "GSCAuthorizedApps", "GSCConnections", "GSCBilling", "GSCDiscordNitro", "GSCHypeSquad", "GSCVoiceVideo", "GSCOverlay", "GSCNotifications", "GSCKeybinds", "GSCGameActivity", "GSCGameLibrary", "GSCTextImages", "GSCAppearance", "GSCStreamerMode", "GSCLanguage", "GSCWindowsSettings", "GSCChangeLog", "GSCLogOut", "GSCCore", "GSCZeresFork", "GSCEmotes", "GSCCustomCSS", "GSCPlugins", "GSCThemes"];
-		BdApi.injectCSS(this.getName() + 'CSS', setStyles());
-		BdApi.showToast(this.getName() + ' v' + this.getVersion() + ' has started.');
-		GuildSettings();
+		GSCGuildSettings();
+		BdApi.injectCSS(this.getName() + 'CSS', GSCsetStyles());
 	}
 
 	observer () {
-		GuildSettings();
+		GSCGuildSettings();
 	}
 
 	stop () {
 		if (document.getElementById(this.getName() + 'CSS')) {
 			BdApi.clearCSS(this.getName() + 'CSS');
 		}
-		Remove();
-		BdApi.showToast(this.getName() + ' v' + this.getVersion() + ' has stopped.');
+		GSCRemove();
 	}
 
 }
 
-function GuildSettings() {
-	CheckClassExists('item-PXvHYJ');
-	CheckClassExists('ui-tab-bar-item');
+function GSCClassList(x) { /*Send string add to array for future reference, I want it to accept an Array even though I never intend to send an array in the future.*/
+	
+	let GSCRemovedClasses;
+
+	if (GSCRemovedClasses === undefined) {
+		GSCRemovedClasses = ["GSCMyAccount", "GSCAuthorizedApps", "GSCConnections", "GSCBilling", "GSCDiscordNitro", "GSCHypeSquad", "GSCVoiceVideo", "GSCOverlay", "GSCNotifications", "GSCKeybinds", "GSCGameActivity", "GSCGameLibrary", "GSCTextImages", "GSCAppearance", "GSCStreamerMode", "GSCLanguage", "GSCWindowsSettings", "GSCChangeLog", "GSCLogOut", "GSCCore", "GSCZeresFork", "GSCBandages", "GSCEmotes", "GSCCustomCSS", "GSCPlugins", "GSCThemes"];
+	}
+
+	if (Array.GSCRemovedClasses && !GSCRemovedClasses.contains(x)) {
+		GSCRemovedClasses.push(x);
+	}
+
+	return GSCRemovedClasses;
+
 }
 
-function CheckClassExists(x) {
+function GSCGuildSettings() {
+	GSCCheckClassExists('item-PXvHYJ');
+	GSCCheckClassExists('ui-tab-bar-item');
+}
+
+function GSCCheckClassExists(x) {
 	if (document.getElementsByClassName(x)[0]) {
-		FindModify(x);
+		GSCFindModify(x);
 	}
 }
 
-function FindModify(x) {
+function GSCFindModify(x) {
 	let ClassElement = [], ClassName = [];
 	for (i = 0; i < document.getElementsByClassName(x).length; i++) {
 			ClassElement[i] = document.getElementsByClassName(x)[i];
 			ClassName[i] = "GSC" + (document.getElementsByClassName(x)[i].innerHTML).replace(/ |'|&amp;|&/igm, "");				
 			if (ClassElement[i].classList.contains(ClassName[i]) == false) {
 				ClassElement[i].classList.add(ClassName[i]);
-				if (!GSCRemoveClass.includes(ClassName[i])) {
-					GSCRemoveClass.push(ClassName[i]);
+				let ClassList = GSCClassList();
+				if (!ClassList.includes(ClassName[i])) {
+					GSCClassList(ClassName[i]);
 				}
 			}
 	}
 }
 
-function Remove() {
+function GSCRemove() {
 	if (document.getElementsByClassName('ui-standard-sidebar-view')[0] || document.getElementsByClassName('ui-tab-bar-item')[0]) {
-		for (i = 0; i < GSCRemoveClass.length; i++) {
-			if (document.getElementsByClassName(GSCRemoveClass[i])) {
-				let elements = document.getElementsByClassName(GSCRemoveClass[i]);
+		let ClassList = GSCClassList();
+		for (i = 0; i < ClassList.length; i++) {
+			if (document.getElementsByClassName(ClassList[i])) {
+				let elements = document.getElementsByClassName(ClassList[i]);
 					for (x = 0; x < elements.length; x++) {
-						elements[x].classList.remove(GSCRemoveClass[i]);
+						elements[x].classList.remove(ClassList[i]);
 					}
 			}
 		}
 	}
 }
 
-function setStyles() {
+function GSCsetStyles() {
 	let styles = `#user-settings .item-PXvHYJ, #bd-settings-sidebar .ui-tab-bar-item {
 		padding-left: 34px;
 	}
@@ -170,8 +183,8 @@ function setStyles() {
 		-webkit-mask: var(--BDCoreSVG);
 	}
 	
-	#bd-settings-sidebar .ui-tab-bar-item.GSCZeresFork:before {
-		-webkit-mask: var(--BDZeresForkSVG);
+	#bd-settings-sidebar .ui-tab-bar-item.GSCBandages:before {
+		-webkit-mask: var(--BDBandagesSVG);
 	}
 	
 	#bd-settings-sidebar .ui-tab-bar-item.GSCEmotes:before {
@@ -221,7 +234,7 @@ function setStyles() {
 		--LinuxSettingsSVG: var(--WindowsSettingsSVG);
 		--ChangeLogSVG: url('data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgPHBhdGggZD0iTTEzIDNhOSA5IDAgMCAwLTkgOUgxbDMuODkgMy44OS4wNy4xNEw5IDEySDZhNyA3IDAgMCAxIDctNyA3IDcgMCAwIDEgNyA3IDcgNyAwIDAgMS03IDdjLTEuOTMgMC0zLjY4LS43OS00Ljk0LTIuMDZsLTEuNDIgMS40MkE4Ljg5NiA4Ljg5NiAwIDAgMCAxMyAyMWE5IDkgMCAwIDAgOS05IDkgOSAwIDAgMC05LTltLTEgNXY1bDQuMjggMi41NC43Mi0xLjIxLTMuNS0yLjA4VjhIMTJ6Ii8+Cjwvc3ZnPgo=');
 		--BDCoreSVG: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAwIDIwMDAiIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCI+CiAgPGc+CiAgICA8cGF0aCBkPSJNMTQwMi4yIDYzMS43Yy05LjctMzUzLjQtMjg2LjItNDk2LTY0Mi42LTQ5Nkg2OC40djcxNC4xbDQ0MiAzOThWNDkwLjdoMjU3YzI3NC41IDAgMjc0LjUgMzQ0LjkgMCAzNDQuOUg1OTcuNnYzMjkuNWgxNjkuOGMyNzQuNSAwIDI3NC41IDM0NC44IDAgMzQ0LjhoLTY5OXYzNTQuOWg2OTEuMmMzNTYuMyAwIDYzMi44LTE0Mi42IDY0Mi42LTQ5NiAwLTE2Mi42LTQ0LjUtMjg0LjEtMTIyLjktMzY4LjYgNzguNC04NC40IDEyMi45LTIwNS45IDEyMi45LTM2OC41eiIvPgogICAgPHBhdGggZD0iTTEyNjIuNSAxMzUuMmgtNzYuOGMyNi42IDEzLjMgNTEuNyAyOC4xIDc1IDQ0LjMgNzAuNyA0OS4xIDEyNi4xIDExMS41IDE2NC42IDE4NS4zIDM5LjkgNzYuNiA2MS41IDE2NS42IDY0LjMgMjY0LjZWMTM3MS4zYy0yLjcgOTktMjQuMyAxODgtNjQuMyAyNjQuNi0zOC41IDczLjgtOTMuOCAxMzYuMi0xNjQuNiAxODUuMy0yMi42IDE1LjctNDYuOSAzMC4xLTcyLjYgNDMuMWg3Mi41YzM0Ni4yIDEuOSA2NzEtMTcxLjIgNjcxLTU2Ny45VjcxNi43YzEuOS00MDQuNS0zMjIuOS01ODEuNS02NjkuMS01ODEuNXoiLz4KICA8L2c+Cjwvc3ZnPgo=');
-		--BDZeresForkSVG: url('data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgPHBhdGggZD0iTTAgMGgyNHYyNEgweiIgZmlsbD0ibm9uZSIvPgogIDxwYXRoIGQ9Ik0xNy43MyAxMi4wMmwzLjk4LTMuOThhLjk5Ni45OTYgMCAwIDAgMC0xLjQxbC00LjM0LTQuMzRhLjk5Ni45OTYgMCAwIDAtMS40MSAwbC0zLjk4IDMuOThMOCAyLjI5YTEuMDAxIDEuMDAxIDAgMCAwLTEuNDEgMEwyLjI1IDYuNjNhLjk5Ni45OTYgMCAwIDAgMCAxLjQxbDMuOTggMy45OEwyLjI1IDE2YS45OTYuOTk2IDAgMCAwIDAgMS40MWw0LjM0IDQuMzRjLjM5LjM5IDEuMDIuMzkgMS40MSAwbDMuOTgtMy45OCAzLjk4IDMuOThjLjIuMi40NS4yOS43MS4yOS4yNiAwIC41MS0uMS43MS0uMjlsNC4zNC00LjM0YS45OTYuOTk2IDAgMCAwIDAtMS40MWwtMy45OS0zLjk4ek0xMiA5Yy41NSAwIDEgLjQ1IDEgMXMtLjQ1IDEtMSAxLTEtLjQ1LTEtMSAuNDUtMSAxLTF6bS00LjcxIDEuOTZMMy42NiA3LjM0bDMuNjMtMy42MyAzLjYyIDMuNjItMy42MiAzLjYzek0xMCAxM2MtLjU1IDAtMS0uNDUtMS0xcy40NS0xIDEtMSAxIC40NSAxIDEtLjQ1IDEtMSAxem0yIDJjLS41NSAwLTEtLjQ1LTEtMXMuNDUtMSAxLTEgMSAuNDUgMSAxLS40NSAxLTEgMXptMi00Yy41NSAwIDEgLjQ1IDEgMXMtLjQ1IDEtMSAxLTEtLjQ1LTEtMSAuNDUtMSAxLTF6bTIuNjYgOS4zNGwtMy42My0zLjYyIDMuNjMtMy42MyAzLjYyIDMuNjItMy42MiAzLjYzeiIvPgo8L3N2Zz4K');
+		--BDBandagesSVG: url('data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgPHBhdGggZD0iTTAgMGgyNHYyNEgweiIgZmlsbD0ibm9uZSIvPgogIDxwYXRoIGQ9Ik0xNy43MyAxMi4wMmwzLjk4LTMuOThhLjk5Ni45OTYgMCAwIDAgMC0xLjQxbC00LjM0LTQuMzRhLjk5Ni45OTYgMCAwIDAtMS40MSAwbC0zLjk4IDMuOThMOCAyLjI5YTEuMDAxIDEuMDAxIDAgMCAwLTEuNDEgMEwyLjI1IDYuNjNhLjk5Ni45OTYgMCAwIDAgMCAxLjQxbDMuOTggMy45OEwyLjI1IDE2YS45OTYuOTk2IDAgMCAwIDAgMS40MWw0LjM0IDQuMzRjLjM5LjM5IDEuMDIuMzkgMS40MSAwbDMuOTgtMy45OCAzLjk4IDMuOThjLjIuMi40NS4yOS43MS4yOS4yNiAwIC41MS0uMS43MS0uMjlsNC4zNC00LjM0YS45OTYuOTk2IDAgMCAwIDAtMS40MWwtMy45OS0zLjk4ek0xMiA5Yy41NSAwIDEgLjQ1IDEgMXMtLjQ1IDEtMSAxLTEtLjQ1LTEtMSAuNDUtMSAxLTF6bS00LjcxIDEuOTZMMy42NiA3LjM0bDMuNjMtMy42MyAzLjYyIDMuNjItMy42MiAzLjYzek0xMCAxM2MtLjU1IDAtMS0uNDUtMS0xcy40NS0xIDEtMSAxIC40NSAxIDEtLjQ1IDEtMSAxem0yIDJjLS41NSAwLTEtLjQ1LTEtMXMuNDUtMSAxLTEgMSAuNDUgMSAxLS40NSAxLTEgMXptMi00Yy41NSAwIDEgLjQ1IDEgMXMtLjQ1IDEtMSAxLTEtLjQ1LTEtMSAuNDUtMSAxLTF6bTIuNjYgOS4zNGwtMy42My0zLjYyIDMuNjMtMy42MyAzLjYyIDMuNjItMy42MiAzLjYzeiIvPgo8L3N2Zz4K');
 		--BDEmotesSVG: url('data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgPHBhdGggZD0iTTEyIDE3LjVjMi4zMyAwIDQuMy0xLjQ2IDUuMTEtMy41SDYuODljLjggMi4wNCAyLjc4IDMuNSA1LjExIDMuNU04LjUgMTFBMS41IDEuNSAwIDAgMCAxMCA5LjUgMS41IDEuNSAwIDAgMCA4LjUgOCAxLjUgMS41IDAgMCAwIDcgOS41IDEuNSAxLjUgMCAwIDAgOC41IDExbTcgMEExLjUgMS41IDAgMCAwIDE3IDkuNSAxLjUgMS41IDAgMCAwIDE1LjUgOCAxLjUgMS41IDAgMCAwIDE0IDkuNWExLjUgMS41IDAgMCAwIDEuNSAxLjVNMTIgMjBhOCA4IDAgMCAxLTgtOCA4IDggMCAwIDEgOC04IDggOCAwIDAgMSA4IDggOCA4IDAgMCAxLTggOG0wLTE4QzYuNDcgMiAyIDYuNSAyIDEyYTEwIDEwIDAgMCAwIDEwIDEwIDEwIDEwIDAgMCAwIDEwLTEwQTEwIDEwIDAgMCAwIDEyIDJ6Ii8+Cjwvc3ZnPgo=');
 		--BDCustomCSSSVG: url('data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgPHBhdGggZD0iTTE0LjYgMTYuNmw0LjYtNC42LTQuNi00LjZMMTYgNmw2IDYtNiA2LTEuNC0xLjRtLTUuMiAwTDQuOCAxMmw0LjYtNC42TDggNmwtNiA2IDYgNiAxLjQtMS40eiIvPgo8L3N2Zz4K');
 		--BDPluginsSVG: url('data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgPHBhdGggZD0iTTIwLjUgMTFIMTlWN2EyIDIgMCAwIDAtMi0yaC00VjMuNUEyLjUgMi41IDAgMCAwIDEwLjUgMSAyLjUgMi41IDAgMCAwIDggMy41VjVINGEyIDIgMCAwIDAtMiAydjMuOGgxLjVjMS41IDAgMi43IDEuMiAyLjcgMi43IDAgMS41LTEuMiAyLjctMi43IDIuN0gyVjIwYTIgMiAwIDAgMCAyIDJoMy44di0xLjVjMC0xLjUgMS4yLTIuNyAyLjctMi43IDEuNSAwIDIuNyAxLjIgMi43IDIuN1YyMkgxN2EyIDIgMCAwIDAgMi0ydi00aDEuNWEyLjUgMi41IDAgMCAwIDIuNS0yLjUgMi41IDIuNSAwIDAgMC0yLjUtMi41eiIvPgo8L3N2Zz4K');
