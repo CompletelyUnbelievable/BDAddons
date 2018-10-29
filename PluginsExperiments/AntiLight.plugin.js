@@ -1,42 +1,36 @@
-//META{"name":"AntiLight"}*//
-
-var PluginName, PluginDesc, PluginVers, PluginAuth, ClassElement;
-
+//META{"name":"AntiLight","source":"https://github.com/CompletelyUnbelievable/BDAddons/blob/master/PluginsExperiments/AntiLight.plugin.js","website":"https://git.io/vhWjm"}*//
 
 class AntiLight {
 
-	getName () {PluginName = "AntiLight"; return PluginName;}
+	getName () {return "AntiLight";}
 
-	getDescription () {PluginDesc = "No more light theme."; return PluginDesc;}
+	getDescription () {return "A crappy little plugin for removing the light theme.";}
 
-	getVersion () {PluginVers = "Alpha"; return PluginVers;}
+	getVersion () {return "Alpha";}
 
-	getAuthor () {PluginAuth = "CompletelyUnbelievable"; return PluginAuth;}
+	getAuthor () {return "CompletelyUnbelievable";}
 
 	observer () {
 		AppCheck();
 	}
 
 	stop () {
-		StopCheck();
-		if (document.getElementById(PluginName + 'CSS')) {
-			BdApi.clearCSS(PluginName + 'CSS');
+		if (document.getElementById(this.getName() + 'CSS')) {
+			BdApi.clearCSS(this.getName() + 'CSS');
 		}
+		StopCheck();
 	}
 
 	start () {
-		ClassElement = [];
+		if (!document.getElementById(this.getName() + 'CSS')) {
+			BdApi.injectCSS(this.getName() + 'CSS', setStyles());
+		}
 		AppCheck();
 	}
 }
 
 function AppCheck() {
 	if (BdApi.findModuleByProps("theme").theme == "light") {
-
-		if (document.getElementById(PluginName + 'CSS')) {}else{
-			BdApi.injectCSS(PluginName + 'CSS', setStyles());
-		}
-
 		CheckElements('app');
 		CheckElements('popouts-3dRSmE');
 		CheckElements('contextMenu-HLZMGh');
@@ -62,16 +56,17 @@ function CheckElements (x) {
 function RemoveLight(x) {
 	if (document.getElementsByClassName(x)[0]) {
 		for (i = 0; i < document.getElementsByClassName(x).length; i++) {
+			let element;
 			if (document.getElementsByClassName(x)[i].classList.contains('theme-light')) {
-				ClassElement[i] = document.getElementsByClassName(x)[i];
-				ClassElement[i].classList.remove('theme-light');
-				ClassElement[i].classList.add('theme-dark');
+				element = document.getElementsByClassName(x)[i];
+				element.classList.remove('theme-light');
+				element.classList.add('theme-dark');
 			}
 
 			if (document.getElementsByClassName(x)[i].classList.contains('da-themeLight')) {
-				ClassElement[i] = document.getElementsByClassName(x)[i];
-				ClassElement[i].classList.remove('da-themeLight');
-				ClassElement[i].classList.add('da-themeDark');
+				element = document.getElementsByClassName(x)[i];
+				element.classList.remove('da-themeLight');
+				element.classList.add('da-themeDark');
 			}
 		}
 	}
@@ -80,23 +75,24 @@ function RemoveLight(x) {
 function RecreateClasses(x) {
 	if (document.getElementsByClassName(x)[0]) {
 		for (i = 0; i < document.getElementsByClassName(x).length; i++) {
+			let element;
 			if (document.getElementsByClassName(x)[i].classList.contains('theme-dark')) {
-				ClassElement[i] = document.getElementsByClassName(x)[i];
-				ClassElement[i].classList.add('theme-light');
-				ClassElement[i].classList.remove('theme-dark');
+				element = document.getElementsByClassName(x)[i];
+				element.classList.add('theme-light');
+				element.classList.remove('theme-dark');
 			}
 
 			if (document.getElementsByClassName(x)[i].classList.contains('da-themeDark')) {
-				ClassElement[i] = document.getElementsByClassName(x)[i];
-				ClassElement[i].classList.add('da-themeLight');
-				ClassElement[i].classList.remove('da-themeDark');
+				element = document.getElementsByClassName(x)[i];
+				element.classList.add('da-themeLight');
+				element.classList.remove('da-themeDark');
 			}
 		}
 	}
 }
 
 function setStyles() {
-	var styles = `#app-mount .closeButton-1tv5uR svg path.fill {
+	let styles = `#app-mount .closeButton-1tv5uR svg path.fill {
 		fill: rgb(220, 221, 222);
 	}
 	
