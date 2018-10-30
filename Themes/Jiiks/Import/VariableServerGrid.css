@@ -1,93 +1,109 @@
-@charset "utf-8";
+@import url("https://completelyunbelievable.github.io/BDAddons/Themes/Jiiks/Import/Legacy.css");
 
 .da-guildsWrapper {
-	//--preventresizing: 1; /*This is for testing purposes only*/
-	--meadiatorwidth: calc(50px * var(--guildiconw));
-	--meadiatorheight: calc(50px * var(--guildiconh));
-	--wrapperwidth: calc(58px * var(--columns, 1)  * var(--preventresizing, var(--guildiconw, 1)) + var(--spacer, 0px) + 24px);
-	--margincentering: calc((58px * var(--columns, 1) * var(--preventresizing, var(--guildiconw, 1)) + var(--spacer, 0px) - 52px) / 2);
-	--addfontsize: calc(40px * var(--guildiconw, 1));
+	//--VSGpreventresizing: 1; /*This is for testing purposes only*/
+	--VSGmeadiatorwidth: calc(50px * var(--VSGguildiconw));
+	--VSGmeadiatorheight: calc(50px * var(--VSGguildiconh));
+	--VSGwrapperwidth: calc(58px * var(--VSGcolumns, 1) * var(--VSGpreventresizing, var(--VSGguildiconw, 1)) + var(--VSGspacer, 0px) + 24px);
+	--VSGmargincentering: calc((58px * var(--VSGcolumns, 1) * var(--VSGpreventresizing, var(--VSGguildiconw, 1)) + var(--VSGspacer, 0px) - 47px) / 2);
+	--VSGaddfontsize: calc(40px * var(--VSGguildiconw, 1));
 }
 
 .da-guildsWrapper:hover {
-	padding-left: var(--nocollapsiblegrid, 0px);
-	transition: var(--nocollapsiblegrid, padding .75s ease 0s), var(--nocompactgrid, width 1.5s ease);
+	padding-left: var(--VSGnocollapsiblegrid, 0px);
+	transition: var(--VSGnocollapsiblegrid, padding .75s ease 0s), var(--VSGnocompactgrid, width .95s ease);
 }
 
 .da-guildsWrapper:not(:hover) {
-	padding-left: var(--nocollapsiblegrid, 20px);
-	width: var(--nocollapsiblegrid, 0px);
-	transition: var(--nocollapsiblegrid, padding .75s ease .25s), var(--nocompactgrid, width 1.5s ease);
+	padding-left: var(--VSGnocollapsiblegrid, 20px);
+	width: var(--VSGnocollapsiblegrid, 0px);
+	transition: var(--VSGnocollapsiblegrid, padding .75s ease .4s), var(--VSGnocompactgrid, width .95s ease);
 }
 
 #bd-pub-li {
-	top: 6px;
+	top: 8px;
+}
+
+.da-guilds .guild-1EfMGQ:not(:first-child):not(#bd-pub-li):not(#RANbutton-frame):not(.da-guildsAdd):hover, .da-guilds .guild-1EfMGQ:not(:first-child, #bd-pub-li):not(#RANbutton-frame):not(.da-guildsAdd) *:not(.da-badge):not(.da-guildsError):hover {
+	height: var(--VSGnohovergrowth, calc(var(--VSGcolumns, 1) * var(--VSGmeadiatorheight, 50px)));
+	width: var(--VSGnohovergrowth, calc(var(--VSGcolumns, 1) * var(--VSGmeadiatorwidth, 50px)));
+	transition: var(--VSGnohovergrowth, width 0.5s ease), var(--VSGnohovergrowth, height 0.5s ease);
 }
 
 .da-guildsWrapper, .da-guildsWrapper .da-scrollerWrap {
-	width: var(--wrapperwidth, 52px);
+	width: var(--VSGwrapperwidth, 52px);
 }
 
 .da-guilds .guild-1EfMGQ:not(:first-child):not(#bd-pub-li):not(#RANbutton-frame):not(.da-guildsAdd), .da-guilds .guild-1EfMGQ:not(:first-child):not(#bd-pub-li):not(#RANbutton-frame):not(.da-guildsAdd) *:not(.da-badge):not(.da-guildsError) {
-	width: var(--meadiatorwidth, 50px);
-	height: var(--meadiatorheight, 50px);
-	font-size: calc(18px * var(--guildiconh, 1)) !important; /*required*/
-	line-height: var(--meadiatorheight, 50px);
-	//border-radius: var(--guildborderradius, 50%);
+	width: var(--VSGmeadiatorwidth, 50px);
+	height: var(--VSGmeadiatorheight, 50px);
+	font-size: calc(18px * var(--VSGguildiconh, 1)) !important; /*required*/
+	line-height: var(--VSGmeadiatorheight, 50px);
+	//border-radius: var(--VSGguildborderradius, 50%);
+	transition: var(--VSGnohovergrowth, width 0.5s ease 0.5s), var(--VSGnohovergrowth, height 0.5s ease 0.5s);
 }
 
-.da-guilds .da-guildsError {
-	width: var(--meadiatorwidth, 50px);
-	height: var(--meadiatorheight, 50px);
-	font-size: calc(18px * var(--guildiconh, 1)); /*required*/
-	line-height: var(--meadiatorheight, 50px);
-	//margin-top: 4px;
+.guilds-1q_RqH .da-guildsError {
+	width: var(--VSGmeadiatorwidth, 50px);
+	height: var(--VSGmeadiatorheight, 50px);
+	font-size: calc(18px * var(--VSGguildiconh, 1)); /*required*/
+	line-height: var(--VSGmeadiatorheight, 50px);
 }
 
-.da-guildsWrapper .da-guilds .guild-1EfMGQ:first-child { 
+.da-guildsWrapper .guilds-1q_RqH .guild-1EfMGQ:first-child { 
 	position: relative;
-	margin: 0px var(--margincentering, auto) 0px var(--margincentering, auto);
+	margin: 0px var(--VSGmargincentering, auto) 0px var(--VSGmargincentering, auto);
 }
 
 #app-mount .da-guildsWrapper .selected-ML3OIq:before {
 	position: absolute;
-	left: 4.25px;
-	top: 38.267px;
-	background: var(--indicatorcolor, #7289da);
+	left: 0px;
+	top: 33px;
+	background: var(--VSGindicatorcolor, #7289da);
 	z-index: 9000;
-	width: calc(5px * var(--guildiconw, 1));
-	height: calc(50px * (var(--guildiconh, 0) - 1) + 25px);
+	width: calc(5px * var(--VSGguildiconw, 1));
+	height: calc(50px * (var(--VSGguildiconh, 0) - 1) + 25px);
 }
 
-.da-guildsWrapper .da-guilds .unread-qLkInr:not(.selected-ML3OIq)::before {
+.da-guildsWrapper .guilds-1q_RqH .unread-qLkInr:not(.selected-ML3OIq)::before {
 	position: absolute;
-	left: 2px;
-	top: 10px;
+	left: 0px;
+	top: 7px;
 	z-index: 9000;
-	background: var(--indicatorcolor, #7289da);
-	width: calc(12px * var(--guildiconw, 1));
-	height: calc(12px * var(--guildiconh, 1));
+	background: var(--VSGindicatorcolor, #7289da);
+	width: calc(12px * var(--VSGguildiconw, 1));
+	height: calc(12px * var(--VSGguildiconh, 1));
 	border-radius: 100%;
 }
 
-.da-badge {
+#RANbutton-frame {
+	margin: -8px auto auto auto;
+}
+
+#gc-counter {
+	margin: 18px auto 0 auto;
+}
+
+.guilds-1q_RqH > :not(.da-dms) .da-badge {
 	box-sizing: border-box;
 	display: table-cell;
-	height: calc(16px * var(--guildiconh, 1));
-	font-size: calc(12px * var(--guildiconw, 1));
-	line-height: calc(14px * var(--guildiconh, 1));
-	//top: calc(-50px * var(--guildiconh, 1));
-	bottom: calc(15px * var(--guildiconh, 1));
+	height: calc(16px * var(--VSGguildiconh, 1));
+	font-size: calc(12px * var(--VSGguildiconw, 1));
+	line-height: calc(14px * var(--VSGguildiconh, 1));
+	//top: calc(-50px * var(--VSGguildiconh, 1));
+	bottom: calc(15px * var(--VSGguildiconh, 1));
 	left: 0px;
 	position: relative;
-	padding: calc(2px * var(--guildiconh, 1)) calc(4px * var(--guildiconw, 1)) calc(2px * var(--guildiconh, 1)) calc(4px * var(--guildiconw, 1));
-	background-color: var(--alertscolor, #f04747);
+	padding: calc(2px * var(--VSGguildiconh, 1)) calc(4px * var(--VSGguildiconw, 1)) calc(2px * var(--VSGguildiconh, 1)) calc(4px * var(--VSGguildiconw, 1));
+	background-color: var(--VSGalertscolor, #f04747);
 	text-align: center;
 	vertical-align: middle;
 }
 
-.da-dms .da-badge {
-	top: -50px;
+.guilds-1q_RqH > .da-dms .da-badge {
+	background-color: var(--VSGalertscolor, #f04747);
+	left: 0px;
+	right: initial;
 }
 
 .da-appMount .guild-1EfMGQ.audio-3vVhBi .da-guildInner::after {
@@ -101,12 +117,12 @@
 }
 
 .da-guildsAdd span.da-guildsAddInner {
-	font-size: var(--addfontsize, 40px);
+	font-size: var(--VSGaddfontsize, 40px);
 	position: relative;
 	left: -1px;
 	top: -1px;
-	height: var(--meadiatorheight, 50px);
-	width: var(--meadiatorwidth, 50px);
+	height: var(--VSGmeadiatorheight, 50px);
+	width: var(--VSGmeadiatorwidth, 50px);
 	text-align: center;
 	display: flex;
 	justify-content: center;
@@ -114,19 +130,18 @@
 	flex-flow: column wrap;
 }
 
-.da-appMount .da-guildsWrapper .da-guilds .da-guildsAdd {
-	width: var(--meadiatorwidth, 50px);
-	height: var(--meadiatorheight, 50px);
-	//border-radius: var(--guildborderradius, 50%);
+.da-appMount .da-guildsWrapper .guilds-1q_RqH .da-guildsAdd {
+	width: var(--VSGmeadiatorwidth, 50px);
+	height: var(--VSGmeadiatorheight, 50px);
+	//border-radius: var(--VSGguildborderradius, 50%);
 	left: -3px;
 	box-sizing: border-box;
 	position: static;
-	margin-top: 4px;
-	margin-bottom: 4px;
+	margin: 4px 4px 4px 4px;
 }
 
-.da-guilds .guild-1EfMGQ:not(:first-child):not(#bd-pub-li):not(#RANbutton-frame):not(.da-guildsAdd) {
-	padding: 4px 4px 4px 4px;
+.guilds-1q_RqH .guild-1EfMGQ:not(:first-child):not(#bd-pub-li):not(#RANbutton-frame):not(.da-guildsAdd) {
+	//padding: 4px 4px 4px 4px;
 }
 
 /*Read all button alligns correctly.*/
@@ -134,23 +149,24 @@
 	margin: auto;
 }
 
-.da-guildsWrapper .da-guilds {
+.da-guildsWrapper .guilds-1q_RqH {
 	display: flex;
 	flex-flow: row wrap;
 	align-content: flex-start;
+	padding: 10px 10px 10px 10px;
 }
 
-.da-guildsWrapper .da-guilds .guild-1EfMGQ:first-child.selected-ML3OIq:before { 
+.da-guildsWrapper .guilds-1q_RqH .guild-1EfMGQ:first-child.selected-ML3OIq:before { 
 	display: none;
 }
 
-.da-guildsWrapper .da-guilds .da-guildSeparator {
+.da-guildsWrapper .guilds-1q_RqH .da-guildSeparator {
 	position: relative;
 	width: 100%;
 	margin-top: 0px;
 }
 
-.da-guildsWrapper .da-guilds .da-friendsOnline {
+.da-guildsWrapper .guilds-1q_RqH .da-friendsOnline {
 	top: 12px;
 	position: relative;
 	width: 100%;
@@ -159,19 +175,20 @@
 	margin-bottom: 5px;
 }
 
-.da-guildsWrapper .da-guilds .guild-1EfMGQ {
+.da-guildsWrapper .guilds-1q_RqH .guild-1EfMGQ {
 	position: relative;
 }
 
-.da-guildsWrapper .da-guilds .da-dms {
+.da-guildsWrapper .guilds-1q_RqH .da-dms {
 	width: 100%;
 	display: flex;
 	flex-flow: row wrap;
 }
 
-.da-guildsWrapper .da-guilds .da-dms .da-guild {
+.da-guildsWrapper .guilds-1q_RqH .da-dms .da-guild {
 	left: 0;
 	top: 2px;
+	margin-bottom: 8px;
 }
 
 /*removes scrollbar.*/
@@ -194,4 +211,8 @@
 
 .da-appMount .guild-1EfMGQ+.guild-1EfMGQ {
 	margin: auto;
+}
+
+.da-appMount .guild-1EfMGQ+.guild-1EfMGQ:not(#bd-pub-li) {
+	margin: 4px auto 4px auto;
 }
