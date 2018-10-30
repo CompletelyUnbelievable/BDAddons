@@ -2,12 +2,13 @@
 @import url("https://completelyunbelievable.github.io/BDAddons/Themes/Jiiks/Import/VariableServerGrid.css");
 
 :root {
-	--columns: 2; /*2*/
-	--spacer: 0px; /*0px*/
-	--indicatorcolor: #7289da; /*#7289da*/
-	--alertscolor: #f04747; /*#f04747*/
-	--guildiconw: 1; /*1*/
-	--guildiconh: 1; /*1*/
-	--nocollapsiblegrid: 1; /*1*/
-	//--guildborderradius: 25px; /*50% or 25px, broken for now.*/
+	--VSGcolumns: 2; /*2*/
+	--VSGspacer: 0px; /*0px*/
+	--VSGindicatorcolor: #7289da; /*#7289da*/
+	--VSGalertscolor: #f04747; /*#f04747*/
+	--VSGguildiconw: 1; /*1*/
+	--VSGguildiconh: 1; /*1*/
+	--VSGnocollapsiblegrid: 1; /*1*/
+	--VSGnohovergrowth: 1; /*1*/
+	//--VSGguildborderradius: 25px; /*50% or 25px, broken for now.*/
 }
