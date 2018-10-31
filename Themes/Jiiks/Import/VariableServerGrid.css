@@ -209,10 +209,10 @@
 }
 /*End of scrollbar fix.*/
 
-.da-appMount .guild-1EfMGQ+.guild-1EfMGQ {
+.da-appMount .guild-1EfMGQ+.guild-1EfMGQ, .da-appMount .guildSeparator-1X4GQ1+.guild-1EfMGQ {
 	margin: auto;
 }
 
-.da-appMount .guild-1EfMGQ+.guild-1EfMGQ:not(#bd-pub-li) {
+.da-appMount .da-guildsWrapper .guild-1EfMGQ+.guild-1EfMGQ:not(#bd-pub-li), .da-appMount .da-guildsWrapper .guildSeparator-1X4GQ1+.guild-1EfMGQ {
 	margin: 4px auto 4px auto;
 }
