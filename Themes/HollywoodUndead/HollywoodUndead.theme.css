@@ -5,10 +5,10 @@
 
 /*Background image and titlebar color.*/
 :root {
-	--DarkBackground: url(https://raw.githubusercontent.com/CompletelyUnbelievable/BDAddons/master/Themes/HollywoodUndead/Import/Images/HU.png);
-	--DarkTitlebarColor: #202225;
-	--LightTitlebarColor: #202225;
-	--LightTitle: 'Anti-Light';
-	--DarkTitle: 'HollywoodUndead';
-	--BackgroundFill: cover;
+	--TQDarkBackground: url(https://raw.githubusercontent.com/CompletelyUnbelievable/BDAddons/master/Themes/HollywoodUndead/Import/Images/HU.png);
+	--TQDarkTitlebarColor: #202225;
+	--TQLightTitlebarColor: #202225;
+	--TQLightTitle: 'Anti-Light';
+	--TQDarkTitle: 'HollywoodUndead';
+	--TQBackgroundFill: cover;
 }
