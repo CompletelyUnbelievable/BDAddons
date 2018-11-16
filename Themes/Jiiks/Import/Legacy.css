@@ -1,11 +1,1 @@
-:root {
-	--VSGcolumns: var(--columns);
-	--VSGspacer: var(--spacer);
-	--VSGindicatorcolor: var(--indicatorcolor);
-	--VSGalertscolor: var(--alertscolor);
-	--VSGguildiconw: var(--guildiconw);
-	--VSGguildiconh: var(--guildiconh);
-	--VSGnocollapsiblegrid: var(--nocollapsiblegrid);
-	--VSGnohovergrowth: var(--nohovergrowth);
-	--VSGguildborderradius: var(--guildborderradius);
-}
+
