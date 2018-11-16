@@ -1,5 +1,3 @@
-@import url("https://completelyunbelievable.github.io/BDAddons/Themes/Jiiks/Import/Legacy.css");
-
 .da-guildsWrapper {
 	//--VSGpreventresizing: 1; /*This is for testing purposes only*/
 	--VSGmeadiatorwidth: calc(50px * var(--VSGguildiconw));
