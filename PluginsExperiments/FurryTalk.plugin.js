@@ -44,7 +44,7 @@ function FTGrabTextNodesWithjQuery(array){
 						contents[i].textContent = FTConvertText(contents[i].textContent);
 						contents[i].parentElement.classList.add(FTAddedClass());
 						//For debugging:
-						//let text = contents[i].textContent, changed = FTConvertText(text);console.log(text + " | " + changed);
+						//console.log(contents[i].textContent + " | " + FTConvertText(contents[i].textContent));
 					}
 				}
 			}
