@@ -11,7 +11,7 @@ class FurryTalk {
 	getAuthor () {return "CompletelyUnbelievable";}
 
 	observer () {
-		FTGrabTextNodesWithjQuery(['markup-2BOw-j','markup-2BOw-j > strong','markup-2BOw-j > em','markup-2BOw-j > em > strong','markup-2BOw-j > s','markup-2BOw-j > u','markup-2BOw-j > code','username-_4ZSMR']);
+		FTGrabTextNodesWithjQuery(['.markup-2BOw-j','.markup-2BOw-j > strong','.markup-2BOw-j > em','.markup-2BOw-j > em > strong','.markup-2BOw-j > s','.markup-2BOw-j > u','.markup-2BOw-j > code','.username-_4ZSMR']);
 	}
 
 	stop () {
@@ -37,8 +37,8 @@ function FTGrabTextNodesWithjQuery(array){
 	if (Array.isArray(array)) {
 		for (y = 0; y < array.length; y++) {
 			x = array[y];
-			if ($('.' + x)[0]) {
-				let contents = $('.' + x).contents();
+			if ($(x)[0]) {
+				let contents = $(x).contents();
 				for (i = 0; i < contents.length; i++) {
 					if (contents[i].nodeType === Node.TEXT_NODE && !contents[i].parentElement.classList.contains(FTAddedClass())) {
 						contents[i].textContent = FTConvertText(contents[i].textContent);
