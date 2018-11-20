@@ -4,9 +4,9 @@ class FurryTalk {
 
 	getName () {return "FurryTalk";}
 
-	getDescription () {return "A plugin that makes the text in the chat area similar to that seen in furry roleplay. Client side only, this does not change the contents of any message you are sending and will not change multiline code blocks for sanity reasons.";}
+	getDescription () {return "A plugin that makes the text in the chat area similar to that seen in furry roleplay. This plugin is client side only and only changes characters of the english alphabet. The plugin does not change the contents of any message you are sending and will not change multiline code blocks for sanity reasons.";}
 
-	getVersion () {return "1.0";}
+	getVersion () {return "1.1";}
 
 	getAuthor () {return "CompletelyUnbelievable";}
 
