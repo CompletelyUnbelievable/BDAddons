@@ -12,35 +12,35 @@ body .da-appMount {
 }
 
 /*Allows background images to extend behind the titlebar and sets up declarations for the background images*/
-.app {
+.app-2rEoOp {
 	margin-top: -22px;
 	background-repeat: no-repeat;
 }
 
 /*Allows background images to extend behind the titlebar.*/
-.app::before {
+.app-2rEoOp::before {
 	content: '';
 	padding-top: 22px;
 }
 
 /*Sets the background color of the titlebar in dark theme.*/
-.app.theme-dark::before {
+.app-2rEoOp.theme-dark::before {
 	background: var(--TQDarkTitlebarColor, var(--TQFallbackColor, transparent));
 }
 
 /*Sets the background color of the titlebar in light theme.*/
-.app.theme-light::before {
+.app-2rEoOp.theme-light::before {
 	background: var(--TQLightTitlebarColor, var(--TQFallbackColor, transparent));
 }
 
 /*Sets the background image of the discord window in dark theme.*/
-.app.theme-dark {
+.app-2rEoOp.theme-dark {
 	background: var(--TQDarkBackground, var(--TQFallbackColor, transparent));
 	background-size: var(--TQBackgroundFill, 100% 100%);
 }
 
 /*Sets the background image of the discord window in light theme.*/
-.app.theme-light {
+.app-2rEoOp.theme-light {
 	background: var(--TQLightBackground, var(--TQFallbackColor, transparent));
 	background-size: var(--TQBackgroundFill, 100% 100%);
 }
@@ -170,7 +170,7 @@ body .da-appMount {
 	background: transparent;
 }
 
-#app-mount .applicationStore-1pNvnv, #app-mount .homeWrapper-3-Wh5T .headerBar-UHpsPw, #app-mount .applicationStore-1pNvnv .headerBar-UHpsPw {
+#app-mount .app-2rEoOplicationStore-1pNvnv, #app-mount .homeWrapper-3-Wh5T .headerBar-UHpsPw, #app-mount .app-2rEoOplicationStore-1pNvnv .headerBar-UHpsPw {
 	background-color: transparent;
 }
 
