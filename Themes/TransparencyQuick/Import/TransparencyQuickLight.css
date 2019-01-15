@@ -10,30 +10,30 @@ body .da-appMount {
 	background-color: transparent;
 }
 
-.app {
+.app-2rEoOp {
 	margin-top: -22px;
 	background-repeat: no-repeat;
 }
 
-.app::before {
+.app-2rEoOp::before {
 	content: '';
 	padding-top: 22px;
 }
 
-.app.theme-dark::before {
+.app-2rEoOp.theme-dark::before {
 	background: var(--TQDarkTitlebarColor, var(--TQFallbackColor, transparent));
 }
 
-.app.theme-light::before {
+.app-2rEoOp.theme-light::before {
 	background: var(--TQLightTitlebarColor, var(--TQFallbackColor, transparent));
 }
 
-.app.theme-dark {
+.app-2rEoOp.theme-dark {
 	background: var(--TQDarkBackground, var(--TQFallbackColor, transparent));
 	background-size: var(--TQBackgroundFill, 100% 100%);
 }
 
-.app.theme-light {
+.app-2rEoOp.theme-light {
 	background: var(--TQLightBackground, var(--TQFallbackColor, transparent));
 	background-size: var(--TQBackgroundFill, 100% 100%);
 }
