@@ -22,7 +22,7 @@
 	top: 8px;
 }
 
-.da-guilds .guild-1EfMGQ:not(:first-child):not(#bd-pub-li):not(#RANbutton-frame):not(.da-guildsAdd):hover, .da-guilds .guild-1EfMGQ:not(:first-child, #bd-pub-li):not(#RANbutton-frame):not(.da-guildsAdd) *:not(.da-badge):not(.da-guildsError):hover {
+.da-guilds .guild-1EfMGQ:not(:first-child):not(#bd-pub-li):not(.RANbutton-frame):not(.da-guildsAdd):hover, .da-guilds .guild-1EfMGQ:not(:first-child, #bd-pub-li):not(.RANbutton-frame):not(.da-guildsAdd) *:not(.da-badge):not(.da-guildsError):hover {
 	height: var(--VSGnohovergrowth, calc(var(--VSGcolumns, 1) * var(--VSGmeadiatorheight, 50px)));
 	width: var(--VSGnohovergrowth, calc(var(--VSGcolumns, 1) * var(--VSGmeadiatorwidth, 50px)));
 	transition: var(--VSGnohovergrowth, width 0.5s ease), var(--VSGnohovergrowth, height 0.5s ease);
@@ -32,7 +32,7 @@
 	width: var(--VSGwrapperwidth, 52px);
 }
 
-.da-guilds .guild-1EfMGQ:not(:first-child):not(#bd-pub-li):not(#RANbutton-frame):not(.da-guildsAdd), .da-guilds .guild-1EfMGQ:not(:first-child):not(#bd-pub-li):not(#RANbutton-frame):not(.da-guildsAdd) *:not(.da-badge):not(.da-guildsError) {
+.da-guilds .guild-1EfMGQ:not(:first-child):not(#bd-pub-li):not(.RANbutton-frame):not(.da-guildsAdd), .da-guilds .guild-1EfMGQ:not(:first-child):not(#bd-pub-li):not(.RANbutton-frame):not(.da-guildsAdd) *:not(.da-badge):not(.da-guildsError) {
 	width: var(--VSGmeadiatorwidth, 50px);
 	height: var(--VSGmeadiatorheight, 50px);
 	font-size: calc(18px * var(--VSGguildiconh, 1)) !important; /*required*/
@@ -74,7 +74,7 @@
 	border-radius: 100%;
 }
 
-#RANbutton-frame {
+.RANbutton-frame {
 	margin: -8px auto auto auto;
 }
 
@@ -138,12 +138,12 @@
 	margin: 4px 4px 4px 4px;
 }
 
-.guilds-1q_RqH .guild-1EfMGQ:not(:first-child):not(#bd-pub-li):not(#RANbutton-frame):not(.da-guildsAdd) {
+.guilds-1q_RqH .guild-1EfMGQ:not(:first-child):not(#bd-pub-li):not(.RANbutton-frame):not(.da-guildsAdd) {
 	//padding: 4px 4px 4px 4px;
 }
 
 /*Read all button alligns correctly.*/
-#RANbutton-frame.da-guild {
+.RANbutton-frame.da-guild {
 	margin: auto;
 }
 
