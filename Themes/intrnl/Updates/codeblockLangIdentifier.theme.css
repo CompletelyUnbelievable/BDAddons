@@ -1,4 +1,4 @@
-//META{"name":"codeblockLangIdentifierMod","description":"Shows the corresponding language's syntax highlighting that was used on the code block. Modified by CompletelyUnbeilevable.","author":"intrnl","version":"1.0","source":"https://github.com/intrnl/discordcustomizations/tree/master/codeblockLangIdentifier/src","website":"https://discord.gg/XtedRz3"}*//
+//META{"name":"codeblockLangIdentifier","description":"Shows the corresponding language's syntax highlighting that was used on the code block. Updated by CompletelyUnbeilevable.","author":"intrnl","version":"1.0","source":"https://github.com/intrnl/discordcustomizations/tree/master/codeblockLangIdentifier/src","website":"https://discord.gg/XtedRz3"}*//
 
 .da-markup pre .hljs::before {
 	pointer-events: none;
