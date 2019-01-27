@@ -1,4 +1,4 @@
-A theme(s) developed as part of the The Revitalization Project.
+Theme(s) developed as part of the The Revitalization Project.
 
 # intrnl's Themes
 
