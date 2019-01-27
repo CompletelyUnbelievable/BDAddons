@@ -1,0 +1,14 @@
+//META{"name":"RemasteredCodeBlockLangIdentifier","description":"Describes the language highlighing of codeblocks. Based on and named after a deleted theme by intrnl that serves a similar purpose.","author":"CompletelyUnbelievable","version":"Live","source":"https://github.com/CompletelyUnbelievable/BDAddons/tree/master/Themes/intrnl","website":"https://git.io/vhWjm"}*//
+@import url("https://completelyunbelievable.github.io/BDAddons/Themes/intrnl/Import/RemasteredCodeBlockLangIdentifier.css");
+@import url("https://completelyunbelievable.github.io/BDAddons/Themes/intrnl/Import/Legacy.css");
+
+.da-message code.hljs::before, .message-1PNnaP code.hljs::before{
+	content:var(--CBLILanguage);
+	pointer-events:none;
+	display:block;
+	margin:0 0 10px;
+	padding:0 0 2px;
+	font-family:Whitney,'Helvetica Neue',Helvetica,Arial,sans-serif;
+	border-bottom:2px solid rgba(32,34,37,.3);
+	color:#b58900
+}
