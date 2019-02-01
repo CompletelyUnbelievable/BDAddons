@@ -36,7 +36,6 @@ class RevealSpoilers {
 			for (let x of document.querySelectorAll(`.${self.RSConfig.imageParentClass} .${self.RSConfig.imageHiddenClass}`)) {
 				x.click();
 			}
-			break;
 		}
 	}
 
