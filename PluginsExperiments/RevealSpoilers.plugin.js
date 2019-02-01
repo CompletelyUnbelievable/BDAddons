@@ -27,17 +27,16 @@ class RevealSpoilers {
 
 	observer () {
 		let self = this;
-		switch(true) {
-			case (!!(document.querySelector(`.${self.RSConfig.hiddenClass}`))&&self.RSConfig.textReveal === true): //Text.
-				for (let x of document.querySelectorAll(`.${self.RSConfig.hiddenClass}`)) {
-					x.click();
-				}
-				//Continues to the next case if possible.
-			case (!!(document.querySelector(`.${self.RSConfig.imageParentClass} .${self.RSConfig.imageHiddenClass}`))&&self.RSConfig.imageReveal === true): //Images.
-				for (let x of document.querySelectorAll(`.${self.RSConfig.imageParentClass} .${self.RSConfig.imageHiddenClass}`)) {
-					x.click();
-				}
-				break;
+		if (document.querySelector(`.${self.RSConfig.hiddenClass}`)&&self.RSConfig.textReveal === true) { //Text.
+			for (let x of document.querySelectorAll(`.${self.RSConfig.hiddenClass}`)) {
+				x.click();
+			}
+		}
+		if (document.querySelector(`.${self.RSConfig.imageParentClass} .${self.RSConfig.imageHiddenClass}`)&&self.RSConfig.imageReveal === true) { //Images.
+			for (let x of document.querySelectorAll(`.${self.RSConfig.imageParentClass} .${self.RSConfig.imageHiddenClass}`)) {
+				x.click();
+			}
+			break;
 		}
 	}
 
