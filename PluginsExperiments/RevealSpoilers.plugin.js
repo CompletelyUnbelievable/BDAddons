@@ -58,8 +58,7 @@ class RevealSpoilers {
 
 	start () {
 		let self = this; //kind of unneeded, but w/e.
-		let libraryScript = document.getElementById('zeresLibraryScript');
-		if (!!libraryScript) { //Just checking for updates.
+		if (typeof window.ZLibrary !== "undefined") { //Just checking for updates.
 			ZLibrary.PluginUpdater.checkForUpdate(self.getName(), self.getVersion(), 'https://completelyunbelievable.github.io/BDAddons/PluginsExperiments/RevealSpoilers.plugin.js');
 		}
 	}
