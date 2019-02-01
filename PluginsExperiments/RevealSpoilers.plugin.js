@@ -28,14 +28,10 @@ class RevealSpoilers {
 	observer () {
 		let self = this;
 		if (document.querySelector(`.${self.RSConfig.hiddenClass}`)&&self.RSConfig.textReveal === true) { //Text.
-			for (let x of document.querySelectorAll(`.${self.RSConfig.hiddenClass}`)) {
-				x.click();
-			}
+			self.CElementsArray(document.querySelectorAll(`.${self.RSConfig.hiddenClass}`));
 		}
 		if (document.querySelector(`.${self.RSConfig.imageParentClass} .${self.RSConfig.imageHiddenClass}`)&&self.RSConfig.imageReveal === true) { //Images.
-			for (let x of document.querySelectorAll(`.${self.RSConfig.imageParentClass} .${self.RSConfig.imageHiddenClass}`)) {
-				x.click();
-			}
+			self.CElementsArray(document.querySelectorAll(`.${self.RSConfig.imageParentClass} .${self.RSConfig.imageHiddenClass}`));
 		}
 	}
 
@@ -57,9 +53,15 @@ class RevealSpoilers {
 	}
 
 	start () {
-		let self = this; //kind of unneeded, but w/e.
+		let self = this; //Kind of unneeded in this instance, but w/e.
 		if (typeof window.ZLibrary !== "undefined") { //Just checking for updates.
 			ZLibrary.PluginUpdater.checkForUpdate(self.getName(), self.getVersion(), 'https://completelyunbelievable.github.io/BDAddons/PluginsExperiments/RevealSpoilers.plugin.js');
+		}
+	}
+
+	CElementsArray(array) { //Click elements in an array of elements.
+		for (let x of array) {
+			x.click();
 		}
 	}
 }
