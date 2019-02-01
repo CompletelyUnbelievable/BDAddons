@@ -4,4 +4,4 @@
 
 # RevealSpoilers plugin
 
-<div>Just use <a href="https://github.com/rauenzi/BetterDiscordAddons/tree/master/Plugins/RevealSpoilers">Zerebro's plugin of the same name</a>, my plugin works as well but Zere does it better.
+<div>Just use <a href="https://github.com/rauenzi/BetterDiscordAddons/tree/master/Plugins/RevealSpoilers">Zerebro's plugin of the same name</a>, my plugin works as well but Zere's does it better.
