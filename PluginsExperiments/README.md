@@ -1,6 +1,6 @@
-# Plugins
+# Experimental Plugins
 
-<div>This is a place for my proof of concept plugins, a place for plugins not meant to be used by the general populace yet.</div>
+<div>This is a place for my proof of concept plugins, a place for plugins not meant to be used by the general populace yet. They will have some issues, they will almost certainly be inefficient, and they will be updated at random or not at all, but you can try them if you would like.</div>
 
 # AntiLight plugin
 
