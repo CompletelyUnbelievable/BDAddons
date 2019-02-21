@@ -30,7 +30,6 @@ class StartingVolume {
 
 	start() {
 		self = this; //Set it and forget it. It will have issues accessing the constructor without it.
-		self.loadSettings();
 		let libraryScript = document.getElementById('zeresLibraryScript');
 		if (typeof window.ZLibrary !== "undefined") self.initialize();
 		else libraryScript.addEventListener('load', () => self.initialize());
@@ -38,6 +37,7 @@ class StartingVolume {
 
 	initialize() {
 		ZLibrary.PluginUpdater.checkForUpdate(self.getName(), self.getVersion(), "https://raw.githubusercontent.com/CompletelyUnbelievable/BDAddons/master/PluginsExperiments/StartingVolume.plugin.js");
+		self.loadSettings();
 		self.delegateMediaEvents(self.topElement, 'click', self.mediaEvents, 'play', self.check); //Add listener.
 		console.log(`${self.getName()} v${self.getVersion()} has started.`);
 	}
