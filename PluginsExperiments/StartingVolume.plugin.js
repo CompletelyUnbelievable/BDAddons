@@ -32,12 +32,12 @@ class StartingVolume {
 			return {
 				native: true,
 				volume: 10,
+				soundcloud: false,
+				soundcloudVolume: 10,
 				youtube: false,
 				youtubeVolume: 10,
 				twitter: false,
 				twitterVolume: 10,
-				soundcloud: false,
-				soundcloudVolume: 10
 			}
 		}
 	}
@@ -64,7 +64,7 @@ class StartingVolume {
 	}
 
 	load() {
-		let libraryScript = document.getElementById('zeresLibraryScript'), soundCloudAPI = document.getElementById('soundCloudAPI'), youtubeIframeAPI = document.getElementById('youtubeIframeAPI');
+		let libraryScript = document.getElementById('zeresLibraryScript'), soundCloudAPI = document.getElementById('soundCloudAPI'), youtubeIframeAPI = document.getElementById('youtubeIframeAPI'), twitterWidgetAPI = document.getElementById('twitterWidgetAPI');
 		if (!libraryScript) {
 			libraryScript = document.createElement('script');
 			libraryScript.setAttribute('type', 'text/javascript');
@@ -76,7 +76,8 @@ class StartingVolume {
 		}
 
 		if(!soundCloudAPI && this.debugSP)soundCloudAPI = this.createScriptElementAppend('text/javascript', 'soundCloudAPI', `https://w.soundcloud.com/player/api.js`);
-		if(!youtubeIframeAPI && this.debugSP)youtubeIframeAPI = this.createScriptElementAppend('text/javascript', 'youtubeIframeAPI', `https://www.youtube.com/iframe_api`)
+		if(!youtubeIframeAPI && this.debugSP)youtubeIframeAPI = this.createScriptElementAppend('text/javascript', 'youtubeIframeAPI', `https://www.youtube.com/iframe_api`);
+		if(!twitterWidgetAPI && this.debugSP)twitterWidgetAPI = this.createScriptElementAppend('text/javascript', 'twitterWidgetAPI', `https://platform.twitter.com/widgets.js`);
 	}
 
 	createScriptElementAppend(type, id, src) { //Very basic for now.
@@ -103,70 +104,69 @@ class StartingVolume {
 	}
 	
 	generateSettings(panel) {
-		let self = this;
-		if (!self.debugSP) {
+		if (!this.debugSP) {
 			new ZLibrary.Settings.SettingGroup('Options', {collapsible: true, shown: true}).appendTo(panel).append(
-				new ZLibrary.Settings.Textbox('Set volume', 'Set a volume to use, use a percent without the symbol.', self.settings.volume, text => {
+				new ZLibrary.Settings.Textbox('Set volume', 'Set a volume to use, use a percent without the symbol.', this.settings.volume, text => {
 					let x = parseInt(text, 10); 
 					if (x !== NaN && x >= 1 && x <= 100) {
-						self.settings.volume = x;
-						self.saveSettings();
+						this.settings.volume = x;
+						this.saveSettings();
 					}else{
-						self.regeneratePanel(panel);
+						this.regeneratePanel(panel);
 					}
 				}));
 		}else{
 			new ZLibrary.Settings.SettingGroup('Super Secret Debug Menu', {collapsible: true, shown: true}).appendTo(panel).append(
-				new ZLibrary.Settings.Switch('Native Embeds', `When enabled, changes the volume pertaining to discord's native embeds.`, self.settings.native, boolean => {
-					self.settings.native = boolean;
-					self.saveSettings();
+				new ZLibrary.Settings.Switch('Native Embeds', `When enabled, changes the volume pertaining to discord's native embeds.`, this.settings.native, boolean => {
+					this.settings.native = boolean;
+					this.saveSettings();
 				}),
-				new ZLibrary.Settings.Textbox('Native Embed Volume', `Set a volume to use for discord's native embeds, use a percent without the symbol.`, self.settings.volume, text => {
+				new ZLibrary.Settings.Textbox('Native Embed Volume', `Set a volume to use for discord's native embeds, use a percent without the symbol.`, this.settings.volume, text => {
 					let x = parseInt(text, 10); 
 					if (x !== NaN && x >= 1 && x <= 100) {
-						self.settings.volume = x;
-						self.saveSettings();
+						this.settings.volume = x;
+						this.saveSettings();
 					}else{
-						self.regeneratePanel(panel);
+						this.regeneratePanel(panel);
 					}
 				}),
-				new ZLibrary.Settings.Switch('SoundCloud Embeds', `When enabled, changes the volume pertaining to SoundCloud embeds.`, self.settings.soundcloud, boolean => {
-					self.settings.soundcloud = boolean;
-					self.saveSettings();
+				new ZLibrary.Settings.Switch('SoundCloud Embeds', `When enabled, changes the volume pertaining to SoundCloud embeds.`, this.settings.soundcloud, boolean => {
+					this.settings.soundcloud = boolean;
+					this.saveSettings();
 				}),
-				new ZLibrary.Settings.Textbox('SoundCloud Embed Volume', `Set a volume to use for SoundCloud embeds, use a percent without the symbol.`, self.settings.soundcloudVolume, text => {
+				new ZLibrary.Settings.Textbox('SoundCloud Embed Volume', `Set a volume to use for SoundCloud embeds, use a percent without the symbol.`, this.settings.soundcloudVolume, text => {
 					let x = parseInt(text, 10); 
 					if (x !== NaN && x >= 1 && x <= 100) {
-						self.settings.soundcloudVolume = x;
-						self.saveSettings();
+						this.settings.soundcloudVolume = x;
+						this.saveSettings();
 					}else{
-						self.regeneratePanel(panel);
+						this.regeneratePanel(panel);
 					}
 				}),
-				new ZLibrary.Settings.Switch('YouTube Embeds', `When enabled, changes the volume pertaining to YouTube embeds.`, self.settings.youtube, boolean => {
-					self.settings.youtube = boolean;
-					self.saveSettings();
+				new ZLibrary.Settings.Switch('YouTube Embeds', `When enabled, changes the volume pertaining to YouTube embeds.`, this.settings.youtube, boolean => {
+					this.settings.youtube = boolean;
+					this.saveSettings();
 				}),
-				new ZLibrary.Settings.Textbox('Youtube Embed Volume', `Set a volume to use for YouTube embeds, use a percent without the symbol.`, self.settings.youtubeVolume, text => {
+				new ZLibrary.Settings.Textbox('Youtube Embed Volume', `Set a volume to use for YouTube embeds, use a percent without the symbol.`, this.settings.youtubeVolume, text => {
 					let x = parseInt(text, 10); 
 					if (x !== NaN && x >= 1 && x <= 100) {
-						self.settings.youtubeVolume = x;
-						self.saveSettings();
+						this.settings.youtubeVolume = x;
+						this.saveSettings();
 					}else{
-						self.regeneratePanel(panel);
+						this.regeneratePanel(panel);
 					}
 				}),
-				new ZLibrary.Settings.Switch('Twitter Embeds', `When enabled, changes the volume pertaining to Twitter embeds.`, self.settings.twitter, boolean => {
-					self.settings.twitter = boolean;
-					self.saveSettings();
+				new ZLibrary.Settings.Switch('Twitter Embeds', `When enabled, changes the volume pertaining to Twitter embeds.`, this.settings.twitter, boolean => {
+					this.settings.twitter = boolean;
+					this.saveSettings();
 				}),
-				new ZLibrary.Settings.Textbox('Twitter Embed Volume', `Set a volume to use for Twitter embeds, use a percent without the symbol.`, self.settings.twitterVolume, text => {
+				new ZLibrary.Settings.Textbox('Twitter Embed Volume', `Set a volume to use for Twitter embeds, use a percent without the symbol.`, this.settings.twitterVolume, text => {
 					let x = parseInt(text, 10); 
 					if (x !== NaN && x >= 1 && x <= 100) {
-						self.settings.twitterVolume = x;
-						self.saveSettings();
+						this.settings.twitterVolume = x;
+						this.saveSettings();
 					}else{
-						self.regeneratePanel(panel);
+						this.regeneratePanel(panel);
 					}
 				}));
 				panel.append($('<div>', {class: `protip-12obwm inline-136HKr`, style: `float:left;width:80%;margin:10px 0;`})
@@ -177,10 +177,10 @@ class StartingVolume {
 		}
 		const resetButton = $('<button>', {type: 'button', text: 'Reset Settings', style: 'margin:10px 0;float:right;', class: 'button-38aScr lookOutlined-3sRXeN colorRed-1TFJan sizeMedium-1AC_Sl grow-q77ONN'})
 		.click(function() {
-			if(self.debug)console.log('reset');
-				self.settings = self.default;
-				self.regeneratePanel(panel);
-		});
+			if(this.debug)console.log('reset');
+				this.settings = this.default;
+				this.regeneratePanel(panel);
+		}.bind(this));
 		panel.append(resetButton);
 	}
 
@@ -193,67 +193,63 @@ class StartingVolume {
 	}
 
 	delegateMediaEvents(topEle, topEvent, lowSelector, lowEvent, funct) { //Solution to .on not working with media events.
-		let self = this, handler;
 		if (document.contains(topEle) && typeof topEle === 'object') { //Check if topEle is an element.
-			handler = () => {self.mainEvent(lowSelector, lowEvent, funct)};
+			let handler = () => {this.mainEvent(lowSelector, lowEvent, funct)};
 			topEle.addEventListener(topEvent, handler); //Moved the actual function to mainEvent so that it can be removed with ease.
 			return handler;
 		}
 	}
 
 	removeDelegatedMediaEvents(topEle, topEvent, lowSelector, lowEvent, funct, handler) {
-		let self = this;
 		topEle.removeEventListener(topEvent, handler);
 		if (Array.isArray(lowSelector) && typeof lowSelector === 'object' && typeof funct === 'function') { //Can send an array, why not. This should mean the top event will trigger both where plausable.
-			for (let i of lowSelector) {for (let x of document.querySelectorAll(i)) {x.removeEventListener(lowEvent, funct.bind(self));}}
+			for (let i of lowSelector) {for (let x of document.querySelectorAll(i)) {x.removeEventListener(lowEvent, funct.bind(this));}}
 		}else if (typeof lowSelector === 'string' && typeof funct === 'function') {
-			for (let x of document.querySelectorAll(lowSelector)) {x.removeEventListener(lowEvent, funct.bind(self));}
+			for (let x of document.querySelectorAll(lowSelector)) {x.removeEventListener(lowEvent, funct.bind(this));}
 		}
 	}
 
 	mainEvent(lowSelector, lowEvent, funct) {
-		let self = this;
-		if(self.debug)console.log('mainEvent');
+		if(this.debug)console.log('mainEvent');
 		if (Array.isArray(lowSelector) && typeof lowSelector === 'object' && typeof funct === 'function') { //Can send an array, why not. This should mean the top event will trigger both where plausable.
-			for (let i of lowSelector) {for (let x of document.querySelectorAll(i)) {x.addEventListener(lowEvent, funct.bind(self));}}
+			for (let i of lowSelector) {for (let x of document.querySelectorAll(i)) {x.addEventListener(lowEvent, funct.bind(this));}}
 		}else if (typeof lowSelector === 'string' && typeof funct === 'function') {
-			for (let x of document.querySelectorAll(lowSelector)) {x.addEventListener(lowEvent, funct.bind(self));}
+			for (let x of document.querySelectorAll(lowSelector)) {x.addEventListener(lowEvent, funct.bind(this));}
 		}
 	}
 
 	check(event) { //Changes volumes and adds classes.
-		let self = this, volumes = self.conversions(), element = event.target.closest(self.audioParent) || event.target.closest(self.videoParent) || event.target;
+		let volumes = this.conversions(), element = event.target.closest(this.audioParent) || event.target.closest(this.videoParent) || event.target;
 		//Above would throw an error if I used query selector on something that does not exist, even though it should perform falsy. This forces two step operations.
 		element = element.querySelector('audio') || element.querySelector('video') || event.target;
-		if(self.debug)console.log('check');
-		if (!element.classList.contains(self.class) && element.volume !== volumes.volumeD) {
-			if(self.debug)console.log('click');
-			element.classList.add(self.class);
+		if(this.debug)console.log('check');
+		if (!element.classList.contains(this.class) && element.volume !== volumes.volumeD) {
+			if(this.debug)console.log('click');
+			element.classList.add(this.class);
 			element.volume = volumes.volumeD;
 		}
 	}
 
 	iframeHandling(event) {
-		let self = this, element = event.target;
-		if(self.debug)console.log('iframeHandler');
-		if(self.settings.soundcloud&&element.src.includes('soundcloud')&&!element.classList.contains(self.class)){
-			(SC.Widget(element)).setVolume(self.settings.soundcloudVolume);
-			if(self.debug)console.log('load');
-			element.classList.add(self.class);
+		let element = event.target;
+		if(this.debug)console.log('iframeHandler');
+		if(this.settings.soundcloud&&element.src.includes('soundcloud')&&!element.classList.contains(this.class)){
+			(SC.Widget(element)).setVolume(this.settings.soundcloudVolume);
+			if(this.debug)console.log('load');
+			element.classList.add(this.class);
 		}
 	}
 
 	conversions() {
-		let self = this;
-		if (self.settings !== undefined) { //Try to use settings first,
+		if (this.settings !== undefined) { //Try to use settings first,
 			return {
-				volumeP: `${self.settings.volume}%`,
-				volumeD: self.settings.volume / 100
+				volumeP: `${this.settings.volume}%`,
+				volumeD: this.settings.volume / 100
 			};
-		}else if(self.settings === undefined && self.default !== undefined) { //then use defaults.
+		}else if(this.settings === undefined && this.default !== undefined) { //then use defaults.
 			return {
-				volumeP: `${self.default.volume}%`,
-				volumeD: self.default.volume / 100
+				volumeP: `${this.default.volume}%`,
+				volumeD: this.default.volume / 100
 			};
 		}else{ //In the case everything goes wrong, redundant defaults.
 			return {
