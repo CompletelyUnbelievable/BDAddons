@@ -6,7 +6,7 @@ class StartingVolume {
 
 	getDescription() {return "Sets the volume on the default discord video and audio embeds. Does not visually update properly.";}
 
-	getVersion() {return "1.6";}
+	getVersion() {return "1.7";}
 
 	getAuthor() {return "CompletelyUnbelievable";}
 	
@@ -19,7 +19,8 @@ class StartingVolume {
 		this.embedIframe = `iframe.${BdApi.findModuleByProps('embedIframe').embedIframe.split(' ')[0]}` || `iframe.embedIframe-2hcNY5`;
 		this.debug = false; //Console logs the steps to make sure events are being triggered.
 		this.debugSP = false; //Additional options that will be in testing phases for now, some might not do anything.
-		this.handler; //The delegated event handler gets put here, makes it easier to remove.
+		this.handler; //The delegated event handlers gets put here, makes it easier to remove.
+		this.iframeHandler;  //The delegated event handlers for iframes gets put here, makes it easier to remove.
 	}
 
 	get default() {
@@ -35,6 +36,8 @@ class StartingVolume {
 				youtubeVolume: 10,
 				twitter: false,
 				twitterVolume: 10,
+				soundcloud: false,
+				soundcloudVolume: 10
 			}
 		}
 	}
@@ -42,25 +45,26 @@ class StartingVolume {
 	observer() {} //Don't want to use the observer at all.
 
 	start() {
-		let self = this, libraryScript = document.getElementById('zeresLibraryScript');
-		if (typeof window.ZLibrary !== "undefined") self.initialize();
-		else libraryScript.addEventListener('load', () => self.initialize());
+		let libraryScript = document.getElementById('zeresLibraryScript');
+		if (typeof window.ZLibrary !== "undefined") this.initialize();
+		else libraryScript.addEventListener('load', () => this.initialize());
 	}
 
 	initialize() {
-		let self = this;
-		ZLibrary.PluginUpdater.checkForUpdate(self.getName(), self.getVersion(), "https://raw.githubusercontent.com/CompletelyUnbelievable/BDAddons/master/PluginsExperiments/StartingVolume.plugin.js");
-		self.loadSettings();
-		self.delegateMediaEvents(self.topElement, 'click', self.mediaEvents, 'play', self.check); //Add listener.
-		console.log(`${self.getName()} v${self.getVersion()} has initialized.`);
+		ZLibrary.PluginUpdater.checkForUpdate(this.getName(), this.getVersion(), "https://raw.githubusercontent.com/CompletelyUnbelievable/BDAddons/master/PluginsExperiments/StartingVolume.plugin.js");
+		this.loadSettings();
+		this.handler = this.delegateMediaEvents(this.topElement, 'click', this.mediaEvents, 'play', this.check); //Add listener.
+		if(this.debugSP){this.iframeHandler = this.delegateMediaEvents(this.topElement, 'click', this.embedIframe, 'load', this.iframeHandling);}
+		console.log(`${this.getName()} v${this.getVersion()} has (re)initialized.`);
 	}
 
 	stop() {
-		this.removeDelegatedMediaEvents(this.topElement, 'click', this.mediaEvents, 'play', this.check);
+		this.removeDelegatedMediaEvents(this.topElement, 'click', this.mediaEvents, 'play', this.check, this.handler);
+		if(this.debugSP){this.removeDelegatedMediaEvents(this.topElement, 'click', this.embedIframe, 'load', this.iframeHandling, this.iframeHandler);}
 	}
 
 	load() {
-		let libraryScript = document.getElementById('zeresLibraryScript');
+		let libraryScript = document.getElementById('zeresLibraryScript'), soundCloudAPI = document.getElementById('soundCloudAPI'), youtubeIframeAPI = document.getElementById('youtubeIframeAPI');
 		if (!libraryScript) {
 			libraryScript = document.createElement('script');
 			libraryScript.setAttribute('type', 'text/javascript');
@@ -70,20 +74,32 @@ class StartingVolume {
 			libraryScript.setAttribute('id', 'zeresLibraryScript');
 			document.head.appendChild(libraryScript);
 		}
+
+		if(!soundCloudAPI && this.debugSP)soundCloudAPI = this.createScriptElementAppend('text/javascript', 'soundCloudAPI', `https://w.soundcloud.com/player/api.js`);
+		if(!youtubeIframeAPI && this.debugSP)youtubeIframeAPI = this.createScriptElementAppend('text/javascript', 'youtubeIframeAPI', `https://www.youtube.com/iframe_api`)
+	}
+
+	createScriptElementAppend(type, id, src) { //Very basic for now.
+		let x = document.createElement('script');
+		x.setAttribute('type', type);
+		x.setAttribute('id', id);
+		x.setAttribute('src', src);
+		document.head.appendChild(x);
+		return x;
 	}
 
 	saveSettings() {
         ZLibrary.PluginUtilities.saveSettings(this.getName(), this.settings);
-    }
+	}
 
-    loadSettings() {
+	loadSettings() {
         this.settings = ZLibrary.PluginUtilities.loadSettings(this.getName(), this.default);
-    }
+	}
 
-    getSettingsPanel() {
-        let panel = $("<form>", {class: 'form', style: `width:100%;margin-left:auto;margin-right:auto;`});
-        this.generateSettings(panel);
-        return panel[0];
+	getSettingsPanel() {
+		let panel = $("<form>", {class: 'form', style: `width:100%;margin-left:auto;margin-right:auto;`});
+		this.generateSettings(panel);
+		return panel[0];
 	}
 	
 	generateSettings(panel) {
@@ -114,7 +130,20 @@ class StartingVolume {
 						self.regeneratePanel(panel);
 					}
 				}),
-				new ZLibrary.Settings.Switch('YouTube Embeds', `When enabled, changes the volume pertaining to youtube embeds.`, self.settings.youtube, boolean => {
+				new ZLibrary.Settings.Switch('SoundCloud Embeds', `When enabled, changes the volume pertaining to SoundCloud embeds.`, self.settings.soundcloud, boolean => {
+					self.settings.soundcloud = boolean;
+					self.saveSettings();
+				}),
+				new ZLibrary.Settings.Textbox('SoundCloud Embed Volume', `Set a volume to use for SoundCloud embeds, use a percent without the symbol.`, self.settings.soundcloudVolume, text => {
+					let x = parseInt(text, 10); 
+					if (x !== NaN && x >= 1 && x <= 100) {
+						self.settings.soundcloudVolume = x;
+						self.saveSettings();
+					}else{
+						self.regeneratePanel(panel);
+					}
+				}),
+				new ZLibrary.Settings.Switch('YouTube Embeds', `When enabled, changes the volume pertaining to YouTube embeds.`, self.settings.youtube, boolean => {
 					self.settings.youtube = boolean;
 					self.saveSettings();
 				}),
@@ -164,16 +193,17 @@ class StartingVolume {
 	}
 
 	delegateMediaEvents(topEle, topEvent, lowSelector, lowEvent, funct) { //Solution to .on not working with media events.
-		let self = this;
+		let self = this, handler;
 		if (document.contains(topEle) && typeof topEle === 'object') { //Check if topEle is an element.
-			self.handler = () => {self.mainEvent(lowSelector, lowEvent, funct)};
-			topEle.addEventListener(topEvent, self.handler); //Moved the actual function to mainEvent so that it can be removed with ease.
+			handler = () => {self.mainEvent(lowSelector, lowEvent, funct)};
+			topEle.addEventListener(topEvent, handler); //Moved the actual function to mainEvent so that it can be removed with ease.
+			return handler;
 		}
 	}
 
-	removeDelegatedMediaEvents(topEle, topEvent, lowSelector, lowEvent, funct) {
+	removeDelegatedMediaEvents(topEle, topEvent, lowSelector, lowEvent, funct, handler) {
 		let self = this;
-		topEle.removeEventListener(topEvent, self.handler);
+		topEle.removeEventListener(topEvent, handler);
 		if (Array.isArray(lowSelector) && typeof lowSelector === 'object' && typeof funct === 'function') { //Can send an array, why not. This should mean the top event will trigger both where plausable.
 			for (let i of lowSelector) {for (let x of document.querySelectorAll(i)) {x.removeEventListener(lowEvent, funct.bind(self));}}
 		}else if (typeof lowSelector === 'string' && typeof funct === 'function') {
@@ -200,6 +230,16 @@ class StartingVolume {
 			if(self.debug)console.log('click');
 			element.classList.add(self.class);
 			element.volume = volumes.volumeD;
+		}
+	}
+
+	iframeHandling(event) {
+		let self = this, element = event.target;
+		if(self.debug)console.log('iframeHandler');
+		if(self.settings.soundcloud&&element.src.includes('soundcloud')&&!element.classList.contains(self.class)){
+			(SC.Widget(element)).setVolume(self.settings.soundcloudVolume);
+			if(self.debug)console.log('load');
+			element.classList.add(self.class);
 		}
 	}
 
