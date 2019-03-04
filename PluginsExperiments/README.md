@@ -8,7 +8,7 @@
 
 # FixDiscordImages plugin
 
-<div>Forces certain areas of the home menu to load full sized images instead of the cropped ones. The menu also just uses some bad images, which are not remedied by this plugin.</div>
+<div>Forces certain areas of the home menu to load full sized images instead of the cropped ones. The menu also just uses some bad images, which are not remedied by this plugin. This will probably be outdated very soon due to the activity menu changes that are currently on Canary, and quite possibly on PTB.</div>
 
 # FurryTalk plugin
 
