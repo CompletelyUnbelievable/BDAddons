@@ -24,4 +24,4 @@
 
 # StartingVolume plugin
 
-<div>Makes native discord embeds for audio and video start at 10% of their normal volume. I don't know what discord was thinking having their native embeds play at 100% volume right from the start.</div>
+<div>My most prospective plugin. Sets Discord's native video/audio embeds play at 10% volume from the start. SoundCloud embeds are also supported. Modify the volumes individually in the settings panel.</div>
