@@ -4,15 +4,15 @@
 
 # AntiLight plugin
 
-<div>Don't use it. This plugin was just attempting to do what my old theme of the same name did, but less crap.</div>
+<div>Deprecated, the plugin was just attempting to do what my old theme of the same name did, but a lot easier.</div>
 
 # FixDiscordImages plugin
 
-<div>Forces certain areas of the home menu to load full sized images instead of the cropped ones. The menu also just uses some bad images, which are not remedied by this plugin. This will probably be outdated very soon due to the activity menu changes that are currently on Canary, and quite possibly on PTB.</div>
+<div>Forces certain areas of the home menu to load full sized images instead of the cropped ones. The menu also just uses some bad images, which are not remedied by this plugin. This will probably be outdated and/or deprecated soon due to the activity menu changes that are currently on Canary, and quite possibly on PTB.</div>
 
 # FurryTalk plugin
 
-<div>Makes the text in the chat area appear to be something similar to furry roleplay, does not change anything a user sends. Someone requested a plugin the does the same thing as a chrome extension but for discord. I thought it would be a nice concept for practice, and there aren’t that many goofy plugins that do something absurd. A lot more people were disturbed by it though.</div>
+<div>Makes the text in the chat area appear to be something similar to furry roleplay, does not change anything a user sends. Someone requested a plugin the does the same thing as a certain chrome extension but for discord. I thought it would be a nice concept for practice, and there aren’t that many goofy plugins that do something absurd. In all honesty, more people were disturbed by it.</div>
 
 # GuildSettingsClasses plugin
 
@@ -20,7 +20,7 @@
 
 # RevealSpoilers plugin
 
-<div>Just use <a href="https://github.com/rauenzi/BetterDiscordAddons/tree/master/Plugins/RevealSpoilers">Zerebro's plugin of the same name</a>, my plugin works but Zere's does it better.
+<div>Just use either <a href="https://github.com/mwittrien/BetterDiscordAddons/blob/master/Plugins/RevealAllSpoilersOption/RevealAllSpoilersOption.plugin.js">Devilbro's Reveal All Spoilers Option plugin</a> or <a href="https://github.com/rauenzi/BetterDiscordAddons/tree/master/Plugins/RevealSpoilers">Zerebro's plugin of the same name</a>.
 
 # StartingVolume plugin
 
