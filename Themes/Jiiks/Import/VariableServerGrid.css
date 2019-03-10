@@ -1,4 +1,4 @@
-.da-guildsWrapper {
+.wrapper-1Rf91z {
 	//--VSGpreventresizing: 1; /*This is for testing purposes only*/
 	--VSGmeadiatorwidth: calc(50px * var(--VSGguildiconw));
 	--VSGmeadiatorheight: calc(50px * var(--VSGguildiconh));
@@ -7,32 +7,34 @@
 	--VSGaddfontsize: calc(40px * var(--VSGguildiconw, 1));
 }
 
-.da-guildsWrapper:hover {
+.wrapper-1Rf91z:hover {
 	padding-left: var(--VSGnocollapsiblegrid, 0px);
 	transition: var(--VSGnocollapsiblegrid, padding .75s ease 0s), var(--VSGnocompactgrid, width .95s ease);
 }
 
-.da-guildsWrapper:not(:hover) {
+.wrapper-1Rf91z:not(:hover) {
 	padding-left: var(--VSGnocollapsiblegrid, 20px);
 	width: var(--VSGnocollapsiblegrid, 0px);
 	transition: var(--VSGnocollapsiblegrid, padding .75s ease .4s), var(--VSGnocompactgrid, width .95s ease);
 }
 
-#bd-pub-li {
+.wrapper-1Rf91z #bd-pub-li {
 	top: 8px;
+	position: unset;
+	margin: auto;
 }
 
-.da-guilds .guild-1EfMGQ:not(:first-child):not(#bd-pub-li):not(.RANbutton-frame):not(.da-guildsAdd):hover, .da-guilds .guild-1EfMGQ:not(:first-child, #bd-pub-li):not(.RANbutton-frame):not(.da-guildsAdd) *:not(.da-badge):not(.da-guildsError):hover {
+.wrapper-1Rf91z .scroller-2TZvBN .da-container:not(:first-child):not(#bd-pub-li):not(#RANbutton-frame):not(:last-child):hover, .wrapper-1Rf91z .scroller-2TZvBN .da-container:not(:first-child, #bd-pub-li):not(#RANbutton-frame) *:not(.da-badge):not(.da-guildsError):not(svg):not(g):not(path):not(.da-circleIconButton):hover {
 	height: var(--VSGnohovergrowth, calc(var(--VSGcolumns, 1) * var(--VSGmeadiatorheight, 50px)));
 	width: var(--VSGnohovergrowth, calc(var(--VSGcolumns, 1) * var(--VSGmeadiatorwidth, 50px)));
 	transition: var(--VSGnohovergrowth, width 0.5s ease), var(--VSGnohovergrowth, height 0.5s ease);
 }
 
-.da-guildsWrapper, .da-guildsWrapper .da-scrollerWrap {
+.wrapper-1Rf91z, .wrapper-1Rf91z .da-scrollerWrap {
 	width: var(--VSGwrapperwidth, 52px);
 }
 
-.da-guilds .guild-1EfMGQ:not(:first-child):not(#bd-pub-li):not(.RANbutton-frame):not(.da-guildsAdd), .da-guilds .guild-1EfMGQ:not(:first-child):not(#bd-pub-li):not(.RANbutton-frame):not(.da-guildsAdd) *:not(.da-badge):not(.da-guildsError) {
+.wrapper-1Rf91z .scroller-2TZvBN .da-container:not(:first-child):not(#bd-pub-li):not(#RANbutton-frame):not(:last-child), .wrapper-1Rf91z .scroller-2TZvBN .da-container:not(:first-child):not(#bd-pub-li):not(#RANbutton-frame) *:not(.da-badge):not(.da-guildsError):not(svg):not(g):not(path):not(.da-circleIconButton) {
 	width: var(--VSGmeadiatorwidth, 50px);
 	height: var(--VSGmeadiatorheight, 50px);
 	font-size: calc(18px * var(--VSGguildiconh, 1)) !important; /*required*/
@@ -41,48 +43,44 @@
 	transition: var(--VSGnohovergrowth, width 0.5s ease 0.5s), var(--VSGnohovergrowth, height 0.5s ease 0.5s);
 }
 
-.guilds-1q_RqH .da-guildsError {
+.wrapper-1Rf91z .scroller-2TZvBN .da-guildsError {
 	width: var(--VSGmeadiatorwidth, 50px);
 	height: var(--VSGmeadiatorheight, 50px);
 	font-size: calc(18px * var(--VSGguildiconh, 1)); /*required*/
 	line-height: var(--VSGmeadiatorheight, 50px);
 }
 
-.da-guildsWrapper .guilds-1q_RqH .guild-1EfMGQ:first-child { 
+.wrapper-1Rf91z .scroller-2TZvBN .da-container:first-child { 
 	position: relative;
 	margin: 0px var(--VSGmargincentering, auto) 0px var(--VSGmargincentering, auto);
 }
 
-#app-mount .da-guildsWrapper .selected-ML3OIq:before {
+.wrapper-1Rf91z .da-selected::before {
 	position: absolute;
 	left: 0px;
 	top: 33px;
 	background: var(--VSGindicatorcolor, #7289da);
-	z-index: 9000;
+	z-index: 1;
 	width: calc(5px * var(--VSGguildiconw, 1));
 	height: calc(50px * (var(--VSGguildiconh, 0) - 1) + 25px);
 }
 
-.da-guildsWrapper .guilds-1q_RqH .unread-qLkInr:not(.selected-ML3OIq)::before {
+.wrapper-1Rf91z .scroller-2TZvBN .da-unread:not(.da-selected)::before {
 	position: absolute;
 	left: 0px;
 	top: 7px;
-	z-index: 9000;
+	z-index: 1;
 	background: var(--VSGindicatorcolor, #7289da);
 	width: calc(12px * var(--VSGguildiconw, 1));
 	height: calc(12px * var(--VSGguildiconh, 1));
 	border-radius: 100%;
 }
 
-.RANbutton-frame {
-	margin: -8px auto auto auto;
-}
-
-#gc-counter {
+.wrapper-1Rf91z #gc-counter {
 	margin: 18px auto 0 auto;
 }
 
-.guilds-1q_RqH > :not(.da-dms) .da-badge {
+.wrapper-1Rf91z .scroller-2TZvBN > :not(.da-dms) .da-badge {
 	box-sizing: border-box;
 	display: table-cell;
 	height: calc(16px * var(--VSGguildiconh, 1));
@@ -98,23 +96,23 @@
 	vertical-align: middle;
 }
 
-.guilds-1q_RqH > .da-dms .da-badge {
+.wrapper-1Rf91z .scroller-2TZvBN > .da-dms .da-badge {
 	background-color: var(--VSGalertscolor, #f04747);
 	left: 0px;
 	right: initial;
 }
 
-.da-appMount .guild-1EfMGQ.audio-3vVhBi .da-guildInner::after {
+.wrapper-1Rf91z .da-container.da-audio .wrapper-2lTRaf::after {
 	top: 2px;
 	right: -2px;
 	background-color: transparent;
 }
 
-.da-guildsWrapper .da-scroller {
+.wrapper-1Rf91z .da-scroller {
 	padding-right: 14px;
 }
 
-.da-guildsAdd span.da-guildsAddInner {
+.wrapper-1Rf91z .da-circleIconButton .da-plus {
 	font-size: var(--VSGaddfontsize, 40px);
 	position: relative;
 	left: -1px;
@@ -128,7 +126,22 @@
 	flex-flow: column wrap;
 }
 
-.da-appMount .da-guildsWrapper .guilds-1q_RqH .da-guildsAdd {
+.wrapper-1Rf91z .da-container:last-child, .wrapper-1Rf91z .scroller-2FKFPG > div:not(.da-container):not(.da-friendsOnline):not(.da-guildSeparator):not(.da-container) {
+	width: var(--VSGmeadiatorwidth, 50px);
+	height: var(--VSGmeadiatorheight, 50px);
+	margin: 4px auto 4px auto;
+	justify-content: center;
+	align-content: center;
+	position: relative;
+	display: grid;
+}
+
+.wrapper-1Rf91z .da-container svg[name="Search"] {
+	width: calc(24px * var(--VSGguildiconw));
+	height: calc(24px * var(--VSGguildiconh));
+}
+
+.wrapper-1Rf91z .scroller-2TZvBN .da-circleIconButton {
 	width: var(--VSGmeadiatorwidth, 50px);
 	height: var(--VSGmeadiatorheight, 50px);
 	//border-radius: var(--VSGguildborderradius, 50%);
@@ -138,79 +151,73 @@
 	margin: 4px 4px 4px 4px;
 }
 
-.guilds-1q_RqH .guild-1EfMGQ:not(:first-child):not(#bd-pub-li):not(.RANbutton-frame):not(.da-guildsAdd) {
-	//padding: 4px 4px 4px 4px;
-}
-
 /*Read all button alligns correctly.*/
-.RANbutton-frame.da-guild {
-	margin: auto;
+.wrapper-1Rf91z .RANbutton-frame.da-container {
+	position: relative;
+	margin: auto auto 5px auto;
 }
 
-.da-guildsWrapper .guilds-1q_RqH {
+.wrapper-1Rf91z .scroller-2TZvBN {
 	display: flex;
 	flex-flow: row wrap;
 	align-content: flex-start;
 	padding: 10px 10px 10px 10px;
 }
 
-.da-guildsWrapper .guilds-1q_RqH .guild-1EfMGQ:first-child.selected-ML3OIq:before { 
+.wrapper-1Rf91z .scroller-2TZvBN .da-container:first-child.da-selected::before { 
 	display: none;
 }
 
-.da-guildsWrapper .guilds-1q_RqH .da-guildSeparator {
+.wrapper-1Rf91z .scroller-2TZvBN .da-guildSeparator {
 	position: relative;
 	width: 100%;
-	margin-top: 0px;
+	margin-top: 10px;
 }
 
-.da-guildsWrapper .guilds-1q_RqH .da-friendsOnline {
-	top: 12px;
+.wrapper-1Rf91z .scroller-2TZvBN .da-friendsOnline {
+	top: 6px;
 	position: relative;
 	width: 100%;
-	margin: auto;
-	margin-top: 5px;
-	margin-bottom: 5px;
+	margin: auto auto 5px auto;
 }
 
-.da-guildsWrapper .guilds-1q_RqH .guild-1EfMGQ {
+.wrapper-1Rf91z .scroller-2TZvBN .da-container {
 	position: relative;
 }
 
-.da-guildsWrapper .guilds-1q_RqH .da-dms {
+.wrapper-1Rf91z .scroller-2TZvBN .da-dms {
 	width: 100%;
 	display: flex;
 	flex-flow: row wrap;
 }
 
-.da-guildsWrapper .guilds-1q_RqH .da-dms .da-guild {
+.wrapper-1Rf91z .scroller-2TZvBN .da-dms .da-container {
 	left: 0;
 	top: 2px;
 	margin-bottom: 8px;
 }
 
 /*removes scrollbar.*/
-
-.da-appMount .da-guildsWrapper .scroller-wrap .scroller::-webkit-scrollbar {
+.wrapper-1Rf91z .da-scrollerWrap .da-scroller::-webkit-scrollbar {
 	width: 0px; /*14*/
 }
 
-.da-appMount .da-guildsWrapper .da-scroller::-webkit-scrollbar-thumb {
+.wrapper-1Rf91z .da-scroller::-webkit-scrollbar-thumb {
 	background-color: transparent; /*#202225*/
 	border-color: transparent; /*#36393f*/
 }
 
-.da-appMount .da-guildsWrapper .da-scroller::-webkit-scrollbar-track-piece {
+.wrapper-1Rf91z .da-scroller::-webkit-scrollbar-track-piece {
 	background-color: transparent; /*#2f3136*/
 	border-color: transparent; /*#36393f*/
 	border-radius: 0px; /*7px*/
 }
 /*End of scrollbar fix.*/
 
-.da-appMount .guild-1EfMGQ+.guild-1EfMGQ, .da-appMount .guildSeparator-1X4GQ1+.guild-1EfMGQ {
+.wrapper-1Rf91z .da-container+.da-container, .wrapper-1Rf91z .da-guildSeparator+.da-container {
 	margin: auto;
 }
 
-.da-appMount .da-guildsWrapper .guild-1EfMGQ+.guild-1EfMGQ:not(#bd-pub-li), .da-appMount .da-guildsWrapper .guildSeparator-1X4GQ1+.guild-1EfMGQ {
+.wrapper-1Rf91z .da-container+.da-container:not(#bd-pub-li), .wrapper-1Rf91z .da-guildSeparator+.da-container {
 	margin: 4px auto 4px auto;
 }
