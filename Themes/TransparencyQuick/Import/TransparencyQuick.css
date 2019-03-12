@@ -87,10 +87,6 @@ body .da-appMount {
 	background-color: transparent;
 }
 
-#app-mount .guildsWrapper-5TJh6A {
-	background-color: transparent;
-}
-
 #app-mount .da-layers .da-container {
 	background-color: transparent;
 }
@@ -139,10 +135,6 @@ body .da-appMount {
 	background: transparent;
 }
 
-#app-mount .guildsWrapper-5TJh6A .da-guildsAdd {
-	background: transparent;
-}
-
 #app-mount .da-gameLibrary, #app-mount .da-gameLibrary .da-headerBar, .da-activityFeed .da-headerBar {
 	background-color: transparent;
 }
@@ -151,7 +143,15 @@ body .da-appMount {
 	background-color: transparent;
 }
 
-#app-mount .guildsWrapper-5TJh6A .da-guilds .da-guildInner {
+#app-mount .wrapper-1Rf91z {
+	background-color: transparent;
+}
+
+#app-mount .wrapper-1Rf91z .da-circleIconButton {
+	background: transparent;
+}
+
+#app-mount .wrapper-1Rf91z .da-container .da-wrapper {
 	background: transparent !important;
 }
 
