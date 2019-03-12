@@ -1,6 +1,6 @@
 //META{"name":"TransparencyQuick","description":"A theme to easily allow for a background image. Works in dark and light themes.","author":"CompletelyUnbelievable","version":"1.1","source":"https://github.com/CompletelyUnbelievable/BDAddons/edit/master/Themes/TransparencyQuick","website":"https://git.io/vhWjm"}*//
 @import url("https://completelyunbelievable.github.io/BDAddons/Themes/TransparencyQuick/Import/TransparencyQuick.css");
-@import url("https://completelyunbelievable.github.io/BDAddons/Themes/TransparencyQuick/Import/Builder/Legacy.css");
+@import url("https://completelyunbelievable.github.io/BDAddons/Themes/TransparencyQuick/Import/Legacy.css");
 
 :root {
 	/*If you want to use an image as a background then:
