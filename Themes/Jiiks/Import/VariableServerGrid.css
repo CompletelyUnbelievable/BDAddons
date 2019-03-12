@@ -24,11 +24,11 @@
 	margin: 0px var(--VSGmargincentering, auto) 0px var(--VSGmargincentering, auto) !important;
 }
 
-.wrapper-1Rf91z .da-container[style="opacity: 1;height: 60px;transform: scale(1);"]{
+.wrapper-1Rf91z .da-container[style="opacity: 1; height: 60px; transform: scale(1);"], .wrapper-1Rf91z .da-container[style*="opacity"]{
 	margin: 0px var(--VSGmargincentering, auto) 0px var(--VSGmargincentering, auto);
 }
 
-.wrapper-1Rf91z .da-container[style="opacity: 1;height: 60px;transform: scale(1);"] .da-badge{
+.wrapper-1Rf91z .da-container[style="opacity: 1; height: 60px; transform: scale(1);"] .da-badge, .wrapper-1Rf91z .da-container[style*="opacity"] .da-badge{
 	top:-14px;
 }
 
