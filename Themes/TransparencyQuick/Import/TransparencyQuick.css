@@ -143,6 +143,14 @@ body .da-appMount {
 	background-color: transparent;
 }
 
+#app-mount .pageWrapper-1PgVDX {
+	background-color: transparent;
+}
+
+#app-mount .pageWrapper-1PgVDX .da-bg {
+	opacity: 0.5;
+}
+
 #app-mount .wrapper-1Rf91z {
 	background-color: transparent;
 }
