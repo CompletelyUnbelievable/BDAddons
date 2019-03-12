@@ -21,7 +21,15 @@
 .wrapper-1Rf91z #bd-pub-li {
 	top: 8px;
 	position: unset;
-	margin: auto;
+	margin: 0px var(--VSGmargincentering, auto) 0px var(--VSGmargincentering, auto) !important;
+}
+
+.wrapper-1Rf91z .da-container[style="opacity: 1;height: 60px;transform: scale(1);"]{
+	margin: 0px var(--VSGmargincentering, auto) 0px var(--VSGmargincentering, auto);
+}
+
+.wrapper-1Rf91z .da-container[style="opacity: 1;height: 60px;transform: scale(1);"] .da-badge{
+	top:-14px;
 }
 
 .wrapper-1Rf91z .scroller-2TZvBN .da-container:not(:first-child):not(#bd-pub-li):not(#RANbutton-frame):not(:last-child):hover, .wrapper-1Rf91z .scroller-2TZvBN .da-container:not(:first-child, #bd-pub-li):not(#RANbutton-frame) *:not(.da-badge):not(.da-guildsError):not(svg):not(g):not(path):not(.da-circleIconButton):hover {
@@ -178,7 +186,7 @@
 	top: 6px;
 	position: relative;
 	width: 100%;
-	margin: auto auto 5px auto;
+	margin: auto auto 10px auto;
 }
 
 .wrapper-1Rf91z .scroller-2TZvBN .da-container {
