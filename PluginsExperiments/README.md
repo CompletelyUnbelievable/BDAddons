@@ -2,10 +2,6 @@
 
 <div>This is a place for my proof of concept plugins, a place for plugins not meant to be used by the general populace yet. They will have some issues, they will almost certainly be inefficient, and they will be updated at random or not at all, but you can try them if you would like.</div>
 
-# AntiLight plugin
-
-<div>Deprecated, the plugin was just attempting to do what my old theme of the same name did, but a lot easier.</div>
-
 # FixDiscordImages plugin
 
 <div>Forces certain areas of the home menu to load full sized images instead of the cropped ones. The menu also just uses some bad images, which are not remedied by this plugin. This will probably be outdated and/or deprecated soon due to the activity menu changes that are currently on Canary, and quite possibly on PTB.</div>
