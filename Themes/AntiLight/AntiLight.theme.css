@@ -1,7 +1,0 @@
-//META{"name":"AntiLight","description":"A theme that changes the light theme to the dark theme. Leaves the normal dark theme alone as much as possible.","author":"CompletelyUnbelievable","version":"1.0","source":"https://github.com/CompletelyUnbelievable/BDAddons/tree/master/Themes/AntiLight","website":"https://git.io/vhWjm"}*//
-@import url("https://completelyunbelievable.github.io/BDAddons/Themes/AntiLight/Import/AntiLight.css");
-
-:root {
-	--LightTitle: 'Dark';
-	--DarkTitle: 'Main Theme';
-}
