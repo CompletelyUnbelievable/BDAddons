@@ -29,7 +29,7 @@
 }
 
 .wrapper-1Rf91z .da-container[style="opacity: 1; height: 60px; transform: scale(1);"] .da-badge, .wrapper-1Rf91z .da-container[style*="opacity"] .da-badge{
-	top:-14px;
+	top:-18px;
 }
 
 .wrapper-1Rf91z .scroller-2TZvBN .da-container:not(:first-child):not(#bd-pub-li):not(#RANbutton-frame):not(:last-child):hover, .wrapper-1Rf91z .scroller-2TZvBN .da-container:not(:first-child, #bd-pub-li):not(#RANbutton-frame) *:not(.da-badge):not(.da-guildsError):not(svg):not(g):not(path):not(.da-circleIconButton):hover {
@@ -58,9 +58,24 @@
 	line-height: var(--VSGmeadiatorheight, 50px);
 }
 
-.wrapper-1Rf91z .scroller-2TZvBN .da-container:first-child { 
+.wrapper-1Rf91z .scroller-2TZvBN .da-container:first-child:not([folder]) { 
 	position: relative;
 	margin: 0px var(--VSGmargincentering, auto) 0px var(--VSGmargincentering, auto);
+}
+
+.wrapper-1Rf91z[class*="folder"] .scroller-2TZvBN .da-container:first-child {
+	width: var(--VSGmeadiatorwidth, 50px);
+	height: var(--VSGmeadiatorheight, 50px);
+	font-size: calc(18px * var(--VSGguildiconh, 1)) !important;
+	line-height: var(--VSGmeadiatorheight, 50px);
+	//border-radius: var(--VSGguildborderradius, 50%);
+	transition: var(--VSGnohovergrowth, width 0.5s ease 0.5s), var(--VSGnohovergrowth, height 0.5s ease 0.5s);
+	margin: 4px auto 4px auto;
+}
+
+.wrapper-1Rf91z:not([class*="folder"]) .scroller-2TZvBN .da-container[class*="folder"] .da-badge {
+	z-index:1;
+	top:-17px;
 }
 
 .wrapper-1Rf91z .da-selected::before {
