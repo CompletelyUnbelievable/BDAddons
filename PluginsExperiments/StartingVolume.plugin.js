@@ -6,7 +6,7 @@ class StartingVolume {
 
 	getDescription(){return "Sets the volume on certain audio/video embeds, see settings panel for details.";}
 
-	getVersion(){return "1.8";}
+	getVersion(){return "1.9";}
 
 	getAuthor(){return "CompletelyUnbelievable";}
 	
@@ -50,14 +50,14 @@ class StartingVolume {
 	observer(){} //Don't want to use the observer at all.
 
 	start(){
-		let libraryScript=document.getElementById('zeresLibraryScript');
+		let libraryScript=document.getElementById('ZLibraryScript');
 		if(typeof window.ZLibrary!=="undefined")this.initialize();
 		else libraryScript.addEventListener('load',()=>this.initialize());
 	}
 
 	initialize(){
 		this.initialized=true;
-		ZLibrary.PluginUpdater.checkForUpdate(this.getName(),this.getVersion(),"https://raw.githubusercontent.com/CompletelyUnbelievable/BDAddons/master/PluginsExperiments/StartingVolume.plugin.js");
+		window.ZLibrary.PluginUpdater.checkForUpdate(this.getName(),this.getVersion(),"https://raw.githubusercontent.com/CompletelyUnbelievable/BDAddons/master/PluginsExperiments/StartingVolume.plugin.js");
 		this.loadSettings();
 		this.handler=this.delegateEvents(document,'click',this.mediaEvents,'play',this.check.bind(this)); //Add listener.
 		this.iframeHandler=this.delegateEvents(document,'click',this.embedIframe,'load',this.iframeHandling.bind(this)); //Iframes need a seperate event handler, such as load, in order to have any hope of being triggered.
@@ -71,14 +71,14 @@ class StartingVolume {
 	}
 
 	load(){
-		let libraryScript=document.getElementById('zeresLibraryScript'),soundCloudAPI=document.getElementById('soundCloudAPI'),youtubeIframeAPI=document.getElementById('youtubeIframeAPI'),twitterWidgetAPI=document.getElementById('twitterWidgetAPI'),twitchIframeAPI=document.getElementById('twitchIframeAPI');
-		if(!libraryScript){
+		let libraryScript=document.getElementById('ZLibraryScript'),soundCloudAPI=document.getElementById('soundCloudAPI'),youtubeIframeAPI=document.getElementById('youtubeIframeAPI'),twitterWidgetAPI=document.getElementById('twitterWidgetAPI'),twitchIframeAPI=document.getElementById('twitchIframeAPI');
+		if(!window.ZLibrary&&!libraryScript){
 			libraryScript=document.createElement('script');
 			libraryScript.setAttribute('type','text/javascript');
 			/*In part borrowed from Zere, so it redirects the user to download the Lib if it does not load correctly and the user does not have the plugin version of the lib.*/
-			libraryScript.addEventListener("error",function(){if(typeof ZLibrary==="undefined"){window.BdApi.alert("Library Missing",`The library plugin needed for ${this.getName()} is missing and could not be loaded.<br /><br /><a href="https://betterdiscord.net/ghdl?url=https://raw.githubusercontent.com/rauenzi/BDPluginLibrary/master/release/0PluginLibrary.plugin.js" target="_blank">Click here to download the library!</a>`);}}.bind(this));
+			libraryScript.addEventListener("error",function(){if(typeof window.ZLibrary==="undefined"){window.BdApi.alert("Library Missing",`The library plugin needed for ${this.getName()} is missing and could not be loaded.<br /><br /><a href="https://betterdiscord.net/ghdl?url=https://raw.githubusercontent.com/rauenzi/BDPluginLibrary/master/release/0PluginLibrary.plugin.js" target="_blank">Click here to download the library!</a>`);}}.bind(this));
 			libraryScript.setAttribute('src','https://rauenzi.github.io/BDPluginLibrary/release/ZLibrary.js');
-			libraryScript.setAttribute('id','zeresLibraryScript');
+			libraryScript.setAttribute('id','ZLibraryScript');
 			document.head.appendChild(libraryScript);
 		}
 		if(!soundCloudAPI)soundCloudAPI=this.createScriptElementAppend('text/javascript','soundCloudAPI',`https://w.soundcloud.com/player/api.js`);
@@ -97,11 +97,11 @@ class StartingVolume {
 	}
 
 	saveSettings(){
-        ZLibrary.PluginUtilities.saveSettings(this.getName(),this.settings);
+        window.ZLibrary.PluginUtilities.saveSettings(this.getName(),this.settings);
 	}
 
 	loadSettings(){
-        this.settings=ZLibrary.PluginUtilities.loadSettings(this.getName(),this.default);
+        this.settings=window.ZLibrary.PluginUtilities.loadSettings(this.getName(),this.default);
 	}
 
 	/*
@@ -214,58 +214,58 @@ class StartingVolume {
 		let ProTip='Error, this should be set to something else.';
 		if(!this.debugSP){
 			ProTip=`Because of the way that soundcloud embeds have to be handled,the volume of SoundCloud embeds might be at full volume breifly. This handler could be used as a way to add a volume slider to their embeds,just food for thought. I also want to hand make my settings panel in the future.`;
-			new ZLibrary.Settings.SettingGroup('Options',{collapsible:true,shown:true}).appendTo(panel).append(
-				new ZLibrary.Settings.Switch('Native Embeds',`When enabled,changes the volume pertaining to discord's native embeds.`,this.settings.native,boolean=>{
+			new window.ZLibrary.Settings.SettingGroup('Options',{collapsible:true,shown:true}).appendTo(panel).append(
+				new window.ZLibrary.Settings.Switch('Native Embeds',`When enabled,changes the volume pertaining to discord's native embeds.`,this.settings.native,boolean=>{
 					this.settings.native=boolean;
 					this.saveSettings();
 				}),
-				new ZLibrary.Settings.Textbox('Native Embed Volume',`Set a volume to use for discord's native embeds,use a percent without the symbol.`,this.settings.volume,text=>{
+				new window.ZLibrary.Settings.Textbox('Native Embed Volume',`Set a volume to use for discord's native embeds,use a percent without the symbol.`,this.settings.volume,text=>{
 					this.SPInputValidation('volume',text,panel);
 				}),
-				new ZLibrary.Settings.Switch('SoundCloud Embeds',`When enabled,changes the volume pertaining to SoundCloud embeds.`,this.settings.soundcloud,boolean=>{
+				new window.ZLibrary.Settings.Switch('SoundCloud Embeds',`When enabled,changes the volume pertaining to SoundCloud embeds.`,this.settings.soundcloud,boolean=>{
 					this.settings.soundcloud=boolean;
 					this.saveSettings();
 				}),
-				new ZLibrary.Settings.Textbox('SoundCloud Embed Volume',`Set a volume to use for SoundCloud embeds,use a percent without the symbol.`,this.settings.soundcloudVolume,text=>{
+				new window.ZLibrary.Settings.Textbox('SoundCloud Embed Volume',`Set a volume to use for SoundCloud embeds,use a percent without the symbol.`,this.settings.soundcloudVolume,text=>{
 					this.SPInputValidation('soundcloudVolume',text,panel);
 				})
 			);
 		}else{
 			ProTip=`IFrames are incredibly difficult to interact with, so do not expect me to actually be able to change volumes on YouTube/Twitter/Twitch embeds anytime soon.`;
-			new ZLibrary.Settings.SettingGroup('Super Secret Debug Menu',{collapsible:true,shown:true}).appendTo(panel).append(
-				new ZLibrary.Settings.Switch('Native Embeds',`When enabled, changes the volume pertaining to discord's native embeds.`,this.settings.native,boolean=>{
+			new window.ZLibrary.Settings.SettingGroup('Super Secret Debug Menu',{collapsible:true,shown:true}).appendTo(panel).append(
+				new window.ZLibrary.Settings.Switch('Native Embeds',`When enabled, changes the volume pertaining to discord's native embeds.`,this.settings.native,boolean=>{
 					this.settings.native=boolean;
 					this.saveSettings();
 				}),
-				new ZLibrary.Settings.Textbox('Native Embed Volume',`Set a volume to use for discord's native embeds, use a percent without the symbol.`,this.settings.volume,text=>{
+				new window.ZLibrary.Settings.Textbox('Native Embed Volume',`Set a volume to use for discord's native embeds, use a percent without the symbol.`,this.settings.volume,text=>{
 					this.SPInputValidation('volume',text,panel);
 				}),
-				new ZLibrary.Settings.Switch('SoundCloud Embeds',`When enabled, changes the volume pertaining to SoundCloud embeds.`,this.settings.soundcloud,boolean=>{
+				new window.ZLibrary.Settings.Switch('SoundCloud Embeds',`When enabled, changes the volume pertaining to SoundCloud embeds.`,this.settings.soundcloud,boolean=>{
 					this.settings.soundcloud=boolean;
 					this.saveSettings();
 				}),
-				new ZLibrary.Settings.Textbox('SoundCloud Embed Volume',`Set a volume to use for SoundCloud embeds, use a percent without the symbol.`,this.settings.soundcloudVolume,text=>{
+				new window.ZLibrary.Settings.Textbox('SoundCloud Embed Volume',`Set a volume to use for SoundCloud embeds, use a percent without the symbol.`,this.settings.soundcloudVolume,text=>{
 					this.SPInputValidation('soundcloudVolume',text,panel);
 				}),
-				new ZLibrary.Settings.Switch('YouTube Embeds',`When enabled, changes the volume pertaining to YouTube embeds.`,this.settings.youtube,boolean=>{
+				new window.ZLibrary.Settings.Switch('YouTube Embeds',`When enabled, changes the volume pertaining to YouTube embeds.`,this.settings.youtube,boolean=>{
 					this.settings.youtube=boolean;
 					this.saveSettings();
 				}),
-				new ZLibrary.Settings.Textbox('Youtube Embed Volume',`Set a volume to use for YouTube embeds, use a percent without the symbol.`,this.settings.youtubeVolume,text=>{
+				new window.ZLibrary.Settings.Textbox('Youtube Embed Volume',`Set a volume to use for YouTube embeds, use a percent without the symbol.`,this.settings.youtubeVolume,text=>{
 					this.SPInputValidation('youtubeVolume',text,panel);
 				}),
-				new ZLibrary.Settings.Switch('Twitter Embeds',`When enabled, changes the volume pertaining to Twitter embeds.`,this.settings.twitter,boolean=>{
+				new window.ZLibrary.Settings.Switch('Twitter Embeds',`When enabled, changes the volume pertaining to Twitter embeds.`,this.settings.twitter,boolean=>{
 					this.settings.twitter=boolean;
 					this.saveSettings();
 				}),
-				new ZLibrary.Settings.Textbox('Twitter Embed Volume',`Set a volume to use for Twitter embeds, use a percent without the symbol.`,this.settings.twitterVolume,text=>{
+				new window.ZLibrary.Settings.Textbox('Twitter Embed Volume',`Set a volume to use for Twitter embeds, use a percent without the symbol.`,this.settings.twitterVolume,text=>{
 					this.SPInputValidation('twitterVolume',text,panel);
 				}),
-				new ZLibrary.Settings.Switch('Twitch Embeds',`When enabled, changes the volume pertaining to Twitch embeds.`,this.settings.twitch,boolean=>{
+				new window.ZLibrary.Settings.Switch('Twitch Embeds',`When enabled, changes the volume pertaining to Twitch embeds.`,this.settings.twitch,boolean=>{
 					this.settings.twitch=boolean;
 					this.saveSettings();
 				}),
-				new ZLibrary.Settings.Textbox('Twitch Embed Volume',`Set a volume to use for Twitch embeds, use a percent without the symbol.`,this.settings.twitchVolume,text=>{
+				new window.ZLibrary.Settings.Textbox('Twitch Embed Volume',`Set a volume to use for Twitch embeds, use a percent without the symbol.`,this.settings.twitchVolume,text=>{
 					this.SPInputValidation('twitchVolume',text,panel);
 				})
 			);
