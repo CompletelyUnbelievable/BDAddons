@@ -159,7 +159,7 @@ body .da-appMount {
 	background: transparent;
 }
 
-#app-mount .wrapper-1Rf91z .da-container .da-wrapper {
+#app-mount .wrapper-1Rf91z .da-container .da-wrapper:not(.da-badge) {
 	background: transparent !important;
 }
 
