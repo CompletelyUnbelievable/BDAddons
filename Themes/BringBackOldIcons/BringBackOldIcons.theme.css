@@ -1,21 +1,21 @@
-//META{"name":"BringBackOldIcons","description":"A theme to bring back the old title container icons.","author":"CompletelyUnbelievable","version":"1.0","source":"https://github.com/CompletelyUnbelievable/BDAddons","website":"https://git.io/vhWjm"}*//
+//META{"name":"BringBackOldIcons","description":"A theme to bring back the old title container icons.","author":"CompletelyUnbelievable","version":"1.0","source":"https://github.com/CompletelyUnbelievable/BDAddons/blob/master/Themes/BringBackOldIcons/BringBackOldIcons.theme.css","website":"https://git.io/vhWjm"}*//
 
 #app-mount .toolbar-1t6TWx .iconWrapper-2OrFZ1{
 	margin:0 6px;
 }
 
 #app-mount .toolbar-1t6TWx div.clickable-3rdHwn .icon-22AiRD{
-    background-color:#b9bbbe;
-    fill:transparent;
-    color:transparent;
+	background-color:#b9bbbe;
+	fill:transparent;
+	color:transparent;
 }
 
 #app-mount .theme-dark .toolbar-1t6TWx div.clickable-3rdHwn:hover .icon-22AiRD{
-    background-color:#dcddde;
+	background-color:#dcddde;
 }
 
 #app-mount .toolbar-1t6TWx div.clickable-3rdHwn .icon-22AiRD[name='nova_bell'i]{
-    -webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cpath fill='currentColor' d='M12.0062866,21 C13.0062866,21 13.7205723,20.5980469 14.0062866,19.9951172 L10.0062866,19.9951172 C10.2920009,20.5980469 11.0062866,21 12.0062866,21 L12.0062866,21 Z M18.9868164,17.0365601 L18.9868164,9 C18.9868164,6.36 16.6839496,4.02496338 13.9762573,4.02496338 C13.9762573,3.30496338 13.6322021,2.99511719 12.0031433,2.99511719 C10.3740845,2.99511719 10.0372925,3.30496338 10.0372925,4.02496338 C7.32960017,4.02496338 4.9954834,6.36 4.9954834,9 L4.9954834,17.0365601 L4.00628662,17.0365601 L4.00628662,18.9879761 L20,18.9879761 L20,17.0365601 L18.9868164,17.0365601 Z M17,17 L7,17 L7,9.3 C7,7.43 8.44444444,6 10.3333333,6 L13.6666667,6 C15.5555556,6 17,7.43 17,9.3 L17,17 L17,17 Z'%3E%3C/path%3E%3Crect width='24' height='24'%3E%3C/rect%3E%3C/g%3E%3C/svg%3E") center/cover no-repeat;
+	-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cpath fill='currentColor' d='M12.0062866,21 C13.0062866,21 13.7205723,20.5980469 14.0062866,19.9951172 L10.0062866,19.9951172 C10.2920009,20.5980469 11.0062866,21 12.0062866,21 L12.0062866,21 Z M18.9868164,17.0365601 L18.9868164,9 C18.9868164,6.36 16.6839496,4.02496338 13.9762573,4.02496338 C13.9762573,3.30496338 13.6322021,2.99511719 12.0031433,2.99511719 C10.3740845,2.99511719 10.0372925,3.30496338 10.0372925,4.02496338 C7.32960017,4.02496338 4.9954834,6.36 4.9954834,9 L4.9954834,17.0365601 L4.00628662,17.0365601 L4.00628662,18.9879761 L20,18.9879761 L20,17.0365601 L18.9868164,17.0365601 Z M17,17 L7,17 L7,9.3 C7,7.43 8.44444444,6 10.3333333,6 L13.6666667,6 C15.5555556,6 17,7.43 17,9.3 L17,17 L17,17 Z'%3E%3C/path%3E%3Crect width='24' height='24'%3E%3C/rect%3E%3C/g%3E%3C/svg%3E") center/cover no-repeat;
 }
 
 #app-mount .toolbar-1t6TWx div.clickable-3rdHwn .icon-22AiRD[name='nova_calljoin'i]{
@@ -27,7 +27,7 @@
 }
 
 #app-mount .toolbar-1t6TWx div.clickable-3rdHwn .icon-22AiRD[name='nova_pin'i]{
-    -webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 26 26'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cpath d='M1 1h24v24H1'%3E%3C/path%3E%3Cpath fill='currentColor' d='M15 15V6h-4v9h-.50899482C10.22788048 15 10 15.2238576 10 15.5c0 .2680664.2198305.5.49100518.5h5.01798964C15.77211952 16 16 15.7761424 16 15.5c0-.2680664-.2198305-.5-.49100518-.5H15zm2-9h1V4H8v2h1v8l-2 2v2h5.2v4h1.6v-4H19v-2l-2-2V6z'%3E%3C/path%3E%3C/g%3E%3C/svg%3E") center/cover no-repeat;
+	-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 26 26'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cpath d='M1 1h24v24H1'%3E%3C/path%3E%3Cpath fill='currentColor' d='M15 15V6h-4v9h-.50899482C10.22788048 15 10 15.2238576 10 15.5c0 .2680664.2198305.5.49100518.5h5.01798964C15.77211952 16 16 15.7761424 16 15.5c0-.2680664-.2198305-.5-.49100518-.5H15zm2-9h1V4H8v2h1v8l-2 2v2h5.2v4h1.6v-4H19v-2l-2-2V6z'%3E%3C/path%3E%3C/g%3E%3C/svg%3E") center/cover no-repeat;
 }
 
 #app-mount .toolbar-1t6TWx div.clickable-3rdHwn .iconBadge-qZ4Ksk{
@@ -50,7 +50,3 @@
 #app-mount .toolbar-1t6TWx div.clickable-3rdHwn .icon-22AiRD[name='nova_help'i]{
 	-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24'%3E%3Cg fill='currentColor' fill-rule='evenodd' transform='translate(7 4)'%3E%3Cpath d='M0 4.3258427C0 5.06741573.616438356 5.68539326 1.35616438 5.68539326 2.09589041 5.68539326 2.71232877 5.06741573 2.71232877 4.3258427 2.71232877 2.84269663 4.31506849 2.78089888 4.5 2.78089888 4.68493151 2.78089888 6.28767123 2.84269663 6.28767123 4.3258427L6.28767123 4.63483146C6.28767123 5.25280899 5.97945205 5.74719101 5.42465753 6.05617978L4.19178082 6.73595506C3.51369863 7.10674157 3.14383562 7.78651685 3.14383562 8.52808989L3.14383562 9.64044944C3.14383562 10.3820225 3.76027397 11 4.5 11 5.23972603 11 5.85616438 10.3820225 5.85616438 9.64044944L5.85616438 8.96067416 6.71917808 8.52808989C8.1369863 7.78651685 9 6.30337079 9 4.69662921L9 4.3258427C9 1.48314607 6.71917808 0 4.5 0 2.21917808 0 0 1.48314607 0 4.3258427zM4.5 12C2.5 12 2.5 15 4.5 15 6.5 15 6.5 12 4.5 12L4.5 12z'%3E%3C/path%3E%3C/g%3E%3C/svg%3E") center/cover no-repeat;
 }
-
-#app-mount .toolbar-1t6TWx {
-    --OldUpdate:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 26 26'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cpath d='M1 1h24v24H1V1z'%3E%3C/path%3E%3Cpath fill='currentColor' d='M17 14h-3V4h-2v10H9l4 4 4-4zM5 20v2h16v-2H5z'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
-}/*https://codepen.io/jakob-e/pen/doMoML*/
