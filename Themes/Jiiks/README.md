@@ -1,4 +1,4 @@
-The first of The Revitalization Project.
+This was the first theme of The Revitalization Project. Due to the consistant changes to the GuildsWrapper, Variable Server Grid is now depricated. I'm gonna give them time to figure things out before I update it again.
 
 # VariableServerGrid
 
