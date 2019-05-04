@@ -18,6 +18,10 @@
 	-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cpath fill='currentColor' d='M12.0062866,21 C13.0062866,21 13.7205723,20.5980469 14.0062866,19.9951172 L10.0062866,19.9951172 C10.2920009,20.5980469 11.0062866,21 12.0062866,21 L12.0062866,21 Z M18.9868164,17.0365601 L18.9868164,9 C18.9868164,6.36 16.6839496,4.02496338 13.9762573,4.02496338 C13.9762573,3.30496338 13.6322021,2.99511719 12.0031433,2.99511719 C10.3740845,2.99511719 10.0372925,3.30496338 10.0372925,4.02496338 C7.32960017,4.02496338 4.9954834,6.36 4.9954834,9 L4.9954834,17.0365601 L4.00628662,17.0365601 L4.00628662,18.9879761 L20,18.9879761 L20,17.0365601 L18.9868164,17.0365601 Z M17,17 L7,17 L7,9.3 C7,7.43 8.44444444,6 10.3333333,6 L13.6666667,6 C15.5555556,6 17,7.43 17,9.3 L17,17 L17,17 Z'%3E%3C/path%3E%3Crect width='24' height='24'%3E%3C/rect%3E%3C/g%3E%3C/svg%3E") center/cover no-repeat;
 }
 
+#app-mount .toolbar-1t6TWx svg[name="nova_belloff"i]>:nth-child(1){
+	
+}
+
 #app-mount .toolbar-1t6TWx div.clickable-3rdHwn .icon-22AiRD[name='nova_calljoin'i]{
 	-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cpolygon points='0 0 24 0 24 24 0 24'%3E%3C/polygon%3E%3Cpath fill='currentColor' d='M7.5,10.501456 C8.94,13.331456 10.6672741,15.05 13.4972741,16.5 L15.41,15.18 C15.68,14.91 16.08,14.82 16.43,14.94 C17.55,15.31 18.76,15.51 20,15.51 C20.55,15.51 21,15.96 21,16.51 L21,20 C21,20.55 20.55,21 20,21 C10.61,21 2.78999996,13.6400003 3,4 C3.01197849,3.45013046 3.45,3 4,3 L7.5,3 C8.05,3 8.5,3.45 8.5,4 C8.5,5.25 8.7,6.45 9.07,7.57 C9.18,7.92 9.1,8.31 8.82,8.59 L7.5,10.501456 Z'%3E%3C/path%3E%3C/g%3E%3C/svg%3E") center/cover no-repeat;
 }
@@ -43,7 +47,7 @@
 	-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cpolygon points='0 0 24 0 24 24 0 24'%3E%3C/polygon%3E%3Cpath fill='currentColor' d='M19 19L23 19 23 16.5C23 14.17 18.33 13 16 13 15.71 13 15.38 13.02 15.03 13.05 15.2979181 13.2440097 15.5471657 13.4534892 15.7720754 13.6791778 17.5922944 14.6769857 19 16.1183086 19 18L19 19zM14.3335577 10.4967128C14.8098529 10.8147627 15.3828086 11 16 11 17.66 11 18.99 9.66 18.99 8 18.99 6.34 17.66 5 16 5 15.3827845 5 14.8098082 5.18525173 14.3335019 5.5033244 14.7574619 6.23791814 15 7.09053797 15 8.00006693 15 8.90955601 14.7574832 9.76214095 14.3335577 10.4967128zM9 12C6.79 12 5 10.21 5 8 5 5.79 6.79 4 9 4 11.21 4 13 5.79 13 8 13 10.21 11.21 12 9 12zM9 14C11.67 14 17 15.34 17 18L17 20 1 20 1 18C1 15.34 6.33 14 9 14z'%3E%3C/path%3E%3C/g%3E%3C/svg%3E") center/cover no-repeat;
 }
 
-#app-mount .toolbar-1t6TWx div.clickable-3rdHwn .icon-22AiRD[name='nova_downloading'i]{
+#app-mount .toolbar-1t6TWx div.clickable-3rdHwn .icon-22AiRD[name='nova_downloading'i],#app-mount .toolbar-1t6TWx div.clickable-3rdHwn .icon-22AiRD[name='nova_download'i]{
 	-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 26 26'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cpath d='M1 1h24v24H1V1z'%3E%3C/path%3E%3Cpath fill='currentColor' d='M17 14h-3V4h-2v10H9l4 4 4-4zM5 20v2h16v-2H5z'%3E%3C/path%3E%3C/g%3E%3C/svg%3E") center/cover no-repeat;
 }
 
