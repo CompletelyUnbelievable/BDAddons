@@ -16,7 +16,7 @@ class VCButton{
 		//this.getGuildChannels=BdApi.findModuleByProps("getChannels","getDefaultChannel").getChannels;//These might look the same with the one below but they are different.
 		//this.channels=BdApi.findModuleByProps("getChannels","hasChannel").getChannels;
 		this.changeChannel=BdApi.findModuleByProps("selectChannel","selectVoiceChannel").selectChannel;//function(guildId,channelId,?messageId) *strings*
-		this.type={TEXT_CHANNEL:0,VOICE_CHANNEL:2,HIDDEN_CHANNEL:4};
+		this.type=BdApi.findModuleByProps("ChannelTypes").ChannelTypes||{GUILD_TEXT:0,DM:1,GUILD_VOICE:2,GROUP_DM:3,GUILD_CATEGORY:4,GUILD_NEWS:5,GUILD_STORE:6,GUILD_LFG_LISTINGS:7};
 		this.classes={channels:ZLibrary.DiscordClasses.ChannelList.channels.first||"channels-Ie2l6A",channelName:"name-3_Dsmg",channelContainer:ZLibrary.DiscordClasses.ChannelList.containerDefault.first||"containerDefault-1ZnADq",channelChildren:"children-Bmpf2Q"};
 		this.ReactTools=this.findReactComponent||ZLibrary.ReactTools.getOwnerInstance;
 		this.clipboard=window.require?require('electron').remote.clipboard:'';
@@ -41,7 +41,7 @@ class VCButton{
 	}
 
 	addLinkToElement(){
-		var VCelements=this.cleanArray(this.HtmlCollectionToArray(document.getElementsByClassName(this.classes.channels)[0].getElementsByClassName(this.classes.channelContainer)).map((v)=>{let react=this.ReactTools(v);if(react&&react.props&&react.props.channel&&react.props.channel.type&&react.props.channel.type===this.type.VOICE_CHANNEL)return v;}));
+		var VCelements=this.cleanArray(this.HtmlCollectionToArray(document.getElementsByClassName(this.classes.channels)[0].getElementsByClassName(this.classes.channelContainer)).map((v)=>{let react=this.ReactTools(v);if(react&&react.props&&react.props.channel&&react.props.channel.type&&react.props.channel.type===this.type.GUILD_VOICE)return v;}));
 		if(VCelements.length>0){
 			var reactEles=VCelements.map((v)=>{return this.ReactTools(v).props.channel}),
 			iconEles=VCelements.map((v)=>{return v.getElementsByClassName(this.classes.channelChildren)[0];});
