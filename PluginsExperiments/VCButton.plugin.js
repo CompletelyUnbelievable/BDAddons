@@ -89,17 +89,12 @@ class VCButton{
 		}
 	}
 
-	parseHTML(html){//Modified from: https://stackoverflow.com/a/35385518 TODO: figure out a way where there is no reason to distinguish between the number of tags.
-		var template=document.createElement('template');
-		if(this.toType(html)==='string'){
-			if(/(<[^<>]+>){4,}/g.test(html)){//In theory, see if there are four or more "element" tags (two opening and closing tags), detects anything enclosed in symbols (<>) but not if it is empty.
-				template.innerHTML=html;
-				return template.content.childNodes;
-			}else{//Single element from string.
-				html=html.trim(); // Never return a text node of whitespace as the result
-				template.innerHTML=html;
-				return template.content.firstChild;
-			}
+	parseHTML(html){//Modified from: https://stackoverflow.com/a/35385518
+		if(this.toType(html)==='string'&&/(<[^<>]+>)/g.test(html)){//Checks that it is a string and to see if it has anything resembling a tag.
+			var template=document.createElement('template');
+			template.innerHTML=html;//If trimmed it will never return a text node of whitespace as the result.
+			//Instead it does not return text nodes /w that filter.
+			return template&&template.content&&template.content.childNodes&&template.content.childNodes.length>0?this.HtmlCollectionToArray(template.content.childNodes).filter((v)=>{if(v.nodeName&&v.nodeName!=='#text')return v;}):null;//return null when there is no element(s) to be returned.
 		}
 		return null;
 	}
