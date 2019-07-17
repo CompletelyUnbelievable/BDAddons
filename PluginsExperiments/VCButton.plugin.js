@@ -18,7 +18,7 @@ class VCButton{
 		this.changeChannel=BdApi.findModuleByProps("selectChannel","selectVoiceChannel").selectChannel;//function(guildId,channelId,?messageId) *strings*
 		this.type=BdApi.findModuleByProps("ChannelTypes").ChannelTypes||{GUILD_TEXT:0,DM:1,GUILD_VOICE:2,GROUP_DM:3,GUILD_CATEGORY:4,GUILD_NEWS:5,GUILD_STORE:6,GUILD_LFG_LISTINGS:7};
 		this.classes={channels:window.ZLibrary?window.ZLibrary.DiscordClasses.ChannelList.channels.first:"channels-Ie2l6A",channelName:"name-3_Dsmg",channelContainer:window.ZLibrary?window.ZLibrary.DiscordClasses.ChannelList.containerDefault.first:"containerDefault-1ZnADq",channelChildren:"children-Bmpf2Q"};
-		this.ReactTools=window.ZLibrary&&window.ZLibrary.ReactTools&&window.ZLibrary.ReactTools.getOwnerInstance&&this.testFunction(window.ZLibrary.ReactTools.getOwnerInstance,document.body.firstElementChild.firstElementChild)?window.ZLibrary.ReactTools.getOwnerInstance:this.findReactComponent;
+		this.ReactTools=window.ZLibrary&&window.ZLibrary.ReactTools&&window.ZLibrary.ReactTools.getOwnerInstance&&this.testFunction(window.ZLibrary.ReactTools.getOwnerInstance,window.ZLibrary.ReactTools,document.body)?window.ZLibrary.ReactTools.getOwnerInstance.bind(window.ZLibrary.ReactTools):this.findReactComponent;
 		this.currentVCId=BdApi.findModuleByProps("getChannelId","getVoiceChannelId").getVoiceChannelId;
 		this.clipboard=window.require?require('electron').remote.clipboard:'';
 		this.cleanup=[];//Array of functions, these functions will remove elements from the document that were added by the plugin.
@@ -118,11 +118,11 @@ class VCButton{
 		return null;
 	}
 
-	testFunction(func){//Test a function with a single argument. Something weird is happening with Zlib's ownerInstance function that make it think that I am binding it? I guess?
+	testFunction(func=undefined,bind=null){//Test a function, bind it if needed, and pass any other arguments this function gets as arguments for the function being tested.
 		try{
-			func(arguments[1]);
-			return true;
+			return func.apply(bind,Array.from(arguments).slice(2));//Remove the initial function and the bind then send the rest of the arguments to the function for the test.
 		}catch(e){
+			//console.log("Tested function returned error:",e);
 			return false;
 		}
 	}
