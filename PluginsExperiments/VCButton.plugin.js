@@ -6,7 +6,7 @@ class VCButton{
 
 	getDescription(){return"Adds a button to voice channels that make it easier to video share on any server without the discord experiments plugin.";}
 
-	getVersion(){return"1.2";}
+	getVersion(){return"1.3";}
 
 	getAuthor(){return"CompletelyUnbelievable";}
 
@@ -17,8 +17,8 @@ class VCButton{
 		//this.channels=BdApi.findModuleByProps("getChannels","hasChannel").getChannels;
 		this.changeChannel=BdApi.findModuleByProps("selectChannel","selectVoiceChannel").selectChannel;//function(guildId,channelId,?messageId) *strings*
 		this.type=BdApi.findModuleByProps("ChannelTypes").ChannelTypes||{GUILD_TEXT:0,DM:1,GUILD_VOICE:2,GROUP_DM:3,GUILD_CATEGORY:4,GUILD_NEWS:5,GUILD_STORE:6,GUILD_LFG_LISTINGS:7};
-		this.classes={channels:ZLibrary.DiscordClasses.ChannelList.channels.first||"channels-Ie2l6A",channelName:"name-3_Dsmg",channelContainer:ZLibrary.DiscordClasses.ChannelList.containerDefault.first||"containerDefault-1ZnADq",channelChildren:"children-Bmpf2Q"};
-		this.ReactTools=this.findReactComponent||ZLibrary.ReactTools.getOwnerInstance;
+		this.classes={channels:window.ZLibrary?window.ZLibrary.DiscordClasses.ChannelList.channels.first:"channels-Ie2l6A",channelName:"name-3_Dsmg",channelContainer:window.ZLibrary?window.ZLibrary.DiscordClasses.ChannelList.containerDefault.first:"containerDefault-1ZnADq",channelChildren:"children-Bmpf2Q"};
+		this.ReactTools=window.ZLibrary?window.ZLibrary.ReactTools.getOwnerInstance:this.findReactComponent;
 		this.currentVCId=BdApi.findModuleByProps("getChannelId","getVoiceChannelId").getVoiceChannelId;
 		this.clipboard=window.require?require('electron').remote.clipboard:'';
 		this.cleanup=[];//Array of functions, these functions will remove elements from the document that were added by the plugin.
