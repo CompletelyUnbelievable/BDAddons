@@ -24,4 +24,4 @@
 
 # VCButton plugin
 
-<div>The name is a WIP. This plugin is intended to be used as an alternative to the discord expiriments plugin for streaming or watching streams in a guild (server) voice channel. This plugin should be less likely to cause issue b/c it does not set your client into the developer mode that the discord expiriments plugin does.</div>
+<div>The name is a WIP. This plugin is intended to be used as an alternative to the discord experiments plugin for streaming or watching streams in a guild (server) voice channel. This plugin should be less likely to cause issue b/c it does not set your client into the developer mode that the discord experiments plugin does.</div>
