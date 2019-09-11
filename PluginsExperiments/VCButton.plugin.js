@@ -6,7 +6,7 @@ class VCButton{
 
 	getDescription(){return"Adds a button to voice channels that make it easier to video share on any server without the discord experiments plugin.";}
 
-	getVersion(){return"1.4";}
+	getVersion(){return"1.5";}
 
 	getAuthor(){return"CompletelyUnbelievable";}
 
@@ -44,8 +44,9 @@ class VCButton{
 	}
 
 	addLinkToElement(){
-		var VCelements=this.cleanArray(this.HtmlCollectionToArray(document.getElementsByClassName(this.classes.channels)[0].getElementsByClassName(this.classes.channelContainer)).map((v)=>{let react=this.ReactTools(v);if(react&&react.props&&react.props.channel&&react.props.channel.type&&react.props.channel.type===this.type.GUILD_VOICE)return v;}));
-		if(VCelements.length>0){
+		var VCelements=document.getElementsByClassName(this.classes.channels)[0];
+		if(VCelements){
+			VCelements=this.cleanArray(this.HtmlCollectionToArray(VCelements.getElementsByClassName(this.classes.channelContainer)).map((v)=>{let react=this.ReactTools(v);if(react&&react.props&&react.props.channel&&react.props.channel.type&&react.props.channel.type===this.type.GUILD_VOICE)return v;}))
 			var reactEles=VCelements.map((v)=>{return this.ReactTools(v).props.channel}),
 			iconEles=VCelements.map((v)=>{return v.getElementsByClassName(this.classes.channelChildren)[0];});
 			iconEles.forEach(function(ele,index){
@@ -116,10 +117,14 @@ class VCButton{
 		return({}).toString.call(obj).match(/\s([a-z|A-Z]+)/)[1].toLowerCase();
 	}
 
-	findReactComponent(el=undefined){//Modified from: https://stackoverflow.com/a/48335220
-		if(el&&Object.keys(el).includes('__reactInternalInstance$')){
-			const fiberNode=el['__reactInternalInstance$'];
-			return fiberNode&&fiberNode.return&&fiberNode.return.stateNode;
+	findReactComponent(el=undefined){
+		if(el&&el instanceof Element&&Object.keys(el).length>0){
+            let instance=Object.keys(el).filter((v)=>{if(v&&v.constructor===String&&v.toLowerCase().includes('reactinternalinstance'))return v;})[0];
+            if(instance){
+                const fiberNode=el[instance];
+                if((fiberNode&&fiberNode.return&&fiberNode.return.stateNode)instanceof Element)return this.findReactComponent(fiberNode&&fiberNode.return&&fiberNode.return.stateNode);
+                else return fiberNode&&fiberNode.return&&fiberNode.return.stateNode;
+            }
 		}
 		return null;
 	}
@@ -128,6 +133,7 @@ class VCButton{
 		try{
 			return func.apply(bind,Array.from(arguments).slice(2));//Remove the initial function and the bind then send the rest of the arguments to the function for the test.
 		}catch(e){
+			//console.log("Tested function returned error:",e);
 			return false;
 		}
 	}
@@ -154,7 +160,7 @@ class VCButton{
 						}
 					}
 				}
-				if(arr.length>0)return arr/*[...new Set(arr)]*/;//Remove duplicates: https://stackoverflow.com/a/9229821
+				if(arr.length>0)return arr;/*[...new Set(arr)]*/;//Remove duplicates: https://stackoverflow.com/a/9229821
 			}
 		}
 	return[];
