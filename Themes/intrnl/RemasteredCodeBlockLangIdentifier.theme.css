@@ -2,13 +2,13 @@
 @import url("https://completelyunbelievable.github.io/BDAddons/Themes/intrnl/Import/RemasteredCodeBlockLangIdentifier.css");
 @import url("https://completelyunbelievable.github.io/BDAddons/Themes/intrnl/Import/Legacy.css");
 
-.message-1PNnaP code.hljs::before, .da-message code.hljs::before {
-	content: var(--CBILanguage);
+code.hljs::before {
+	content: var(--CBILanguage,"Error");
 	pointer-events: none;
 	display: block;
 	margin: 0 0 10px 0;
 	padding: 0 0 2px 0;
-	font-family: 'Whitney', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+	font-family: inherit, 'Whitney', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
 	border-bottom: 2px solid rgba(32,34,37,.3);
 	color: #b58900;
 }
