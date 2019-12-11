@@ -3,7 +3,7 @@
 @import url("https://completelyunbelievable.github.io/BDAddons/Themes/intrnl/Import/Legacy.css");
 
 code.hljs::before {
-	content: var(--CBILanguage,"Error");
+	content: var(--CBILanguage);
 	pointer-events: none;
 	display: block;
 	margin: 0 0 10px 0;
