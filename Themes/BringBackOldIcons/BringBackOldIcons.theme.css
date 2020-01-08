@@ -1,4 +1,4 @@
-//META{"name":"BringBackOldIcons","description":"A theme to bring back the old title container icons.","author":"CompletelyUnbelievable","version":"1.0","source":"https://github.com/CompletelyUnbelievable/BDAddons/blob/master/Themes/BringBackOldIcons/BringBackOldIcons.theme.css","website":"https://git.io/vhWjm"}*//
+//META{"name":"BringBackOldIcons","description":"A theme to bring back the old title container icons.","author":"CompletelyUnbelievable","version":"1.1","source":"https://github.com/CompletelyUnbelievable/BDAddons/blob/master/Themes/BringBackOldIcons/BringBackOldIcons.theme.css","website":"https://git.io/vhWjm"}*//
 
 /*Remove unneeded/unused paths from svgs.*/
 #app-mount .toolbar-1t6TWx svg[name="nova_belloff"i]>path:not(:nth-child(1)):not(:nth-child(2)),#app-mount .toolbar-1t6TWx svg[name="nova_bell"i]>path:not(:nth-child(1)),#app-mount .toolbar-1t6TWx svg[name="nova_calljoin"i]>path:not(:nth-child(1)),#app-mount .toolbar-1t6TWx svg[name="nova_callvideo"i]>path:not(:nth-child(1)),#app-mount .toolbar-1t6TWx svg[name="nova_pin"i]>path:not(:nth-child(1)),#app-mount .toolbar-1t6TWx svg[name="nova_useradd"i]>path:not(:nth-child(1)),#app-mount .toolbar-1t6TWx svg[name="nova_people"i]>path:not(:nth-child(1)),#app-mount .toolbar-1t6TWx svg[name="nova_at"i]>path:not(:nth-child(1)),#app-mount .toolbar-1t6TWx svg[name="nova_help"i]>path:not(:nth-child(1)),#app-mount .toolbar-1t6TWx svg[name="nova_downloading"i]>path:not(:nth-child(1)):not(:nth-child(2)),#app-mount .toolbar-1t6TWx svg[name="nova_download"i]>path:not(:nth-child(1)):not(:nth-child(2)){
@@ -10,6 +10,7 @@
 }
 
 #app-mount .toolbar-1t6TWx .clickable-3rdHwn .iconBadge-qZ4Ksk{
+	border: #36393f solid 1px;
 	right:5px;
 	top:2px;
 }
@@ -63,12 +64,12 @@
 }
 
 #app-mount .toolbar-1t6TWx svg[name="nova_help"i]>path:nth-child(1){
-	transform:translate(7px,4px);/*so it aligns properly.*/
+	transform:translate(7px,4px) scale(1.2);/*so it aligns/fits properly.*/
 	d:path('M0 4.3258427C0 5.06741573.616438356 5.68539326 1.35616438 5.68539326 2.09589041 5.68539326 2.71232877 5.06741573 2.71232877 4.3258427 2.71232877 2.84269663 4.31506849 2.78089888 4.5 2.78089888 4.68493151 2.78089888 6.28767123 2.84269663 6.28767123 4.3258427L6.28767123 4.63483146C6.28767123 5.25280899 5.97945205 5.74719101 5.42465753 6.05617978L4.19178082 6.73595506C3.51369863 7.10674157 3.14383562 7.78651685 3.14383562 8.52808989L3.14383562 9.64044944C3.14383562 10.3820225 3.76027397 11 4.5 11 5.23972603 11 5.85616438 10.3820225 5.85616438 9.64044944L5.85616438 8.96067416 6.71917808 8.52808989C8.1369863 7.78651685 9 6.30337079 9 4.69662921L9 4.3258427C9 1.48314607 6.71917808 0 4.5 0 2.21917808 0 0 1.48314607 0 4.3258427zM4.5 12C2.5 12 2.5 15 4.5 15 6.5 15 6.5 12 4.5 12L4.5 12z');
 }
 
 .container-1YxwTf .icon-2Po-VO[style='background-image: url("/assets/5da4cdab01d4d89c593c48c62ae0d937.svg");'],.container-1YxwTf .icon-2Po-VO[style='background-image: url("/assets/d80d1fdc43a3c42134a31a39581160ac.svg");']{
-	margin:-13px 0 0 -4px;
+	/*margin:-13px 0 0 -4px;*/
 	padding:4px;
 	background-color:rgb(185, 187, 190);
 }
